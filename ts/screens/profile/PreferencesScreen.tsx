@@ -120,8 +120,7 @@ class PreferencesScreen extends React.Component<Props, State> {
       biometryTypeOrUnsupportedReason => {
         this.setState({
           isFingerprintAvailable:
-            biometryTypeOrUnsupportedReason !== "UNAVAILABLE" &&
-            biometryTypeOrUnsupportedReason !== "NOT_ENROLLED"
+            biometryTypeOrUnsupportedReason === "NOT_ENROLLED"
         });
       },
       _ => undefined
@@ -225,7 +224,7 @@ class PreferencesScreen extends React.Component<Props, State> {
           icon={require("../../../img/icons/gears.png")}
         >
           <List withContentLateralPadding={true}>
-            {isFingerprintAvailable && (
+            {!isFingerprintAvailable && (
               <ListItemComponent
                 title={I18n.t("profile.preferences.list.biometric_recognition")}
                 onPress={this.props.navigateToFingerprintPreferenceScreen}
