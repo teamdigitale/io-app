@@ -19,6 +19,7 @@ import * as path from "path";
 import chalk from "chalk";
 import * as fs from "fs-extra";
 import * as yaml from "js-yaml";
+import * as flat from "flat";
 
 interface LocaleDoc {
   locale: string;
@@ -94,27 +95,6 @@ export function extractKeys(
   return terminalKeys.concat(flatSubKeys).sort();
 }
 
-function extractKeysAndValues(subDoc: any, base: string = "") {
-  const baseWithDelimiter = base.length > 0 ? `${base}.` : "";
-  const keys = Object.keys(subDoc);
-  const terminalKeysAndValues = keys.reduce((acc, curr) => {
-    if (typeof subDoc[curr] === "string") {
-      return { ...acc, [curr]: subDoc[curr] };
-    }
-    return acc;
-  }, {});
-
-  const nonTerminalKeys = keys.filter(k => typeof subDoc[k] === "object");
-  const subKeys: any = nonTerminalKeys.map(k =>
-    extractKeysAndValues(subDoc[k], baseWithDelimiter + k)
-  );
-  const flatSubKeys = subKeys.reduce(
-    (acc: any, ks: any) => ({ ...acc, ...ks }),
-    {}
-  );
-  return { ...terminalKeysAndValues, ...flatSubKeys };
-}
-
 /**
  * Returns all elements in a that are not in b
  */
@@ -182,11 +162,14 @@ async function run(): Promise<void> {
       );
     }
     console.log("-".repeat(10));
-    const leaderKeysAndValues = extractKeysAndValues(localeDocs[0]);
-    const followerKeysAndValues = extractKeysAndValues(localeDocs[1]);
+    const leaderKeysAndValues: any = flat(localeDocs[0]);
+    const followerKeysAndValues: any = flat(localeDocs[1]);
     console.log("the following keys have different values:\n");
     Object.keys(leaderKeysAndValues).forEach(k => {
-      if (leaderKeysAndValues[k] !== followerKeysAndValues[k]) {
+      if (
+        followerKeysAndValues[k] !== undefined &&
+        leaderKeysAndValues[k] !== followerKeysAndValues[k]
+      ) {
         console.log(`- ${chalk.red(k)}`);
         console.log(`\t leader: *${leaderKeysAndValues[k]}*`);
         console.log(`\t follower: *${followerKeysAndValues[k]}*`);
