@@ -1,0 +1,1 @@
+L'adesione delle strutture turistico-ricettive all’iniziativa è libera e non è previsto un meccanismo di "iscrizione" a nessun elenco. Sta alla struttura informare i clienti, attraverso propri canali, del fatto che accetta o meno il Bonus Vacanze. Prima di richiederlo, assicurati che ti sarà possibile utilizzarlo dove hai scelto di soggiornare per le tue prossime vacanze.

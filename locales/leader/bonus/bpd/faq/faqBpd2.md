@@ -1,0 +1,1 @@
+Ti suggeriamo di salvare la tua carta sia come **PagoBANCOMAT** sia come **Carta di debito**. Soltanto in questo modo potrai effettuare pagamenti su IO e collezionare tutte le transazioni valide per il Cashback.

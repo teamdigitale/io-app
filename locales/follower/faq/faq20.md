@@ -1,0 +1,2 @@
+Il riconoscimento biometrico viene chiesto all'utente in fase di login (se la sessione è ancora attiva), permettendo di entrare velocemente nell'app IO senza dover ogni volta re-inserire username, password e OTP, e come conferma durante il flusso di pagamento o altre azioni significative che hanno un impatto diretto sulla sicurezza dell'utente (come la cancellazione dell'account).
+Il riconoscimento biometrico rimane attivo per 30 giorni dall'ultimo accesso; al 31 giorno la sessione scade e sarà necessario autenticarsi nuovamente.

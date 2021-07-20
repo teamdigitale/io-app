@@ -1,0 +1,1 @@
+Il PIN di otto cifre della tua Carta di Identità elettronica è rilasciato per la prima metà dal Comune in occasione della richiesta di rilascio della CIE e per la seconda alla consegna della stessa presso il tuo domicilio.

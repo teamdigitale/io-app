@@ -1,0 +1,1 @@
+**Qui trovi le informazioni legate alla privacy del tuo profilo**, in particolare puoi consultare l'informativa sul trattamento dei dai personali, eliminare il tuo account ed esportare i dati personali associati al tuo profilo. 

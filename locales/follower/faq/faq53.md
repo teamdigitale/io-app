@@ -1,0 +1,3 @@
+Nella sezione in alto del tuo Profilo potrai visualizzare la versione digitale di alcuni tuoi documenti, come il fac-simile del Codice Fiscale, la Carta di Identità Elettronica, la Tessera Sanitaria (in corso di sviluppo).
+Questi documenti sono dei fac-simile, cioè non sostituiscono in toto il documento fisico ma possono essere utilizzati per la lettura dei dati e del codice a barre sul documento dagli esercenti che lo richiedono, per esempio in una farmacia o in posta.
+Selezionando la card in alto alla pagina, puoi vederne i dettagli. Se tocchi di nuovo il fac-simile, oltre al dettaglio potrai vedere l'anteprima a tutto schermo (per una più facile scansione del codice presente sulla carta).

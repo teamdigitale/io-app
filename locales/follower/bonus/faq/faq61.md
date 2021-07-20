@@ -1,0 +1,1 @@
+E' disponibile un bonus vacanze per nucleo familiare. Il bonus può essere speso da uno qualunque dei componenti del nucleo familiare elencati in questa pagina, non necessariamente dal richiedente. 

@@ -1,0 +1,3 @@
+Serve che qualcuno del tuo nucleo familiare abbia presentato una Dichiarazione Sostitutiva Unica (DSU) a INPS e che esista un ISEE ordinario o corrente in corso di validità.
+Il bonus viene erogato alle famiglie che hanno un ISEE non superiore a 40.000€.
+Se sai già di non avere mai presentato una DSU a INPS, o se l'hai presentato per richiedere un tipo di ISEE diverso da ordinario o corrente, oppure ancora, se qualcosa è cambiato dall'ultima DSU presentata (es. variazione del numero dei componenti del nucleo familiare, variazioni patrimoniali, ecc.), ti consigliamo di presentare una nuova domanda a INPS, prima di procedere con la richiesta.

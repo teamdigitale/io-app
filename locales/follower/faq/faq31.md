@@ -1,0 +1,2 @@
+Dai dettagli del messaggio puoi visualizzare le informazioni relative allo specifico servizio e ente erogatore. Se segui il link al profilo del servizio trovi le informazioni estese, e i recapiti attraverso i quali puoi contattare l'ente erogatore del servizio.
+A seconda delle modalità di contatto gestite dal singolo ente e servizio, i recapiti possono includere: indirizzo dello sportello fisico, numero di telefono, indirizzo mail e/o PEC, sito web, assistenza online, mobile app.

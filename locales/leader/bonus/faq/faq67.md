@@ -1,0 +1,1 @@
+No. Dopo aver presentato all’INPS la Dichiarazione Sostitutiva Unica (DSU) per il calcolo dell’ISEE, per richiedere il Bonus tramite IO non serve fare altro. Al momento della richiesta, è l’app stessa a verificare direttamente con i sistemi di INPS che il tuo ISEE sia sotto la soglia prevista.  

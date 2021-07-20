@@ -1,0 +1,1 @@
+Una volta terminato il flusso di autenticazione ti ritroverai all'interno dell'app IO. Nella sezione profilo, sotto la voce privacy, puoi consultare in ogni momento l'informativa sul trattamento dei dati personali degli utenti dell'app IO (art. 13 del Regolamento UE n.2016/679).

@@ -1,0 +1,1 @@
+Potrebbe esserci un problema legato all'integrazione tra SPID e l'app IO. Segnalaci il problema utilizzando i bottoni che trovi in fondo a questa pagina: faremo del nostro meglio per assisterti e permetterti di accedere  all'app IO il prima possibile.

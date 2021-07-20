@@ -1,0 +1,3 @@
+Se l’app ti avverte che la tua DSU presenta “omissioni o difformità”, puoi:
+- interrompere la richiesta del Bonus e presentare una nuova DSU per aggiornare il tuo ISEE. In questo caso, potrai richiedere nuovamente il Bonus in un secondo momento;
+- oppure puoi verificare la DSU inviata tramite i canali di INPS e - se è tutto corretto -  proseguire comunque con la richiesta. Se decidi di proseguire con l’attivazione del Bonus, dopo averlo utilizzato presso la struttura turistica prescelta, potresti essere chiamato a fornire la documentazione per provare la completezza e la veridicità dei dati indicati nella DSU.

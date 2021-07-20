@@ -1,0 +1,1 @@
+**Il tuo calendario preferito è di default quello associato alla tua mail,** se ti sei registrato con un account Google. Puoi in ogni momento modificare la mail associata al tuo calendario, in modo da ricevere i promemoria di IO sul calendario che usi di più.

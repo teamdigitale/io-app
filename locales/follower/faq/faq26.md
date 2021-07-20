@@ -1,0 +1,3 @@
+No, in questo primo rilascio non è possibile rispondere al messaggio di un servizio direttamente dall'app IO. 
+L'app al momento è un canale che agevola la comunicazione dall'ente verso il cittadino, e supporta lo svolgimento di alcune operazioni come quella di pagamento. 
+Se hai la necessità di contattare un ente o hai delle domande in merito a una comunicazione ricevuta, puoi visualizzare nei dettagli del messaggio tutte le informazioni relative al servizio e dell'ente erogatore. Inoltre, se segui il link verso il profilo del servizio, trovi i recapiti attraverso cui contattare l'ente direttamente (indirizzo dello sportello, telefono, sito web, app, ecc.).

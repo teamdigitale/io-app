@@ -1,0 +1,1 @@
+No. Al momento non è previsto che il Bonus Bici sia erogato attraverso l’app IO.

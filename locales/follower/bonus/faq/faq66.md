@@ -1,0 +1,2 @@
+Al momento puoi richiedere il Bonus Vacanze o l'attivazione al servizio Cashback. 
+La lista di questa pagina mostra già tutti i bonus o gli sconti richiedibili tramite l'app IO e rimarrà sempre aggiornata man mano che verranno aggiunte nuove iniziative.

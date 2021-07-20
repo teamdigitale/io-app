@@ -1,0 +1,1 @@
+Sì, è possibile richiedere più di una identità digitale – anche con diversi livelli di sicurezza – con l’opportunità di rivolgersi a differenti gestori di identità digitale. In caso di possesso di più identità, ogni cittadino è libero di effettuare l'accesso a IO con le credenziali SPID che preferisce.

@@ -1,0 +1,3 @@
+Se sei maggiorenne, semplicemente clicca sul pulsante "Richiedi bonus vacanze" in fondo alla pagina e segui il flusso che ti viene proposto. L'app IO interrogherà INPS per verificare l'ISEE del tuo nucleo familare, e se conforme alle condizioni stabilite, ti mostrerà a quanto ammonta il bonus di cui puoi usufruire tu o i tuoi familiari. Una volta confermata la tua richiesta, creeremo e attiveremo il tuo Bonus. 
+
+Attenzione: il processo è stato reso il più semplice possibile per il cittadino, ma potrebbe volerci più tempo del previsto per elaborare i dati. Non preoccuparti: se ciò dovesse accadere, ti invieremo un messaggio in app quando la tua richiesta sarà pronta.

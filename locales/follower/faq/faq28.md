@@ -1,0 +1,3 @@
+Se non sei interessato a ricevere messaggi da questo servizio, è possibile in ogni momento disattivare la ricezione. 
+Per effettuare la disattivazione devi entrare nella sezione Servizi, selezionare dalla lista il servizio in questione, e selezionare la scritta 'il servizio è attivo'. Da quel momento in poi vedrai comparire la scritta 'Il servizio non è attivo', e il servizio non ti invierà più messaggi tramite l'app IO.
+Ti ricordiamo che il servizio continuerà a contattarti, se necessario, tramite i canali alternativi a disposizione (mail, posta, telefono, ecc.), a seconda delle tue preferenze.

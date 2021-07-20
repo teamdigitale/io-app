@@ -1,0 +1,3 @@
+Se pensi che ci sia un errore nel messaggio che hai ricevuto, puoi utilizzare i recapiti di contatto dell'ente erogatore del servizio per fare una segnalazione o chiedere chiarimenti. 
+I recapiti sono disponibili dall'area dettagli del messaggio oppure nella sezione 'Servizi' dell'app IO, selezionando lo specifico ente e servizio in questione.
+A seconda delle modalità di contatto gestite dal singolo ente e servizio, i recapiti possono includere: indirizzo dello sportello fisico, numero di telefono, indirizzo mail e/o PEC, sito web, assistenza online, mobile app. 

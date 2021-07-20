@@ -1,0 +1,1 @@
+Sì, sarà possibile reimpostare il Codice di sblocco all'interno della sezione profilo, selezionando la voce "Reimposta Codice di sblocco". Ti verrà richiesto di ricominciare il processo di autenticazione da capo, digitando un nuovo Codice di sblocco dopo esserti autenticato con SPID o CIE.

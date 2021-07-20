@@ -1,0 +1,2 @@
+I messaggi archiviati vengono spostati nella tab 'Archiviati' della sezione messaggi. 
+Questa modifica ha effetto solo sul telefono che stai utilizzando per effettuare l'operazione di archiviazione: se effettuerai l'accesso con le stesse credenziali su un altro dispositivo, ritroverai tutti i messaggi all'interno della categoria 'Ricevuti'. Puoi comunque rimuovere i messaggi dall'archivio e li ritroverai automaticamente nella tab principale 'Messaggi'.

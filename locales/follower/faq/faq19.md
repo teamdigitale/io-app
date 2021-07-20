@@ -1,0 +1,2 @@
+"I metodi di riconoscimento basati sulla biometria si sono rivelati nel tempo più sicuri delle password numeriche o alfa-numeriche, spesso vulnerabili o involontariamente comunicate ad altre persone. Il riconoscimento biometrico ti offre il vantaggio di velocizzare l'autenticazione, rispetto all'inserimento del Codice di sblocco, e ti permette di svolgere più velocemente le operazioni all'interno dell'app IO.
+"

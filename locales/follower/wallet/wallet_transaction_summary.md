@@ -1,0 +1,1 @@
+**Qui puoi visualizzare il riepilogo della transazione che stai per effettuare.** Il riepilogo della transazione è aggiornato a questo istante, nel quale si sta procedendo con il pagamento: per questo motivo può risultare maggiorato da eventuali interessi di mora applicati dall'ente creditore. 

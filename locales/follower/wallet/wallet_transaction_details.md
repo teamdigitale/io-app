@@ -1,0 +1,2 @@
+**Qui puoi visualizzare il riepilogo della tua transazione**.  
+Questa transazione fa riferimento a un pagamento effettuato tramite pagoPA, la piattaforma dei pagamenti verso la Pubblica Amministrazione. Se, già prima di aver attivato un account sull’app IO, hai completato dei pagamenti con pagoPA sui siti o dalle app degli enti creditori, qui troverai lo storico completo di tutte le transazioni eseguite con successo. Ovviamente, qui trovi anche il riepilogo di ogni transazione eseguita con successo dall’app IO.

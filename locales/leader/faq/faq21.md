@@ -1,0 +1,2 @@
+Il riconoscimento biometrico può essere utilizzato nell'app IO solo se è supportato dal dispositivo e abilitato nelle preferenze di sistema del dispositivo stesso.
+Se il tuo telefono supporta il riconoscimento biometrico, puoi in ogni momento attivarlo dalle preferenze di sistema.

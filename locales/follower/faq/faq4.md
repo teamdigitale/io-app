@@ -1,0 +1,1 @@
+La CIE, la Carta d’Identità Elettronica, è un documento elettronico altamente sicuro, dotato di un microprocessore a radiofrequenza che ne permette l’utilizzo in svariati scenari, incluso l’accesso a servizi online. Risponde alle esigenze di sicurezza del nostro paese e sostituisce la versione cartacea.

@@ -1,0 +1,2 @@
+Puoi collegare il calendario interagendo con il tasto '+ Promemoria'  nell'anteprima o nel dettaglio del singolo messaggio. La prima volta che selezioni '+ Promemoria', ti verrà chiesto quale calendario vuoi collegare all'app IO: da quel momento in poi, i promemoria verranno inseriti direttamente nel calendario indicato.
+In ogni momento, puoi visualizzare e modificare il calendario associato all'app IO dalle preferenze, nella sezione 'Profilo'.

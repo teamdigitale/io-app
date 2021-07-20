@@ -1,0 +1,2 @@
+**Nella sezione Portafoglio sono elencati i tuoi metodi di pagamento, i tuoi Bonus e carte sconto e lo storico delle transazioni effettuate con pagoPA**, la piattaforma dei pagamenti per la Pubblica Amministrazione. 
+Qui potrai inoltre pagare tutti gli avvisi di pagamento cartaceo con il logo pagoPA: inquadra il QR code che trovi nell'avviso cartaceo e completa il pagamento direttamente dall'app. IO supporta al momento solo pagamenti con carta di credito/debito, ma presto saranno aggiunti altri metodi di pagamento.

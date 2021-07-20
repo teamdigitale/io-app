@@ -1,0 +1,1 @@
+La password è il codice alfanumerico che hai impostato al momento della creazione della tua Identità Digitale SPID. Se non dovessi ricordarla, puoi selezionare recupero password e avviare la relativa procedura di recupero, gestita direttamente dall'Identity Provider.

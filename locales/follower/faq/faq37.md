@@ -1,0 +1,1 @@
+Al momento puoi aggiungere carte di debito, credito, prepagate e PagoBANCOMAT. L'aggiunta di ulteriori metodi di pagamento è in programma per i prossimi mesi. Consulta l'elenco aggiornato alla pagina [Metodi di Pagamento](https://io.italia.it/metodi-pagamento).

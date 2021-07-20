@@ -1,0 +1,2 @@
+L'app IO permette di ricevere diversi tipi di messaggi: avvisi di pagamento (con possibilità di pagare contestualmente tramite l’app), promemoria di scadenze, notifiche e aggiornamenti vari. 
+Non si tratta di messaggi generici che riguardando l'attività dell'ente, ma di comunicazioni che ti riguardano personalmente, come ad esempio un messaggio che ti avvisa della scadenza di un documento. Non aspettarti di ricevere spam sull'app IO: ti scriveranno solo i servizi che hanno qualcosa di importante da dirti.

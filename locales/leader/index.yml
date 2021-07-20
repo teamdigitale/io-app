@@ -1,0 +1,2672 @@
+---
+date:
+  formats:
+    default: "%d/%m/%Y"
+    short: "%d %B"
+    long: "%d %B %Y"
+  day_names:
+    - "domenica"
+    - "lunedì"
+    - "martedì"
+    - "mercoledì"
+    - "giovedì"
+    - "venerdì"
+    - "sabato"
+  abbr_day_names:
+    - "dom"
+    - "lun"
+    - "mar"
+    - "mer"
+    - "gio"
+    - "ven"
+    - "sab"
+  month_names:
+    - ""
+    - "gennaio"
+    - "febbraio"
+    - "marzo"
+    - "aprile"
+    - "maggio"
+    - "giugno"
+    - "luglio"
+    - "agosto"
+    - "settembre"
+    - "ottobre"
+    - "novembre"
+    - "dicembre"
+  abbr_month_names:
+    - ""
+    - "gen"
+    - "feb"
+    - "mar"
+    - "apr"
+    - "mag"
+    - "giu"
+    - "lug"
+    - "ago"
+    - "set"
+    - "ott"
+    - "nov"
+    - "dic"
+  meridian:
+    - "am"
+    - "pm"
+global:
+  you: "TU"
+  id: "ID"
+  badges:
+    blocked: "Bloccato"
+    onGoing: "In corso"
+  password: Password
+  username: Username
+  disclaimer_beta: Se riscontri problemi di accesso, segnalacelo!
+  unknown: sconosciuto
+  sectionStatus:
+    moreInfo: più info
+  accessibility:
+    reload: "Ricarica"
+    inputLabel: "{{header}}, Intestazione"
+    textField: "{{inputLabel}}, campo di testo"
+    description: Descrizione
+    dateField: Due cifre per il mese, due per l'anno
+    threeDigits: 3 cifre
+    fourDigits: 4 cifre
+    dateFormat: DD MMMM YYYY
+    expanded: Paragrafo espanso
+    collapsed: Paragrafo chiuso
+    active: Stato attivo
+    inactive: Stato non attivo
+    linkHint: Attivando questo elemento verrai reindirizzato sul browser del dispositivo
+    activityIndicator:
+      label: Caricamento in corso
+      hint: Attendi il caricamento del contenuto
+    header:
+      label: Header dell'applicazione
+    contextualHelp:
+      close: Chiudi l'help contestuale
+      open:
+        label: Aiuto contestuale
+        hint: Accedi alle informazioni sul contenuto della schermata corrente
+    chat:
+      description: "Messaggi assistenza IO"
+      unread_singular: "{{messages}} nuovo messaggio"
+      unread_plural: "{{messages}} nuovi messaggi"
+  ioWebSite: https://io.italia.it
+  symbols:
+    question: "?"
+    asterisk: "*"
+  localization:
+    delimiterSeparator: "."
+    decimalSeparator: ","
+  date:
+    invalid: "data non valida"
+    today: "oggi"
+    tomorrow: "domani"
+  dateFormats:
+    shortFormat: "%d/%m/%Y"
+    fullFormatShortMonthLiteral: "%d %b %Y"
+    fullFormatShortMonthLiteralWithTime: "%d %b %Y, %H:%M"
+    fullFormatShortMonthLiteralWithoutTime: "%d %b %Y"
+    fullFormatFullMonthLiteral: "%d %B %Y"
+    fullMonthLiteral: "%B"
+    fullMonthLiteralWithYear: "%B %Y"
+    dayMonthWithTime: "%d %b, %H:%M"
+    dayMonthWithoutTime: "%d %b"
+    dayFullMonth: "%d %B"
+    numericMonthYear: "%m/%Y"
+    shortNumericMonthYear: "%m/%-y"
+    monthYear: "MMMM YYYY"
+    dayAndMonth: "dddd D MMMM"
+    dayMonth: "DD/MM"
+    dayMonthYear: "D MMMM YYYY"
+    weekdayDayMonthYear: "dddd D MMMM YYYY"
+  genericError: C'è un problema temporaneo, riprova.
+  genericAlert: Attenzione!
+  genericWaiting: Attendi qualche secondo...
+  genericThanks: Grazie
+  genericShare: Condividi
+  genericSave: Salva
+  genericRetry: Riprova
+  jserror:
+    title: Si è verificato un errore imprevisto
+    message: Abbiamo segnalato questo al nostro team! Si prega di chiudere l'app e ricominciare!
+  markdown:
+    reference: !include markdown_reference.md
+    decodeError: Il messaggio non può essere decodificato
+  buttons:
+    share: Condividi
+    delete: Elimina
+    cancel: Annulla
+    settings: Impostazioni
+    ok: OK
+    ok2: Ok
+    continue: Continua
+    retry: Riprova
+    back: Indietro
+    confirm: Conferma
+    close: Chiudi
+    exit: Esci
+    saveSelection: Salva la selezione
+    search: Ricerca
+    skip: "Salta"
+    add: Aggiungi
+    edit: "Modifica"
+    info: "Info"
+    activate: "Attiva"
+    deactivate: "Disattiva"
+    show: "Mostra"
+    update: "Aggiorna"
+    findOutMore: "Scopri di più"
+    details: "Dettagli"
+  navigator:
+    messages: messaggi
+    wallet: portafoglio
+    documents: documenti
+    profile: profilo
+    services: servizi
+  actions:
+    retry: Si è verificato un errore, si prega di riprovare
+    search: Testo da cercare
+  remoteStates:
+    loading: In caricamento...
+    wait: Attendi qualche secondo...
+    notAvailable: Non disponibile
+  notImplemented: NON IMPLEMENTATO
+  search:
+    invalidSearchBarText: Inserisci almeno {{minCharacter}} caratteri
+    noResultsFound: "Non ci sono risultati per questa ricerca: prova qualcos'altro."
+    noResultsTitle: Nessun risultato.
+  localNotifications:
+    spidLogin:
+      title: Accedi per iniziare a usare l'app
+      message: IO funziona solo se hai effettuato l'accesso almeno una volta
+  media:
+    email: "Email"
+    pec: "PEC"
+    phone: "Telefono"
+tablet:
+  message: L’interfaccia di IO è ottimizzata per smartphone, ma tutte le funzioni compatibili con il tuo dispositivo sono comunque disponibili.
+rooted:
+  title: Sembra che la sicurezza del tuo dispositivo sia compromessa!
+  bodyiOS: !include jailbroken_body.md
+  bodyAndroid: !include rooted_body.md
+  continueAlert:
+    title: Continua
+    body: Sei sicuro di aver compreso i rischi e voler continuare?
+    confirmText: Si
+    cancelText: Annulla
+  cancelAlert:
+    title: Esci
+    body: Puoi chiudere l'app
+    confirmText: Esci
+locales:
+  it: Italiano
+  en: Inglese
+  de: Tedesco
+clipboard:
+  copyFeedback: Copiato negli appunti
+  copyText: copia
+  copyFeedbackButton: copiato
+betaBanner:
+  title: "app IO"
+  description: Le tue segnalazioni ci aiutano a migliorare giorno dopo giorno.
+connection:
+  status:
+    offline: Offline! Qualcosa non funzionerà.
+exit:
+  pressAgain: Premi ancora per uscire
+errors:
+  loginError: C'è stato un errore in fase di login, ripetere la procedura.
+  profileUpdateError: Si è verificato un errore durante l'aggiornamento del tuo profilo.
+startup:
+  title: Inizializzazione
+  authentication: Utente autenticato
+  sessionInfo: Attributi SPID caricati
+  profileInfo: Profilo utente caricato
+  profileEnabled: Profilo utente abilitato
+  userDeletePendingAlert:
+    title: Eliminazione profilo in corso
+    message: Se hai cambiato idea, puoi annullare la richiesta nella sezione Privacy del tuo Profilo.
+    cta_1: Vai a Privacy
+    cta_2: Ignora
+  contextualHelp:
+    title: Problemi di inizializzazione?
+    body: Se stai riscontrando problemi ad accedere all'app, segnalalo al nostro team e provvederemo a risolvere il problema quanto prima.
+login:
+  welcome:
+    line1: benvenuto nella tua
+    line2: Cittadinanza Digitale
+  expiration_info: Per ragioni di sicurezza, dopo 30 giorni dall'ultimo accesso con SPID o CIE, dovrai inserire nuovamente le credenziali per utilizzare IO.
+inbox:
+  enableButton: Abilita Inbox
+  disableButton: Disabilita Inbox
+  enableCallToActionDescription: Abilita l'inbox per visualizzare i messaggi
+profile:
+  fiscalCode:
+    accessibility:
+      unavailable: Non disponibile
+      preview:
+        label: Anteprima del tuo codice fiscale
+        hint: Attiva per visualizzare il facsimile del tuo codice fiscale
+      front:
+        label: Parte anteriore del documento codice fiscale {{code}} di {{name}} {{family_name}}, sesso {{gender}}, nato a {{placeOfBirth}},{{province}} il {{birthDate}}
+        hint: Attiva per passare alla visualizzazione a schermo intero
+      rear:
+        label: Codice a barre del tuo documento
+        hint: Attiva per passare alla visualizzazione a schermo intero
+    title: I tuoi documenti personali
+    fiscalCode: Codice fiscale
+    help: !include profile/profile_fiscal_code.md
+    content: Il fac-simile del codice fiscale non sostituisce il documento fisico ma ne permette la lettura dei dati o del codice a barre sul retro
+    facSimile: FAC-SIMILE
+  sections:
+    spid: PROFILO SPID
+  unknown: SCONOSCIUTO
+  logout:
+    menulabel: Esci da IO
+    alertTitle: Vuoi davvero uscire?
+    alertMessage: Al prossimo accesso sarà necessario autenticarti con CIE o SPID.
+    loading: Logout in corso...
+    exit: Esci
+    cta:
+      header: Come vuoi uscire dall'app?
+      keepData:
+        title: Esci ma conserva i miei dati
+        description: "Per poter usare IO dovrai nuovamente accedere con la tua identità digitale ma tutte le impostazioni saranno disponibili quando lanci l'App. Questa funzione non comporta una cancellazione dei dati personali che ti riguardano da parte dell'App."
+      resetData:
+        title: Esci e resetta l'applicazione
+        description: "Le impostazioni e i dati salvati sul tuo dispositivo saranno resettati. Questa funzione non comporta una cancellazione dei dati personali che ti riguardano da parte dell'App."
+  errors:
+    load: Errore nel caricamento del profilo
+    upsert: Errore nella creazione o nell'aggiornamento del profilo
+  alerts:
+    emailNotValidated:
+      title: Email non verificata
+      subtitle: È necessario verificare la mail per poter procedere con l'operazione. Per farlo, vai nella sezione profilo e scegli preferenze.
+  main:
+    title: Profilo
+    logout: Logout/Esci
+    forgetCurrentSession: Dimentica sessione corrente
+    contextualHelpTitle: Cosa puoi fare nel tuo Profilo
+    contextualHelpContent: !include profile/profile_account_main.md
+    developerModeOn: Modalità sviluppatore attivata
+    cache:
+      alert: Vuoi davvero eliminare la cache?
+      clear: Elimina cache
+      cleared: La cache è stata eliminata.
+    data:
+      title: I tuoi dati
+      description: Rivedi le tue informazioni
+    preferences:
+      title: Preferenze
+      description: Gestisci le preferenze dell'applicazione
+    security:
+      title: Sicurezza
+      description: Gestisci accesso biometrico e codice di sblocco
+    privacy:
+      title: Privacy e Condizioni d'uso
+      description: I tuoi diritti e obblighi nell’uso di IO
+      subtitle: Qui trovi informazioni sui tuoi diritti e obblighi e sul trattamento dei tuoi dati personali.
+      loading: Attendi qualche secondo, stiamo verificando il tuo profilo...
+      removeAccount:
+        title: Elimina il tuo account
+        description: Cancella in modo permanente il tuo account e i tuoi dati personali
+        error: Si è verificato un errore nella richiesta di rimozione dell'account, riprova.
+        alert:
+          activeBonusTitle: Bonus attivi
+          activeBonusDescription: Sembra che tu abbia dei Bonus attivi. Vogliamo informarti che la cancellazione del tuo profilo non equivale alla cancellazione dei bonus o alla disiscrizione da eventuali iniziative. Per gestire i tuoi bonus vai alla sezione Portafoglio, altrimenti scegli Continua
+          oldRequest: Hai già richiesto la cancellazione del tuo account.
+          oldRequestSubtitle: "Stiamo elaborando la tua richiesta.\n Se hai cambiato idea o hai richiesto l’eliminazione per sbaglio, clicca su “Annulla eliminazione” qui sotto."
+          cta:
+            manageBonus: Gestisci bonus
+            continue: Continua
+            return: Indietro
+            cancel: Annulla l'eliminazione
+        info:
+          body: "Puoi esercitare il tuo diritto alla cancellazione del tuo profilo IO in qualsiasi momento\n\nTi informiamo che l'eliminazione del tuo account è definitiva e avverrà entro 30 giorni dalla richiesta.\n\nSe decidi di proseguire non potrai più recuperare i messaggi o le preferenze che hai impostato nell'app.\nTi segnaliamo inoltre che eventuali bonus o sconti ottenuti tramite l'app IO non saranno più accessibili.\n\nPotrai iscriverti nuovamente all'App IO in ogni momento effettuando una nuova procedura di registrazione con SPID o CIE."
+          cta: Continua
+        details:
+          body: "Ci piacerebbe sapere perché stai eliminando il tuo account, per poter migliorare in futuro. Puoi anche proseguire direttamente con l’eliminazione cliccando sul pulsante qui sotto."
+          question: Qual è il motivo della cancellazione?
+          answer_1: Non ritengo più utile IO
+          answer_2: Non mi sento al sicuro su IO
+          answer_3: Non ho mai usato l'app
+          answer_4: Nessuno dei precedenti
+          labelOpenAnswer: Dicci di più
+          cta: Elimina Account
+        success:
+          title: Stiamo processando la tua richiesta.
+          body: "La tua richiesta è stata presa in carico e procederemo alla cancellazione del tuo account entro 30 giorni.\n\nPotrai iscriverti nuovamente all’App IO in ogni momento effettuando una nuova procedura di registrazione con SPID o CIE.\n\nPremendo 'Esci', la tua sessione verrà terminata.\n\nGrazie per aver utilizzato IO"
+          cta: Esci
+      exportData:
+        cta: Richiedi copia dei tuoi dati
+        title: Accedi ai tuoi dati
+        description: Ricevi una copia dei dati associati al tuo profilo IO
+        info:
+          title: Puoi scaricare le informazioni relative al tuo profilo IO in qualsiasi momento.
+          body: !include profile/profile_download_data.md
+        alert:
+          requestTitle: Vuoi davvero esportare tutti i tuoi dati?
+          oldRequest: Abbiamo già preso in carico una richiesta di esportazione dei dati.
+          confirmSubtitle: Al termine dell'elaborazione, riceverai una email con tutte le informazioni associate al tuo profilo.
+        error: Si è verificato un errore nella richiesta di esportazione dei dati, riprova.
+      privacyPolicy:
+        title: Informativa e Condizioni d'uso
+        description: Consulta l’Informativa Privacy e i Termini e condizioni d’uso di IO
+        header: Informativa sul trattamento dei dati personali degli utenti dell'app IO
+        updated: Abbiamo aggiornato la nostra Informativa e i Termini e condizioni d'uso
+        infobox: È necessario prendere visione e accettare l'Informativa ed i Termini e condizioni d'uso
+        contextualHelpTitlePolicy: Informativa sul trattamento dei dati personali e condizioni d'uso del servizio
+        contextualHelpContentPolicy: !include profile/profile_privacy_policy.md
+        contextualHelpTitle: Le tue impostazioni di privacy
+        contextualHelpContent: !include profile/profile_privacy_main.md
+      shareData:
+        title: "Privacy"
+        listItem:
+          title: "Condividi i dati di utilizzo"
+          description: "Aiuta il team di IO a monitorare il funzionamento dell’app"
+        screen:
+          title: "I tuoi dati di utilizzo"
+          description: "Aiuta il team di IO a monitorare il funzionamento dell’app e fornirti l’assistenza adeguata in caso di problemi."
+          why:
+            description:
+              one: "IO raccoglie solo le informazioni "
+              two: "necessarie "
+              three: "per il funzionamento dei servizi offerti"
+            cta: "Perché?"
+          security:
+            description:
+              one: "Adottiamo misure di sicurezza per proteggere i tuoi dati e, ove possibile, li "
+              two: "pseudonimizziamo"
+            cta: "Scopri di più"
+          gdpr:
+            description:
+              one: "Il team di IO collabora con fornitori in conformità con le "
+              two: "norme previste dal GDPR"
+            cta: "Vedi elenco fornitori"
+          additionalInformation:
+            description: "Per maggiori informazioni, leggi "
+            cta: "l’Informativa Privacy e i Termini e Condizioni d’uso"
+          profileSettings: "Potrai modificare questa scelta in ogni momento in Profilo > Preferenze"
+          cta:
+            shareData: "Condividi dati"
+            dontShareData: "Non condividere dati"
+            dontShare: "Non condividere"
+          confirmToast: "Preferenze aggiornate!"
+        alert:
+          title: "Non stai dando il permesso a IO di raccogliere i tuoi dati di utilizzo"
+          body: "Se confermi quest’opzione, il team di IO non sarà sempre in grado di fornirti tutta l’assistenza necessaria in caso di problemi."
+        whyBottomSheet:
+          title: "Per quali finalità raccogliamo informazioni?"
+          body: "**IO non raccoglie dati per finalità di marketing.**  \nUtilizziamo strumenti che ci permettono di registrare dati relativi al tuo utilizzo dell’app, per fornirti un servizio migliore e assisterti in caso di problemi."
+        securityBottomSheet:
+          title: "Cos’è la pseudonimizzazione?"
+          body: "È il trattamento dei dati personali in modo tale che i dati personali non possano più essere attribuiti a un interessato specifico senza l'utilizzo di informazioni aggiuntive, a condizione che tali informazioni aggiuntive siano conservate separatamente e soggette a misure tecniche e organizzative intese a garantire che tali dati personali non siano attribuiti a una persona fisica identificata o identificabile."
+    appInfo:
+      title: Informazioni su IO
+      description: Per saperne di più sull'app IO
+      contextualHelpContent: !include profile/profile_appinfo_main.md
+    developersSectionHeader: Sviluppatori
+    experimentalFeatures:
+      confirmTitle: Funzionalità sperimentali
+      confirmMessage: Le funzionalità sperimentali potrebbero rendere l'applicazione instabile. Vuoi davvero abilitarle?
+      bannerMessage: Stai usando funzioni sperimentali che potrebbero essere incomplete o instabili.
+    pagoPaEnvironment:
+      pagoPaEnv: Ambiente pagoPA di Test
+      pagoPAEnvAlert: La modifica richiede il riavvio dell'app
+      alertConfirmTitle: Vuoi usare l'ambiente di test pagoPA?
+      alertConfirmMessage: Se abiliti l'ambiente di test pagoPA non vedrai più lo storico delle tue transazioni e i tuoi metodi di pagamento salvati, e potrai usare solo metodi di pagamento espressamente creati per questo scopo. Se non ti è chiaro cosa questo significa non abilitare questa funzione.
+      alertMessage: È necessario il riavvio dell'applicazione affinché le modifiche abbiano effetto.
+    appVersion: Versione App
+    backendVersion: Versione Backend
+    debugMode: Modalità debug
+    showroom: UI Showroom
+  data:
+    title: I tuoi dati
+    subtitle: Rivedi le tue informazioni.
+    list:
+      email: Indirizzo email
+      need_validate: Da validare
+    email:
+      contextualHelpTitle: Come gestire la tua mail
+      contextualHelpContent: !include profile/profile_data_email_address.md
+  security:
+    title: Sicurezza
+    subtitle: Gestisci le modalità di autenticazione in app.
+    list:       
+      biometric_recognition:
+        title: Riconoscimento biometrico
+        subtitle: Usa la tua impronta o il tuo volto
+        needed_to_disable: Riconoscimento richiesto per disabilitare
+        popup:
+          title: Consenti l’accesso al sensore biometrico
+          description: Tocca ‘Impostazioni’ e consenti ad IO di utilizzare il sensore biometrico del tuo dispositivo.
+  preferences:
+    title: Preferenze
+    subtitle: Queste impostazioni ti permettono di personalizzare l’esperienza di app IO. 
+    contextualHelpTitle: Le tue preferenze
+    contextualHelpContent: !include profile/profile_preferences_home.md
+    list:
+      spid_email: Email SPID
+      mobile_phone: Numero di telefono SPID
+      wip: In elaborazione
+      language: Lingua
+      digitalDomicile: Domicilio digitale
+      service_contact: Gestione servizi
+      preferred_calendar:
+        title: Calendario preferito
+        not_selected: Non Selezionato
+      preferred_language:
+        title: Lingua preferita
+        subtitle: In quale lingua vuoi usare l'applicazione?
+        alert:
+          title: Vuoi cambiare la lingua in
+          subtitle: Dovrai riavviare l'applicazione per applicare il cambiamento
+        not_selected: Non selezionato
+    empty:
+      default: Nessuna preferenza impostata
+    unavailable:
+      title: Questa preferenza è impostata nel tuo profilo SPID
+    language:
+      contextualHelpTitle: Come gestire la lingua su IO
+      contextualHelpContent: !include profile/profile_preferences_language.md
+    spid_email:
+      contextualHelpTitle: Questa preferenza è impostata nel tuo profilo SPID
+      contextualHelpContent: !include profile/profile_preferences_spid_email.md
+    email:
+      forward:
+        contextualHelpTitle: Come gestire l'inoltro dei messaggi
+        contextualHelpContent: !include profile/profile_preferences_email_forward.md
+    calendar:
+      contextualHelpTitle: Cos'è il tuo calendario preferito
+      contextualHelpContent: !include profile/profile_preferences_calendar.md
+      local_calendar: Calendario locale
+      birthday_calendar: Compleanni
+userMetadata:
+  errors:
+    upsertVersion: Impossibile creare o aggiornare i metadata utente con questa versione
+navigation:
+  messages: Messaggi
+  profile: Profilo
+  accessibility: "Sezione {{section}}, pannello, {{order}} di 4"
+  selected: È selezionato
+cie:
+  title: Appoggia la carta
+  layCardMessageHeader: Appoggia per qualche secondo la tua carta di identità elettronica al retro del tuo telefono.
+  layCardMessageFooter: Se non sai con precisione dove sia l'antenna NFC sposta la carta in punti diversi e attendi qualche secondo finché non senti un suono.
+  booking_url: https://www.cartaidentita.interno.gov.it/prenotazione-della-richiesta/
+spid:
+  login: ACCEDI
+  loginButton: ENTRA CON
+  selectIdp: Per procedere all'accesso, seleziona il gestore della tua identità SPID
+  selectDemoIdp:
+    Se non possiedi ancora una tua identità SPID, naviga l'app in modalità
+    demo
+  loginErrorAlert:
+    title: Errore login
+    message: Mi spiace, si è verificato un errore durante l'accesso, potresti riprovare?
+  subscription:
+    line1:
+      SPID è l'identità digitale per accedere ai servizi online della Pubblica
+      Amministrazione Italiana.
+    line2: Inserisci la tua email per attivarla.
+authentication:
+  landing:
+    accessibility:
+      carousel:
+        label: Presentazione di IO
+        hint: Carosello contenente una guida introduttiva alle funzionalità di IO. Seleziona per consultarne il contenuto
+    session_expired:
+      title: La tua sessione è scaduta
+      body: Per ragioni di sicurezza, dopo 30 giorni dall'ultimo accesso con SPID o CIE, ti chiediamo di inserire nuovamente le credenziali per utilizzare IO.
+    cie_unsupported:
+      title: Accesso con CIE non disponibile
+      body: !include cie/cieNotSupported.md
+      android_desc: !include cie/cieNotSupported_android.md
+      os_version_unsupported: una versione del sistema operativo compatibile con l'autenticazione tramite CIE (Android 6.0 o superiore)
+      nfc_incompatible: una antenna NFC compatibile con l'autenticazione tramite CIE
+    contentTitleCie: Non hai SPID o la CIE?
+    cie_information_request: !include cie.md
+    spid_or_cie: Per utilizzare IO devi dotarti di uno di questi strumenti digitali, che certificano in maniera certa la tua identità.
+    request_cie: Richiedi CIE
+    request_spid: Ottieni SPID
+    contextualHelpTitle: Come accedere all'app IO
+    contextualHelpContent: !include authentication/authentication_landing.md
+    loginSpid: Entra con SPID
+    loginCie: Entra con CIE
+    loginSpidCie: Accedi con SPID o CIE
+    infoSpidCie: Introduzione a SPID e CIE
+    loginSpidCieContent: Da oggi, oltre a SPID, puoi usare la tua Carta d'Identità Elettronica per accedere
+    nospid: Non hai SPID? Scopri di più
+    nospid-nocie: Non hai SPID o CIE? Scopri di più
+    card1-title: Tutti i messaggi in un solo posto
+    card1-content:
+      Visualizza tutte le comunicazioni in arrivo dalle Amministrazioni
+      Pubbliche
+    card2-title: Usa i tuoi metodi di pagamento preferiti
+    card2-content:
+      Puoi pagare un tributo o una multa con il tuo conto corrente e
+      le tue carte
+    card3-title: Paga velocemente un avviso cartaceo
+    card3-content:
+      Tramite la scansione del QR code puoi velocemente pagare anche
+      un avviso cartaceo
+    card4-title: Potrai utilizzare l'app solo tramite SPID
+    card4-content:
+      L'accesso è consentito solo tramite SPID (Sistema Pubblico di Identità
+      Digitale) per garantire la tua sicurezza online
+    card5-title: Benvenuto nella prima versione pubblica di IO!
+    card5-content: In alto a destra trovi l'icona '?' per aprire
+      una chat con il team di IO se qualcosa non funziona come dovrebbe.
+    expiredCardTitle: Carta scaduta o non più valida
+    expiredCardHeaderTitle: Entra con CIE
+    expiredCardContent: "La carta utilizzata non è più valida oppure è scaduta.\nSe vuoi autenticarti ed accedere ad IO devi usare SPID."
+    expiredCardHelp: Come rinnovare la propria Carta di Identità Elettronica?
+  cie:
+    genericTitle: Entra con CIE
+    cie: CIE
+    noDataTitle: Per usare IO è necessario autorizzare l'invio dei dati
+    authToSendData: !include cie/auth_to_send_data.md
+    nfc:
+      retry: Riprova
+      noNfcConnectionTitle: Hai appoggiato la carta?
+      noNfcConnectionContent: !include cie/noNfcConnection.md
+      enableNfcTitle: Attiva NFC
+      enableNfcHeader: Verifica NFC
+      enableNfcContent: Per permettere all'app di verificare la tua Carta di Identità Elettronica devi prima attivare la funzione NFC del tuo dispositivo. Torna qui quando avrai finito!
+    pin:
+      accessibility:
+        placeholderLabel: PIN della Carta di identità elettronica
+        label: Campo di inserimento per pin della Carta di Identità elettronica
+        hint: Inserire in questo campo il pin a 8 cifre della propria Carta di Identità Elettronica
+      pinCardTitle: Inserisci il PIN della tua carta di identità
+      pinCardHeader: Entra con CIE
+      pinCardContent: Il codice PIN è composto da 8 cifre. Quattro cifre che ti sono state consegnate all'anagrafe e altre 4 cifre ti sono state spedite a casa, insieme alla carta. Mettile insieme, in quest'ordine, e inseriscile qui per favore.
+      incorrectCiePinTitle: PIN errato, hai ancora {{remainingCount}} tentativi
+      incorrectCiePinHeaderTitle: PIN errato
+      incorrectCiePinContent1: Per la tua sicurezza puoi provare ad inserire il PIN della carta non più di tre volte. Poi dovrai sbloccare la carta inserendo il PUK.
+      incorrectCiePinContent2: Ricorda che il codice PIN della tua Carta d'Identità Elettronica (CIE) è composto da 8 cifre. Quattro cifre che ti sono state consegnate all'anagrafe e altre quattro cifre che ti sono state spedite a casa, insieme alla carta.
+      alert: Vuoi davvero tornare indietro?
+      subtitleHelp: Il PIN è un codice di 8 cifre.
+      subtitleCTA: Dove lo trovo?
+      bottomSheetCTA: Hai dimenticato il PIN?
+      contextualHelpTitle: Dove trovo i codici PIN e PUK?
+      contextualHelpBody: !include help/ciePinHelpBody.md
+      contextualHelpCTA: Hai dimenticato il PIN/PUK?
+    pinTempLocked:
+      header: Entra con CIE
+      title: Carta temporaneamente bloccata
+      content: !include cie/temporary_blocked_cie.md
+      button: "Scarica / Apri CieID"
+    card:
+      title: Appoggia la carta
+      titleiOS: Riprova di nuovo
+      headerTitle: Entra con CIE
+      layCardMessageHeader: Appoggia per qualche secondo la tua carta di identità elettronica al retro del tuo telefono.
+      layCardMessageHeaderiOS: Tieni la tua carta d’identità elettronica sul retro dell’iPhone, nella parte in alto.
+      layCardMessageFooter: Se non sai con precisione dove sia l'antenna NFC sposta la carta in punti diversi e attendi qualche secondo finché non senti una vibrazione.
+      cieCardValid: Ok, la tua carta CIE è valida! Puoi rimuoverla.
+      readerCardTitle: Tieni ferma la carta per qualche secondo
+      readerCardHeader: Stiamo leggendo i dati della tua carta d'identità e verificandone la sua validità.
+      readerCardFooter: Tieni ferma la carta in questa posizione ancora per qualche secondo
+      error:
+        readerCardLostTitle: Avvicina nuovamente la carta
+        readerCardLostTitleiOS: Hai rimosso la carta troppo presto
+        readerCardLostHeader: Non abbiamo ancora terminato le operazioni di lettura dei dati della carta.
+        readerCardLostHeaderiOS: Non abbiamo ancora terminato le operazioni di lettura dei dati della carta. Riprova di nuovo.
+        onTagLost: Hai rimosso la carta troppo presto. Tieni la carta appoggiata sul retro dello smartphone finché nello schermo non comparirà una conferma. Basterà qualche secondo.
+        tryAgain: Si è verificato un errore durante la verifica della tua carta. Probabilmente è un errore momentaneo, riprova per piacere!
+        generic: Si è verificato un errore durante la verifica della tua carta. Se non riesci a risolvere il problema, segnalacelo con l’icona '?' in alto a destra. Grazie!
+        unknownCardTitle: Carta sconosciuta
+        unknownCardContent: La carta utilizzata non sembra essere una Carta di Identità Elettronica (CIE).
+        unknownCardHelpLink: Che cos'è la Carta di Identità Elettronica?
+  spid: SPID
+  spid_information_request:
+    headerTitle: Non hai SPID?
+    contentTitle: Cos'è SPID?
+    paragraph1:
+      SPID, il Sistema Pubblico di Identità Digitale, ti permette di accedere
+      a tutti i servizi della Pubblica Amministrazione con un'unica Identità Digitale
+      (username e password).
+    paragraph2:
+      Se ti va, lasciaci il tuo indirizzo email per ricevere promemoria
+      e aggiornamenti su questa app
+    paragraph3: Proseguendo dichiari di accettare le
+    tosLinkText: regole sul trattamento dei dati personali
+    continue: Continua
+  spid_information:
+    spid: !include spid.md
+    headerTitle: Non hai SPID?
+    contentTitle: Cos'è SPID?
+    moreLinkText: Per saperne di più
+    subtitle: SPID è sicuro
+    paragraph1:
+      SPID, il Sistema Pubblico di Identità Digitale, ti permette di accedere
+      a tutti i servizi della Pubblica Amministrazione con un'unica Identità Digitale
+      (username e password).
+    paragraph2-part1:
+      "SPID ti permette di fare online cose che prima potevi fare
+      solo di persona: per registrarti a SPID dovrai quindi "
+    paragraph2-bold: certificare la tua identità
+    paragraph2-part2:
+      "completando il riconoscimento presso un Identity Provider.
+      Ecco cosa dovrai fare:"
+    point1-value: "1"
+    point1-content: "Scegli il tuo \nIdentity Provider"
+    point2-value: "2"
+    point2-content: Inserisci i tuoi dati anagrafici ed il tuo cellulare
+    point3-value: "3"
+    point3-content: Carica una copia dei tuoi documenti d'identità
+    point4-value: "4"
+    point4-content: "Completa il \nriconoscimento"
+    knowMore: Puoi saperne di più su spid.gov.it
+  idp_selection:
+    headerTitle: Home
+    contentTitle: Scegli il tuo Identity Provider
+    contextualHelpTitle: Chi è il tuo Identity Provider
+    contextualHelpContent: !include authentication/authentication_idp_selection.md
+  idp_login:
+    headerTitle: Accedi
+    contextualHelpTitle: Qual è la tua password
+    contextualHelpContent: !include authentication/authentication_idp_login.md
+    contextualHelpTitle2: Hai bisogno di aiuto per il login SPID?
+    openTicket: Apri una segnalazione
+    recoverDescription: Se hai dimenticato la tua password, ti consigliamo di procedere cliccando sul bottone qui di seguito.
+    dualRecoverDescription: Se hai dimenticato le tue credenziali, ti consigliamo di procedere cliccando sui bottoni qui di seguito.
+    recoverUsername: Recupera il nome utente
+    recoverPassword: Recupera la password
+  errors:
+    notoken: La sessione non è pronta o non è valida
+    logout: Errore nel logout
+    network:
+      title: Problema di accesso
+      body:
+        L'identity provider che hai scelto non è disponibile in questo momento, puoi riprovare più tardi.
+        Se disponi di un altra identità SPID scegli un provider alternativo.
+        Puoi segnalarci il problema con l’icona '?' in alto a destra.
+    login:
+      title: Errore nel login
+      body: Si è verificato un errore durante il login, si prega di riprovare!
+    spid:
+      unknown: Errore sconosciuto
+      error_19: "Hai inserito troppe volte un nome utente o una password non corretti: riprova fra qualche minuto o contatta il tuo fornitore di identità SPID per cambiare le tue credenziali."
+      error_20: "Per motivi di sicurezza IO richiede un login con un secondo fattore di autenticazione: contatta il tuo fornitore di identità SPID per capire come si usa."
+      error_21: "È passato troppo tempo da quando hai iniziato l'accesso: per piacere riparti dall'inizio."
+      error_22: "Per usare IO è necessario consentire l'accesso ad alcuni dei tuoi dati: accedi nuovamente e dai il tuo consenso al passaggio di dati."
+      error_23: "La tua identità SPID risulta sospesa o revocata. Per riattivare il tuo account, contatta il tuo fornitore di identità SPID."
+      error_25: "Hai annullato l'operazione di login: puoi riprovare quando vuoi."
+  expiredSessionBanner:
+    title: Avviso di sicurezza
+    message: Per mantenere al sicuro i tuoi dati privati, accedi nuovamente con le tue credenziali SPID, grazie!
+email:
+  read:
+    title: Il tuo indirizzo email
+    info: Questo è l'indirizzo email che hai associato all'account SPID. Puoi
+      usare in IO un indirizzo email diverso, se preferisci. Per rendere operativo
+      il nuovo indirizzo, dovrai validarlo cliccando sul link che riceverai nella tua
+      casella di posta elettronica.
+    details:
+      Puoi modificare questo indirizzo, che dovrai validare cliccando su un
+      link che spediremo alla tua casella di posta. Nel frattempo, le funzioni di IO che
+      dipendono dalla email (pagamenti, inoltro messaggi, etc.) saranno disattivate.
+    alert: "Attenzione: il tuo account pagoPA è associato alla tua email,
+      quindi se la modifichi non troverai più elencati
+      nell'applicazione le tue transazioni ed i tuoi metodi di pagamento."
+    help: Il tuo profilo SPID trasferisce ad IO il tuo indirizzo email. Se è un
+      indirizzo sbagliato o che non utilizzi più, puoi modificarlo direttamente dal
+      tuo provider di servizi SPID.
+  insert:
+    header: Attivazione
+    title: Inserisci la tua email
+    subtitle: Alcune funzioni di IO hanno bisogno della tua email
+    label: Indirizzo email personale
+    alert: Stai già usando questa email
+    help:
+      title: Email
+      content: !include email_insert_help.md
+  edit:
+    title: Modifica la tua email
+    subtitle: L'email che avevi inserito in precedenza è
+    validated: L'email che avevi inserito e validato in precedenza è
+    label: Nuovo indirizzo email personale
+    cta: Modifica email
+    upsert_ok: La richiesta di modifica email è stata inviata correttamente
+    upsert_ko: Errore nella richiesta di modifica email, riprovare
+  validate:
+    title: Ricorda di validare il tuo indirizzo email!
+    header: Validazione email
+    content1:
+      "Ti abbiamo inviato una mail a <b>{{email}}</b> con un link per validare la mail:
+      clicca semplicemente su quel link.<br/>Finché non validerai il tuo indirizzo email alcune funzioni dell'app (pagamenti,
+      inoltro dei messaggi via mail, ecc.) non potranno essere utilizzate, ma potrai
+      usare comunque altre funzioni (es. servizi, messaggi, ecc.)."
+    content2:
+      "Per usare alcune funzioni di IO devi validare il tuo indirizzo email.<br/>Ti abbiamo inviato una email a <b>{{email}}</b>:
+      apri il tuo client di posta e clicca semplicemente sul link."
+    cta: Invia una nuova email di validazione
+    sent: Email inviata
+    send_validation_ok: Email di validazione inviata
+    send_validation_ko: Errore nell'invio della email di validazione. Riprova.
+    help: Il tuo profilo SPID trasferisce ad IO il tuo indirizzo email. Se è un
+      indirizzo sbagliato o che non utilizzi più, puoi modificarlo direttamente dal
+      tuo provider di servizi SPID.
+    validation_ok: La mail è stata validata. Ora puoi accedere a tutte le funzionalità di IO.
+    validated: Email validata!
+    validated_ok: Grazie, ora puoi usare le funzionalità legate ai pagamenti, all’inoltro dei messaggi, etc.
+onboarding:
+  contextualHelpTitle: Come funziona il riconoscimento biometrico
+  contextualHelpContent: !include onboarding/onboarding_fingerprint.md
+  tos:
+    headerTitle: Attivazione
+    accept: Accetta
+    error: Errore nel caricamento
+    alert:
+      title: Attenzione
+      message: Devi leggere tutto il contenuto dei Termini di servizio e Privacy policy per continuare.
+  unlockCode:
+    headerTitle: Attivazione
+    contentTitle: Scegli un codice di sblocco
+    contentSubtitle: inserisci un codice di 6 cifre
+    contentTitleConfirm: Ripeti il codice di sblocco
+    contentTitleConfirmSubtitle: inserisci di nuovo il codice di 6 cifre
+    pinInfo: Questo codice ti verrà richiesto ogni volta che aprirai l’app e quando dovrai visualizzare dati sensibili o compiere operazioni dispositive. Potrai cambiarlo in ogni momento dopo l'autenticazione.
+    reset: Modifica il codice
+    confirmInvalid: I due codici non coincidono
+    contextualHelpTitle: Qual è il tuo codice di sblocco
+    contextualHelpContent: !include onboarding/onboarding_pin.md
+  alert:
+    title: Vuoi davvero uscire da IO?
+    description: Dovrai fare nuovamente il login per continuare ad usare l'app
+  fingerprint:
+    headerTitle: Attivazione
+    title: Autenticazione biometrica
+    body:
+      enrolledText: !include onboarding/tos_fingerprint_enrolled.md
+      enrolledType:
+        fingerprint: la tua impronta digitale
+        faceId: Face ID
+        touchId: Touch ID
+      notEnrolledText: !include onboarding/tos_fingerprint_not_enrolled.md
+forms:
+  validators:
+    required: Valore richiesto
+    email: Indirizzo email non valido
+  spidInformation:
+    fields:
+      email:
+        placeholder: indirizzo email
+lipsum:
+  medium:
+    Etiam habebis sem dicantur magna mollis euismod. Contra legem facit qui
+    id facit quod lex prohibet. Integer legentibus erat a ante historiarum dapibus.
+    Excepteur sint obcaecat cupiditat non proident culpa. Petierunt uti sibi concilium
+    totius Galliae in diem certam indicere. Magna pars studiorum, prodita quaerimus.
+    Non equidem invideo, miror magis posuere velit aliquet. Inmensae subtilitatis,
+    obscuris et malesuada fames.
+datetimes:
+  yesterday: ieri
+  todayAt: oggi, alle
+  notValid: Data non valida.
+payment:
+  abortWebView:
+    title: Vuoi interrompere il pagamento in corso?
+    confirm: Annulla il pagamento
+    cancel: Continua con il pagamento
+    success: Il pagamento è stato annullato correttamente
+  errorDetails: Dettagli
+  currentPsp: Il pagamento sarà gestito da
+  noPsp: Non hai ancora selezionato un PSP
+  changePsp: Modifica gestore
+  IUV: IUV
+  IUV_extended: Identificativo Univoco di Versamento
+  notice: Avviso
+  noticeCode: Codice Avviso
+  recipientFiscalCode: Codice fiscale beneficiario
+  paidConfirm: Hai pagato {{amount}}
+  details:
+    state:
+      successful: Concluso
+      incomplete: Non terminato
+      failed: Fallito
+    info:
+      buttons:
+        copy: copia
+        help: Contatta l'assistenza
+      title: Dettaglio pagamento
+      enteCreditore: Ente creditore
+      causaleVersamento: Causale
+      dateAndTime: Data e ora
+      outcomeCode: Codice esito
+      onlyDate: Data
+      paymentAmount: Importo pagamento
+      transactionCosts: Costi di transazione
+      transactionCode: Codice identificativo della transazione
+      help: Se hai riscontrato un problema con questo pagamento, scrivici per maggiori informazioni e dettagli
+    list:
+      empty:
+        title: Nessun tentativo di pagamento
+        description: IO non ha memorizzato tentativi di pagamento. Qui troverai i tentativi di pagamento più recenti
+      title: Tentativi di pagamento
+      iuv: Codice IUV {{iuv}}
+wallet:
+  wallet: Portafoglio
+  refreshWallet: Aggiorna il Portafoglio
+  favourite:
+    setFavoriteTitle: Usa come preferito
+    setFavoriteSubtitle: Quando paghi in app, IO mostra in automatico questo metodo di pagamento
+  incoming:
+    title: "In arrivo"
+    message: "Una prossima versione di IO renderà disponibile anche questo metodo di pagamento"
+  featured: In evidenza
+  creditCard:
+    onboardingAttempts:
+      title: Tentativi aggiunta metodo di pagamento
+      emptyTitle: Nessun tentativo di aggiunta di un metodo di pagamento
+      emptyBody: IO non ha memorizzato tentativi di aggiunta di un metodo di pagamento. Qui troverai i tentativi più recenti
+      lastAttemptsTitle: Ultimi tentativi
+      success: Aggiunto
+      failure: Fallito
+      dateTime: Data e ora
+      detailTitle: Dettaglio
+      help: Se hai riscontrato un problema durante l'inserimento di questo metodo di pagamento, scrivi per maggiori informazioni e dettagli
+    details:
+      header: Dettaglio Metodo
+  searchAbi:
+    header: Aggiungi {{methodName}}
+    bancomat:
+      title: Ricerca delle tue carte PagoBANCOMAT
+      description:
+        text1: "IO cercherà tutte le carte PagoBANCOMAT associate a te.\nProseguendo accetti l'"
+        text2: informativa sul trattamento dei dati personali.
+        text3: "Se preferisci, puoi scegliere la banca su cui hai una carta PagoBANCOMAT attiva, "
+        text4: cercando fra quelle disponibili
+    bpay:
+      title: Ricerca dei tuoi account BANCOMAT Pay
+      description:
+        text1: "IO cercherà tutti gli account BANCOMAT Pay associati a te.\nProseguendo accetti l'"
+        text2: informativa sul trattamento dei dati personali.
+        text3: "Se preferisci, puoi scegliere la banca su cui hai un account BANCOMAT Pay attivo, "
+        text4: cercando fra quelle disponibili
+    cobadge:
+      title: Ricerca delle tue carte con circuito internazionale
+      description:
+        text1: "IO cercherà tutte le carte Maestro, Mastercard, V-Pay e Visa associate a te presso "
+        text2: le banche aderenti al servizio
+        text3: "Per maggiori informazioni consulta l'"
+        text4: informativa sul trattamento dei dati personali.
+    bankName: Denominazione della banca
+    noName: Nome non disponibile
+    loading: Carico la lista delle banche...
+  accessibility:
+    addElement: Aggiungi elemento al portafoglio
+    cardsPreview: Anteprima dei metodi di pagamento. Attiva per accedere alla lista dei tuoi metodi
+    transactionListItem:
+      payment:
+        read: Transazione
+        unread: Transazione da leggere
+      label: "{{payment}} verso {{merchant}} di {{amount}} euro, del {{datetime}} alle ore {{hours}} con causale {{reason}}. Attiva per il dettaglio completo"
+  onboarding:
+    bancomat:
+      headerTitle: "Aggiungi carta PagoBANCOMAT"
+      koTimeout:
+        title: "Non siamo riusciti a recuperare le tue carte PagoBancomat"
+        body: "Riprova per favore"
+      koNotFound:
+        title: "Spiacenti, non abbiamo trovato nessuna carta"
+        body: "Non risultano carte PagoBANCOMAT a te intestate: contatta la tua banca per maggiori informazioni."
+      koNotFoundSingleBank:
+        title: "Spiacenti, non abbiamo trovato nessuna carta su questa banca"
+        body: "Non risultano carte PagoBANCOMAT a te intestate.\nSe lo desideri, IO può effettuare una ricerca tra tutte le banche."
+        continue: "Continua"
+      koServicesError:
+        title: "Non è stato possibile recuperare le carte: seleziona la tua banca"
+        body: "Indica la banca che ha emesso la tua carta per vedere le lista delle carte PagoBANCOMAT a te intestate."
+        chooseTheBank: "Seleziona banca"
+      loadingSearch:
+        title: "Stiamo recuperando la lista delle tue carte\n\nAttendi qualche secondo..."
+      add:
+        title: "Aggiungi PagoBancomat"
+        label: "Carta PagoBancomat {{current}} di {{length}}"
+        screenTitle: "Vuoi aggiungere questa carta?"
+        bodySingular: "Abbiamo trovato 1 carta a te intestata. Procedi con l'aggiunta di questa carta cliccando Aggiungi o clicca Salta per annullare l'operazione."
+        bodyPlural: "Abbiamo trovato {{number}} carte a te intestate. Procedi con l'aggiunta di questa carta cliccando Aggiungi o clicca Salta per passare alla carta successiva."
+        loading: "Stiamo aggiungendo la tua carta PagoBANCOMAT\n\nAttendi qualche secondo..."
+        warning: "Se non trovi tutte le carte che possiedi, prova ad aggiungere quella mancante in un secondo momento, selezionando la Banca presso cui hai il tuo conto corrente."
+        blocked: "Questa carta risulta bloccata e pertanto non può essere attivata ai fini del Cashback. Contatta la tua banca."
+    bPay:
+      headerTitle: "Aggiungi BANCOMAT Pay"
+      loadingSearch: "Stiamo recuperando i tuoi dati BANCOMAT Pay\n\nAttendi qualche secondo"
+      add:
+        label: "Account BANCOMAT Pay {{current}} di {{length}}"
+        screenTitle: "Vuoi aggiungere questo account?"
+      loadingAdd: "Stiamo aggiungendo il tuo account BANCOMAT Pay\n\nAttendi qualche secondo"
+      koTimeout:
+        title: "Impossibile recuperare i tuoi dati"
+        body: "Riprova per favore"
+      koNotFound:
+        title: "Spiacenti, non abbiamo trovato nessuna servizio BANCOMAT Pay attivo"
+        body: "Contatta la tua Banca per attivare BANCOMAT Pay!"
+    satispay:
+      headerTitle: "Aggiungi Satispay"
+      start:
+        title: "Vuoi aggiungere su IO il tuo account Satispay?"
+        body: "Verificheremo se esiste un account Satispay associato al tuo codice fiscale."
+        cta: "Informativa sul trattamento dei dati personali"
+      loadingSearch:
+        title: "Stiamo verificando il tuo account Satispay\n\nAttendi qualche secondo"
+      loadingAdd:
+        title: "Stiamo aggiungendo il tuo account Satispay\n\nAttendi qualche secondo"
+      add:
+        title: "Vuoi aggiungere questo account Satispay?"
+      koTimeout:
+        title: "Non siamo riusciti a contattare Satispay"
+        body: "Riprova per favore"
+      koNotFound:
+        title: "Spiacenti, non ci risulta che tu abbia ancora attivato Satispay"
+        body: "Contatta Satispay per l’attivazione"
+    coBadge:
+      headerTitle: "Aggiungi circuito internazionale"
+      start:
+        loading: "Stiamo caricando le impostazioni\n\nAttendi qualche secondo"
+        koDisabled:
+          title: "La tua banca non offre ancora questa funzionalità"
+          body: "Siamo al lavoro per permetterti presto di poter aggiungere la tua carta con circuito internazionale."
+        koUnavailable:
+          title: "Non riusciamo a contattare la tua banca"
+          body: "Siamo al lavoro per risolvere il problema."
+      search:
+        loading: "Stiamo recuperando la lista delle tue carte\n\nAttendi qualche secondo"
+        koTimeout:
+          title: "Non riusciamo a recuperare le tue carte"
+          body: "Riprova per favore"
+        koNotFound:
+          title: "Spiacenti, non abbiamo trovato nessuna carta tra le banche aderenti al servizio"
+          body: "Non risultano carte con circuito internazionale intestate a te: contatta la tua Banca per ulteriori informazioni."
+        koSingleBankNotFound:
+          title: "Spiacenti, non abbiamo trovato nessuna carta su questa banca"
+          body: "Non risultano carte con circuito internazionale intestate a te. Se lo desideri, IO può effettuare una ricerca tra tutte le banche aderenti."
+        koServiceError:
+          title: "Non riusciamo a recuperare le tue carte"
+          body: "Riprova più tardi per favore"
+      add:
+        screenTitle: "Vuoi aggiungere questa carta?"
+        label: "Carta con circuito internazionale {{current}} di {{length}}"
+        blocked: "Questa carta risulta bloccata e pertanto non può essere attivata ai fini del Cashback. Contatta la tua banca."
+        warning1: "In alcuni casi, i dati mostrati potrebbero essere diversi da quelli riportati sulla carta fisica: "
+        warning2: "se hai dubbi contatta la tua banca."
+        loading: "Stiamo aggiungendo la tua carta con circuito internazionale\n\nAttendi qualche secondo..."
+      chooseType:
+        title: "La tua carta ti permette di acquistare online?"
+        description: "Questa domanda ci permette di capire meglio com’è fatta la tua carta e aiutarti ad aggiungerla al tuo Portafoglio."
+        path:
+          enabled:
+            title: "Sì, è abilitata agli acquisti online"
+            description: "Verificheremo i dati della carta con la tua banca, di solito via sms o notifica push"
+          disabled:
+            title: "No, la uso solo nei negozi"
+            description: "Cercheremo tutte le carte intestate a te presso le banche aderenti al servizio"
+          unknown:
+            title: "Non lo so"
+            description: "Cercheremo tutte le carte intestate a te presso le banche aderenti al servizio"
+    privative:
+      headerTitle: "Aggiungi carta supermercato"
+      choosePrivativeIssuer:
+        loading: "Stiamo caricando le impostazioni\n\nAttendi qualche secondo"
+        title: "Scegli il marchio della tua carta"
+        body: "Puoi aggiungere soltanto carte che ti permettono di pagare nei supermercati."
+        koDisabled:
+          title: "Questo supermercato non offre ancora questa funzionalità"
+          body: "Siamo al lavoro per permetterti presto di poter aggiungere la tua carta."
+        koUnavailable:
+          title: "Non riusciamo a contattare il server"
+          body: "Siamo al lavoro per risolvere il problema."
+      addPrivativeCardNumber:
+        title: "Inserisci il numero carta"
+        body: "Digita le cifre riportate sul fronte. IO verificherà se la carta è associata al tuo codice fiscale."
+        disclaimer:
+          text1: "Proseguendo accetti l’"
+          text2: "informativa sul trattamento dei dati personali"
+      search:
+        loading: "Stiamo verificando la tua carta\n\nAttendi qualche secondo"
+        koTimeout:
+          title: "Al momento è impossibile verificare la tua carta"
+          body: "Riprova per favore"
+        koNotFound:
+          title: "Spiacenti, c'è un problema con questa carta"
+          body: "Prova ad inserire nuovamente il numero oppure, in alternativa, chiedi aiuto al servizio clienti del tuo supermercato."
+          cta:
+            modifyCardNumber: "Modifica numero carta"
+        koServiceError:
+          title: "Al momento è impossibile recuperare la tua carta"
+          body: "Riprova più tardi per favore"
+      add:
+        screenTitle: "Vuoi aggiungere questa carta?"
+        loading: "Stiamo aggiungendo la tua carta\n\nAttendi qualche secondo..."
+        blocked: "Questa carta risulta bloccata e pertanto non può essere attivata ai fini del Cashback. Contatta il tuo supermercato."
+  alert:
+    supportedCardPageLinkError: Si è verificato un errore durante l'apertura della pagina di riferimento per le carte supportate.
+    msgErrorUpdateApp: "Si è verificato un errore durante l'apertura dello store delle app"
+    titlePagoPaUpdateApp: Aggiornamento richiesto
+    messagePagoPaUpdateApp: "IO introduce spesso piccole migliorie e nuove funzioni: per continuare ad usare il portafoglio è necessario aggiornare l'applicazione all'ultima versione."
+    btnUpdateApp: Aggiorna l'app IO
+    favorite: Per modificare quest'opzione, seleziona un altro metodo dal tuo Portafoglio e impostalo come preferito.
+    amex: I pagamenti con carte American Express, per importi superiori a €1000, non sono al momento possibili
+  contextualHelpTitle: Cosa puoi fare nel tuo Portafoglio
+  contextualHelpContent: !include wallet/wallet_home.md
+  creditcards: Carte di Credito
+  paymentMethods: Metodi di pagamento
+  paymentMethod: Metodo di pagamento
+  paymentMethodDesc: Carte di credito, debito, prepagate, PagoBANCOMAT, app
+  walletLoadMessage: Carico i metodi di pagamento...
+  walletLoadFailure: Non è stato possibile caricare i metodi di pagamento, riprova per piacere.
+  transactionsLoadMessage: Carico lo storico delle transazioni...
+  transactionsLoadFailure: Non è stato possibile caricare lo storico delle tue operazioni, riprova per piacere.
+  transactionHelpMessage:
+    text1: Problemi con un pagamento o l’aggiunta di un nuovo metodo?
+    text2: Consulta l’help in alto a destra su questa pagina.
+  transactionsLoadMore: Carica precedenti
+  transacionsLoadingMore: Carico precedenti...
+  transactionsShow: Mostra operazioni
+  pickPaymentMethod:
+    unavailable:
+      title: Questo metodo di pagamento non è ancora disponibile
+      message: Questo metodo di pagamento sarà disponibile in una versione futura
+  add: aggiungi
+  delete:
+    bancomat:
+      successful: Bancomat rimosso correttamente
+      failed: Impossibile rimuovere il bancomat
+    satispay:
+      successful: Satispay rimosso correttamente
+      failed: Impossibile rimuovere Satispay
+    bPay:
+      successful: BancomatPay rimosso correttamente
+      failed: Impossibile rimuovere BancomatPay
+    successful: Carta rimossa correttamente
+    failed: Impossibile rimuovere la carta
+    alert: "Il metodo di pagamento usato per la transazione non è più presente nel portafoglio"
+  newPaymentMethod:
+    add: aggiungi
+    show: mostra
+    refresh: aggiorna
+    addButton: Aggiungi un metodo
+    addDescription: Aggiungi un metodo di pagamento per pagare da IO in pochi secondi, oppure richiedi l’attivazione di un bonus o di una carta sconto.
+    walletAlert: "Nel tuo portafoglio sono registrati dei metodi di pagamento ma nessuno di questi è compatibile con IO"
+    successful: Carta aggiunta con successo
+    failed: Impossibile aggiungere la carta
+    failedCardAlreadyExists: La carta che stai inserendo è già presente
+    contextualHelpTitle: Come aggiungere un metodo di pagamento
+    contextualHelpContent: !include wallet/wallet_add_payment_method.md
+    abort:
+      title: Vuoi annullare l'inserimento di un nuovo metodo di pagamento?
+      confirm: Annulla l'inserimento
+      cancel: Continua con l'inserimento
+      success: L'inserimento del metodo di pagamento è stato annullato correttamente
+  textMsg:
+    title: Codice di conferma
+    header: Codice di Conferma SMS
+    newCode: Richiedi nuovo codice
+    info: Inserici il codice che abbiamo inviato via SMS al tuo numero di telefono
+  transactionDetails: Dettagli della transazione
+  transactionFullReason: Causale completa
+  detailsTransaction:
+    contextualHelpContent: !include wallet/wallet_transaction_details.md
+  saveCard:
+    contextualHelpTitle: Salva una carta su IO
+    contextualHelpContent: !include wallet/wallet_card.md
+    header: Salva la carta
+    title: Vuoi salvare questa carta?
+    infoTitle: Imposta la carta come metodo di pagamento preferito
+    info:
+      Al prossimo pagamento ti verrà automaticamente proposto questo metodo di
+      pagamento
+    save: Salva
+    notice: Per verificare la carta troverai una transazione di pochi centesimi che verrà stornata dal tuo conto.
+    temporaryError: Si è verificato un errore nel salvataggio di questa carta
+    temporarySubError: Non abbiamo ricevuto risposta dai sistemi di sicurezza. Ci scusiamo per il disagio.
+    loadWalletsErrorTitle: I sistemi stanno impiegando più tempo del previsto
+    loadWalletsErrorBody: Non abbiamo ricevuto risposta dai sistemi di sicurezza, ma la tua carta potrebbe essere stata aggiunta. Aggiorna il tuo portafoglio prima di riprovare.
+    loadingAlert: Sto verificando le informazioni della tua carta...
+  challenge3ds:
+    header: Autorizza il pagamento
+    description: L’emittente della carta ha bisogno della tua conferma. Se riscontri problemi, contatta la tua banca.
+  saveCardInPayment:
+    header: Paga con questa carta
+    title: Vuoi pagare con questa carta?
+    save: Paga con questa carta
+  thanks: "✓ Grazie!"
+  endPayment: Il tuo pagamento è concluso
+  pickPsp:
+    headerTitle: "Seleziona un gestore"
+    title: Con quale gestore vuoi pagare?
+    info: Ogni gestore propone un costo di transazione.
+    info2: In questa lista trovi tutti i gestori
+    info2Bold: compatibili con il tuo metodo, anche se non sei loro cliente.
+    provider: Gestore
+    maxFee: Costo di transazione
+    loadingPsps: Caricamento gestori in corso...
+    onUpdateWalletPspFailure: Operazione fallita, riprova
+    contextualHelpTitle: Scelta del gestore
+    contextualHelpContent: !include pick_psp.md
+  ConfirmPayment:
+    header: Conferma pagamento
+    cancelPayment: Annulla l'operazione
+    goToPay: Paga
+    askConfirm: Confermi il pagamento?
+    partialAmount: Importo dovuto
+    fee: Costi di transazione
+    why: Perché?
+    info: "Dopo questo passaggio non sarà più possibile annullare"
+    info2: Stai utilizzando il tuo metodo di pagamento preferito.
+    changeMethod: Cambia metodo di pagamento
+    change: Cambia metodo
+    identificationMessage: "Conferma l'operazione inserendo il tuo codice di sblocco"
+    transactionSuccess: il pagamento è stato completato!
+    transactionFailure: Si è verificato un errore durante il pagamento, riprova!
+    transactionTimeout: Non è stato possibile recuperare l'esito del pagamento!
+    confirmCancelTitle: Vuoi annullare il pagamento?
+    confirmCancelPayment: Annulla il pagamento
+    confirmContinuePayment: Continua con il pagamento
+    cancelPaymentSuccess: Il pagamento di questo avviso è stato annullato, potrai pagarlo nuovamente tra qualche minuto
+  payWith:
+    noWallets:
+      title: Nessun metodo di pagamento salvato
+      text: Aggiungi un metodo di pagamento per procedere con il pagamento
+    header: Scelta metodo di pagamento
+    title: Paga con
+    text: Seleziona un metodo dal tuo Portafoglio, oppure aggiungine uno nuovo.
+    fetchPspFailure: Errore temporaneo, riprova
+    noPspsAvailable: Questo metodo di pagamento non può essere usato
+    contextualHelpTitle: Scelta del metodo di pagamento
+    contextualHelpContent: !include wallet/wallet_pick_payment_method.md
+    pickPaymentMethod:
+      title: "Con quale metodo vuoi pagare?"
+      description: "{{firstElement}} · {{secondElement}}"
+      notAvailable:
+        title: "Metodi non compatibili"
+        arriving:
+          bottomSheetTitle: "Stiamo lavorando per supportare questo metodo"
+          bottomSheetDescription: "Nel frattempo, prova a pagare con un altro metodo. Puoi utilizzare pagoPA anche sulla tua app di pagamenti preferita o sul sito del tuo Ente Creditore."
+        unaccepted:
+          bottomSheetTitle: "Perché non posso pagare con questa carta?"
+          bottomSheetDescription: "Il circuito di questa carta consente di pagare nei punti vendita fisici, ma non online. Se la tua carta è abilitata ai pagamenti online, aggiungila al tuo Portafoglio come 'carta di debito o di credito'."
+  firstTransactionSummary:
+    header: Riepilogo avviso di Pagamento
+    title: Avviso di pagamento
+    amount: Importo pagamento
+    total: Totale pagato
+    expireDate: Scadenza
+    tranche: Rata
+    info: "Per informazioni:"
+    tel: "Tel:"
+    email: "Email:"
+    PEC: "PEC:"
+    recipient: Ente creditore
+    object: Causale
+    date: Data e ora
+    iuv: Codice IUV
+    entityCode: Codice Fiscale Ente Creditore
+    updatedAmount: Importo aggiornato
+    fee: Costi di transazione
+    idTransaction: Codice identificativo della transazione
+    updateInfo:
+      pagoPA aggiorna automaticamente l'importo per assicurarti
+      di aver pagato esattamente quanto dovuto ed evitarti così more o altri interessi
+    loadingMessage:
+      activation: Sto avvisando l'ente creditore, attendi qualche secondo...
+      verification: Sto verificando lo stato e l'importo del tuo avviso...
+      generic: Sto terminando le operazioni di verifica del tuo avviso, attendi qualche secondo...
+      wallet: Sto verificando se esistono metodi di pagamento salvati...
+    contextualHelpTitle: Riepilogo della transazione
+    contextualHelpContent: !include wallet/wallet_transaction_summary.md
+  errorTransaction:
+    submitBugText: Se non riesci a risolvere il problema, segnalacelo con l’icona '?' in alto a destra. Grazie!
+  insertManually:
+    header: Inserisci dati avviso
+    title: Inserisci i dati dell'avviso
+    info: che ci consentono di identificare il pagamento
+    link: Dove si trovano?
+    noticeCode: Codice Avviso
+    entityCode: Codice Fiscale Ente Creditore
+    amount: Importo (€)
+    proceed: Procedi con il pagamento
+    contextualHelpTitle: Inserimento dati manuali
+    contextualHelpContent: !include wallet/insert_manual_notice.md
+  total: Totale
+  amount: Importo €
+  payAmount: Importo dovuto
+  transactionFee: Costo operazione
+  why: Perché?
+  paymentReason: Causale
+  recipient: Ente Creditore
+  date: Data
+  time: Ora
+  psp: Gestore della transazione
+  receipt: Ricevuta dell'operazione
+  seeReceipt: Vedi la ricevuta
+  transactions: Operazioni
+  transaction: Operazione
+  noTransactions: Non ci sono operazioni.
+  noNewTransactions: Non ci sono nuove operazioni.
+  noneTransactions: Nessuna operazione
+  noTransactionsInWalletHome: Non hai ancora fatto nessuna operazione.
+  noTransactionsInTransactionsScreen: Non hai ancora utilizzato questo metodo di pagamento per pagare tramite IO o pagoPA. In questa lista vedrai solo le operazioni eseguite con questo metodo.
+  payNotice: Paga un avviso
+  latestTransactions: Le tue operazioni
+  creditDebitCards: Carte di Credito/Debito
+  addPaymentMethodTitle: Aggiungi metodo di pagamento
+  continue: Paga questo avviso
+  backToPayments: Torna ai pagamenti
+  methods:
+    comingSoon: in arrivo
+    newCome: Novità
+    card:
+      name: Carta di credito, debito o prepagata
+      shortName: "Carta"
+      description: La carta emessa dalla tua banca che usi normalmente per pagare nei negozi e online
+      pagoPaCapability:
+        title: Pagamenti in app
+        description: Effettua pagamenti verso la Pubblica Amministrazione tramite pagoPA
+        active: Attivo
+        arriving: In arrivo
+        incompatible: Non compatibile
+        bottomSheetTitle: Cosa sono i pagamenti in app?
+        bottomSheetBody: IO ti permette di pagare tutti gli avvisi pagoPA, anche quelli cartacei. Quando effettui un pagamento in app, ti verrà chiesto di autorizzarlo tramite riconoscimento biometrico o codice di sblocco.
+        bottomSheetCTA: Scopri di più
+    bonus:
+      name: Sconto, bonus e altri servizi
+      description: Iniziative degli enti pubblici a supporto della spesa, o servizi relativi ai pagamenti
+    digital:
+      name: App e strumenti di pagamento digitali
+      description: I tuoi strumenti digitali preferiti su IO
+    loyalty:
+      name: Carta di pagamento supermercati
+      description: Le carte emesse dalle catene di supermercati che usi per pagare la spesa
+    pagobancomat:
+      name: Carta PagoBANCOMAT
+      description: La carta con il logo PagoBANCOMAT che usi per prelevare contante o pagare nei negozi
+    bank:
+      name: Bancomat Pay
+      maxFee: Commissione massima 0.50€
+    satispay:
+      name: Satispay
+      description: Abbina il tuo account Satispay
+    bancomatPay:
+      name: BANCOMAT Pay
+      description: Abbina il tuo account BANCOMAT Pay
+    postepayApp:
+      name: Postepay
+      description: la tua app Postepay
+    postepay:
+      name: Carta BancoPosta o Postepay
+      description: Le carte emesse da Poste Italiane
+    paypal:
+      name: Paypal
+    bancomat:
+      name: PagoBANCOMAT
+    cobadge:
+      name: circuito internazionale
+    notImplemented: Prossimamente
+  addCardTitle: Dati carta
+  dummyCard:
+    labels:
+      holder:
+        label: Intestatario carta
+        description:
+          base: "Inserisci come riportato sulla carta"
+          error: "Inserisci esattamente come riportato sulla carta"
+      pan: Numero carta
+      expirationDate: Data di scadenza
+      securityCode: Codice di sicurezza
+      securityCode4D: CID (4 cifre)
+    values:
+      holder: Mario Rossi
+      pan: 0000 0000 0000 0000
+      expirationDate: mm/aa
+      securityCode: "•••"
+      securityCode4D: "••••"
+    accessibility:
+      holder:
+        base: "Intestatario carta, inserisci come riportato sulla carta"
+        error: "Intestatario carta. Per favore, non utilizzare lettere accentate"
+      pan:
+        base: "Numero carta"
+        error: "Numero carta. Per favore, inserisci almeno {{minLength}} cifre"
+      expirationDate:
+        base: "Data di scadenza, due cifre per il mese, due per l’anno"
+        error: "Data di scadenza, due cifre per il mese, due per l’anno. Per favore, inserisci una data valida"
+      securityCode:
+        3D:
+          base: "Codice di sicurezza, 3 cifre"
+          error: "Codice di sicurezza. Per favore, inserisci 3 cifre"
+        4D:
+          base: "CID, 4 cifre"
+          error: "Codice CID. Per favore, inserisci 4 cifre"
+      button:
+        fieldError: "Per continuare per favore correggi il campo {{field}}"
+        missingFields: "Per continuare, compila tutti i campi"
+  acceptedCards: Carte accettate
+  missingDataCTA: Ti manca qualche dato?
+  openAcceptedCardsPageCTA: Scopri le carte accettate
+  missingDataText:
+    body: Se non trovi il codice di sicurezza, la tua carta potrebbe non essere abilitata ai pagamenti online. Puoi però aggiungerla ai fini del Cashback, se la tua banca è supportata.
+    cta: Cerca le tue carte
+  chooseMethod: Scegli il metodo che preferisci
+  QRtoPay:
+    chooser: Carica immagine dalla galleria
+    wrongQrCode: Non è un QR Code pagoPA!
+    byCameraTitle: QR Code avviso
+    cameraUsageInfo:
+      Inquadra il codice QR che trovi nell'avviso, oppure
+      inserisci manualmente i dati (Codice Avviso e Codice Fiscale Ente Creditore).
+    setManually: Inserisci tu i dati
+    enroll_cta: Per inquadrare il codice QR presente sull'avviso, devi prima consentire ad IO l'uso della fotocamera. Puoi farlo dal menu 'Impostazioni' del tuo dispositivo.
+    cameraUsagePermissionInfobox:
+      title: "Permesso per utilizzare la fotocamera da parte di IO"
+      message: "IO richiede di poter utilizzare la fotocamera ed inquadrare il QR code"
+    settingsAlert:
+      title: Sembra che l'accesso alle foto sia stato negato
+      message: IO ha bisogno di accedere alla tua galleria per salvare bonus e certificati, o caricare screenshot e avvisi di pagamento
+      buttonText:
+        settings: Abilita permessi
+        cancel: Annulla
+    contextualHelpTitle: Come puoi pagare un avviso
+    contextualHelpContent: !include wallet/wallet_qrcode.md
+  whyAFee:
+    title: Perché i costi di transazione?
+    text: !include wallet/why_a_fee.md
+  errors:
+    PAYMENT_DUPLICATED: Questo avviso è già stato pagato!
+    INVALID_AMOUNT: L'ammontare specificato nell'avviso non è corretto, se hai inserito i dati manualmente, controlla che siano corretti e riprova.
+    PAYMENT_ONGOING: Un pagamento per questo avviso è già in corso, non è possibile iniziare un nuovo pagamento ora.
+    PAYMENT_EXPIRED: Il pagamento per questo avviso non è più disponibile poiché questo avviso è scaduto.
+    PAYMENT_UNAVAILABLE: Il pagamento per questo avviso non è disponibile in questo momento, riprova più tardi.
+    PAYMENT_UNKNOWN: Questo avviso di pagamento non è riconosciuto dall'ente che lo ha emesso, il pagamento non può essere effettuato.
+    DOMAIN_UNKNOWN: Questo avviso è stato emesso da un ente non accreditato su pagoPA, il pagamento non può essere effettuato.
+    GENERIC_ERROR: Ooops, qualcosa è andato storto! Probabilmente è un errore momentaneo, riprova per piacere!
+    MISSING_PAYMENT_ID: L'ente che ha emesso questo avviso ha qualche problema a gestirne il pagamento in questo momento, riprova!
+    PAYMENT_ONGOING_NOCANCEL: Un pagamento per questo avviso è già in corso, riprova tra 30 minuti.
+    PAYMENT_ONGOING_NOCANCEL_TIMEOUT: Se hai già atteso 30 minuti e il pagamento risulta ancora bloccato utilizza il pulsante qui sotto per inviarci una segnalazione.
+    PAYMENT_ONGOING_CANCELLED: È in corso l'annullamento del tuo tentativo di pagamento precedente, potrai riprovare a pagare l'avviso tra {{remainingMinutes}} minuti.
+    PAYMENT_ONGOING_CANCELLED_TIMEOUT: L'annullamento di questo pagamento è stato richiesto più di 15 minuti fa ma risulta ancora bloccato. Utilizza il pulsante qui sotto per inviarci una segnalazione.
+    sendReport: Invia segnalazione
+    loadingData: errore durante il caricamento, riprova.
+  walletList:
+    contextualHelpTitle: I tuoi metodi di pagamento
+    contextualHelpContent: !include wallet/wallet_list.md
+  walletCardTransaction:
+    contextualHelpTitle: Transazioni effettuate con questo metodo
+    contextualHelpContent: !include wallet/wallet_card_transaction.md
+  bancomat:
+    details:
+      infobox:
+        one: "Le carte PagoBANCOMAT "
+        two: "non consentono di pagare tramite IO"
+        three: ", ma solo presso i punti fisici (POS)."
+      debit:
+        title: "La tua carta ha più di un logo?"
+        body: "Se la tua carta PagoBANCOMAT mostra altri circuiti internazionali, puoi aggiungerli cercando tutte le carte di debito (o credito) intestate a te. Attivando il metodo al Cashback, potrai accumulare anche le transazioni effettuate su questi circuiti."
+        addCta: "Aggiungi secondo circuito"
+      removeCta: "Elimina questo metodo di pagamento"
+      deleteLoading: Eliminazione metodo di pagamento in corso
+  satispay:
+    details:
+      infobox:
+        one: "Satispay"
+        two: " non consente ancora di pagare tramite IO"
+        three: ": questa funzione verrà abilitata con le prossime versioni dell’app."
+  cobadge:
+    details:
+      card:
+        validUntil: "Valida fino al {{expiryDate}}"
+  newRemove:
+    title: "Vuoi eliminare questo metodo?"
+    body: "Questo metodo di pagamento verrà rimosso. Eventuali funzioni collegate, come il Cashback, verranno disattivate entro 24h."
+    warningCapability: "Verranno disattivate anche le funzioni: "
+  capability:
+    title: "Funzioni Disponibili"
+  outcomeMessage:
+    cta:
+      close: Chiudi
+      visualizeCard: Visualizza carta
+    fallback:
+      title: "Spiacenti, si è verificato un errore imprevisto"
+      description: "Non è stato addebitato alcun importo."
+    code1:
+      title: "Spiacenti, si è verificato un errore imprevisto"
+      description: "Non è stato addebitato alcun importo."
+    code2:
+      title: "Autorizzazione negata"
+      description: "La tua banca non ha autorizzato l’operazione. Controlla di aver inserito correttamente i vari codici richiesti dalla tua banca."
+    code4:
+      title: "Spiacenti, la sessione è scaduta"
+      description: "Non è stato addebitato alcun importo. Per la tua sicurezza, hai a disposizione 5 minuti per completare l’operazione."
+    code7:
+      title: "C’è un problema con la tua carta"
+      description: "Non è stato addebitato alcun importo. Per maggiori informazioni, contatta la tua banca."
+    code8:
+      title: "L’operazione è stata annullata"
+    code10:
+      title: "Autorizzazione negata"
+      description: "Probabilmente hai superato il massimale della tua carta. Verifica con la tua banca prima di riprovare."
+    addCreditCard:
+      success:
+        title: "La tua carta è stata aggiunta con successo!"
+    payment:
+      success:
+        title: "Grazie, l’operazione è stata eseguita con successo!"
+        description1: "Abbiamo inviato una ricevuta a"
+        description2: "Puoi trovarla anche nel tuo Portafoglio."
+  abortWebView:
+    title: Vuoi uscire dall'operazione in corso?
+    confirm: Sì, esci
+    cancel: No, continua
+    success: Problemi con l'aggiunta? Contatta la tua banca.
+saveCard:
+  saveCard: Salva la carta
+  header: Vuoi salvare questa carta?
+  favoriteTitle: Imposta la carta come metodo di pagamento preferito
+  favoriteText:
+    Al prossimo pagamento ti verrà automaticamente proposto questo metodo
+    di pagamento
+cardComponent:
+  validUntil: Valida fino al
+  expiresOn: Scade il
+  expiredCard: Carta scaduta il
+  actions: Azioni
+  setFavorite: Imposta come preferita
+  unsetFavorite: Rimuovi dai preferiti
+  deleteTitle: Vuoi eliminare questo metodo?
+  deleteMsg: Questo metodo di pagamento verrà rimosso. Eventuali funzioni collegate, come il Cashback, verranno disattivate entro 24h.
+  deleteLoading: Eliminazione metodo di pagamento in corso
+  neverUsed: Mai utilizzata
+  lastUsage: Ultimo utilizzo
+  detailsAndTransactions: Dettagli e transazioni
+  pick: Paga con questo metodo
+  removeCta: "Elimina questo metodo di pagamento"
+messages:
+  accessibility:
+    message:
+      read: "Messaggio"
+      unread: "Messaggio non letto"
+      description: "{{newMessage}}, ricevuto da {{organizationName}}, {{serviceName}}. {{subject}}. {{receivedAt}}"
+      received_on: "ricevuto il"
+      received_at: "ricevuto alle ore"
+  contextualHelpTitle: Cosa puoi fare nei tuoi Messaggi
+  contextualHelpContent: !include messages/messages_home.md
+  counting:
+    zero: Nessun messaggio
+    one: Hai 1 messaggio
+    other: Hai {{count}} messaggi
+  tab:
+    inbox: Ricevuti
+    deadlines: In scadenza
+    archive: Archiviati
+  contentTitle: Messaggi
+  refresh: Trascina in basso per aggiornare
+  loading: Caricamento dei messaggi...
+  yesterday: ieri
+  errorLoading:
+    details: Impossibile caricare i dettagli del messaggio
+    senderInfo: Mittente sconosciuto
+    serviceInfo: Info sul servizio mancanti
+    departmentInfo: Info sul dipartimento mancanti
+  loadingErrorTitle: Non è stato possibile caricare i messaggi
+  cta:
+    archive: Archivia
+    unarchive: Ripristina
+    selectAll: Tutti
+    deselectAll: Nessuno
+    payment:
+      expired: Pagamento scaduto
+      paid: Questo avviso è stato pagato. Visualizza la ricevuta nel tuo
+      addMemo:
+        block1: Aggiungi un promemoria per il
+        block2: alle
+      expiringOrValidAlert:
+        block1: Questo avviso scade il giorno
+      expiredAlert:
+        block1: L'avviso è scaduto alle
+        block2: del
+    prescription:
+      addMemo: Questa ricetta scade il
+      expiringAlert: Questa ricetta scade oggi
+      expiredAlert:
+        block1: La ricetta è scaduta alle ore
+        block2: del
+
+    pay: Paga € {{amount}}
+    onlyPay: Paga
+    paid: Pagato
+    seeNotice: Vedi Avviso
+    reminder: Promemoria
+    reminderShort: Memo
+    reminderCalendarSelect: In quale calendario vuoi aggiungere il promemoria?
+    reminderTitle: "Promemoria per: {{title}}"
+    reminderAlertTitle: "Esiste già un evento"
+    reminderAlertDescription: "Esiste già un evento corrispondente al messaggio selezionato nel calendario. Vuoi mantenere quello precedente o aggiungerne uno nuovo?"
+    reminderAlertKeep: "Mantieni l'evento precedente"
+    reminderAlertAdd: "Aggiungi un nuovo evento"
+    reminderAddSuccess: "Promemoria aggiunto"
+    reminderAddFailure: "Errore durante l'aggiunta del promemoria, riprova per piacere"
+    reminderRemoveRequest:
+      title: Vuoi davvero rimuovere il promemoria?
+      ok: Rimuovi promemoria
+      cancel: Annulla l'operazione
+    reminderRemoveSuccess: "Promemoria eliminato"
+    reminderRemoveFailure: "Errore durante l'eliminazione del promemoria, riprova per piacere"
+    preferenceCalendarSelect: "Seleziona un calendario predefinito"
+    calendarPermDenied:
+      title: "Sembra che i permessi per accedere al calendario siano stati negati"
+      ok: "Abilita i permessi"
+      cancel: "Annulla"
+    errors:
+      fetchCalendars: Errore durante il recupero dei calendari
+    helper: "IO ricorderà d'ora in poi questa scelta: potrai modificarla dalle preferenze dell'app."
+  badge:
+    expired: Scaduto
+    paid: Pagato
+  unknownSender: Mittente sconosciuto
+  noContent: Contenuto non disponibile
+  archive:
+    emptyMessage:
+      title: Il tuo archivio è vuoto.
+      subtitle: Tieni premuto su un messaggio per spostarlo in archivio. Puoi anche archiviare più messaggi contemporaneamente. I messaggi archiviati verranno comunque conservati e saranno disponibili nei risultati di ricerca.
+  inbox:
+    emptyMessage:
+      title: La tua lista dei messaggi è vuota.
+      subtitle: Aggiorna per vedere se ti sono arrivati nuovi messaggi.
+  deadlines:
+    emptyMessage:
+      title: Non hai scadenze in programma.
+      subtitle: Usa il pulsante qui sopra per vedere le scadenze già trascorse.
+  medical:
+    not_available: "n/a"
+    prescription: Ricetta elettronica
+    memo: Promemoria per l'assistito
+    nre: Numero Ricetta Elettronica
+    iup: Identificativo Unico Prenotazione
+    patient_fiscal_code: Codice Fiscale dell'assistito
+    prescriber_fiscal_code: Codice fiscale del medico
+    deadline: Questa ricetta scade il {{date}}
+    barcodes: Codici a barre
+    nationalService: Servizio Sanitario Nazionale
+    note: "Rilasciato ai sensi dell'art.11, comma 16 del DL 31 mag 2010, n.78 e dell’art.1, comma 4 del DM 2 nov 2011"
+messageDetails:
+  contextualHelpTitle: Dettagli del messaggio
+  contextualHelpContent: !include messages/message_detail.md
+  headerTitle: Messaggio
+  emptyMessage: Nessun contenuto
+  loadingText: Caricamento dei dettagli del messaggio in corso...
+  errorText: Non siamo riusciti a caricare i dettagli del tuo messaggio
+  retryText: Probabilmente è un errore temporaneo... riprova per piacere!
+  submitBugText: Se il problema non si risolve segnalacelo con l'icona '?' in alto a destra, grazie!
+  rawInfoLink:
+    showLabel: Dettagli del messaggio
+    hideLabel: Chiudi dettagli
+  rawInfoLabels:
+    createdAt: Data
+    organizationName: Inviato da
+    departmentName: Dipartimento
+    serviceName: Servizio
+  addMemo: !include messages/addMemo.md
+  dateSending: "Data e ora invio:"
+  sender: "Mittente:"
+  service: "Servizio:"
+  question: "Qualcosa non è chiaro?"
+  answer: Se non ti è chiaro il contenuto del messaggio, devi segnalare un errore o vuoi approfondire, puoi contattare direttamente i referenti del servizio indicando il seguente ID del messaggio.
+  call: Chiama
+  sendEmail: Manda email
+  write: Scrivi
+  id: "ID:"
+notifications:
+  installation:
+    errorTitle: Notifiche push
+    errorMessage:
+      La registrazione verso il servizio di notifiche push ha generato
+      un errore
+biometric_recognition:
+  contextualHelpTitle: Come funziona il riconoscimento biometrico
+  contextualHelpContent: !include profile/profile_security_biometric_recognition.md
+send_email_messages:
+  title: Inoltro dei messaggi via email
+  subtitle: Vuoi che IO inoltri il contenuto dei messaggi anche a
+  options:
+    disable_all:
+      label: Disabilita per tutti i servizi
+      info: Non riceverai più messaggi via email
+    enable_all:
+      label: Abilita per tutti i servizi attivi
+      info: Ogni messaggio sarà inoltrato alla tua email, se il servizio lo consente
+    by_service:
+      label: Scegli servizio per servizio
+      info: Potrai scegliere nella scheda di ogni servizio di ricevere i relativi messaggi anche via email
+services:
+  optIn:
+    preferences:
+      completed:
+        title: "Preferenze salvate!"
+        body: "Potrai sempre vedere la lista dei servizi disponibili visitando la sezione Servizi."
+        cta: "Vedi i servizi disponibili"
+      oldUsersBadge: "Impostazione attuale"
+      choiceLabel: "Hai scelto la"
+      unavailable: "Non selezionato"
+      title: "Come vuoi configurare i servizi su IO?"
+      body: "IO è semplice perché non devi fare nulla: se un servizio ha qualcosa di importante da dirti, può mandarti un messaggio."
+      quickConfig:
+        value: "Configurazione rapida"
+        label: "tutti i servizi che non hai disattivato possono contattarti."
+        title: "Usa configurazione rapida"
+        body:
+          text1: "Ti contatteranno solo i servizi che hanno qualcosa di importante da dirti."
+          text2: "Potrai sempre disattivare le comunicazioni dei servizi che non ti interessano."
+      manualConfig:
+        value: "Configurazione manuale"
+        label: "ti possono contattare solo i servizi che hai attivato."
+        title: "Configura manualmente"
+        body:
+          text1: "Nessun servizio potrà contattarti. Per ricevere messaggi dovrai configurarli uno a uno."
+        bottomSheet:
+          title: "Vuoi davvero configurare i servizi uno ad uno?"
+          body: "**Su IO ti contattano solo i servizi che hanno qualcosa di importante da dirti.** Se scegli questa opzione, dovrai configurare manualmente i servizi che ti interessano. Tutti i servizi che arriveranno in futuro non potranno inviarti messaggi."
+  title: Servizi
+  subTitle: Attiva o disattiva i servizi da cui puoi ricevere messaggi
+  contextualHelpTitle: Cosa puoi fare nei tuoi Servizi
+  contextualHelpContent: !include services/services_home.md
+  serviceIsEnabled: Contattarti in app
+  serviceNotEnabled: Il servizio non è attivo
+  pushNotifications: Inviarti notifiche push
+  emailForwarding: Inviarti e-mail
+  tosAndPrivacy: Termini e Privacy
+  tosLink: Termini e condizioni d'uso
+  privacyLink: Informativa sulla privacy
+  otherAppsInfo: Puoi usare questo servizio anche
+  otherAppWeb: Online su
+  otherAppIos: App iOS
+  otherAppAndroid: App Android
+  contactsAndInfo: Contatti ed informazioni
+  visitWebsite: Visita il sito
+  askForAssistance: Richiedi assistenza
+  contactAddress: Indirizzo
+  contactPhone: Telefono
+  contactSupport: Assistenza
+  areasOfInterest:
+    selectMessage: Scegli le aree geografiche (comuni, regioni, etc.) dove risiedi o che frequenti solitamente per vederne qui i relativi servizi. Potrai modificarle in ogni momento.
+    selectMessageEmptyOrgs: Al momento non è possibile aggiungere una località. Per favore trascina in basso per aggiornare i dati e riprova a selezionare un'area.
+    addButton: Aggiungi le tue aree di interesse
+    editButton: Modifica le aree di interesse
+    searchEmpty: Se non trovi la tua area di interesse, significa che gli enti di quel territorio non espongono ancora servizi su IO.
+  tab:
+    locals: Locali
+    national: Nazionali
+    all: Tutti
+  loading:
+    title: Sto caricando l'elenco dei servizi
+    subtitle: attendi qualche secondo...
+  enableAll: Usa configurazione rapida
+  disableAll: Usa configurazione manuale
+  updatingServiceMode: Attendi...
+  disableAllTitle: Vuoi davvero disattivare tutti i servizi?
+  disableAllMsg: "Ricorda che su IO ti scriveranno solo i servizi che effettivamente hanno qualche informazione personalizzata da comunicarti. Non riceverai messaggi di spam. Se disattivi tutti i servizi, questi non potranno più contattarti tramite IO (finché non li riattiverai). Potrai continuare a fruire i servizi attraverso altri canali (sportello, sito, etc.)"
+  close: Chiudi
+  emptyListMessage: Non ci sono servizi disponibili al momento, trascina in basso per aggiornare
+serviceDetail:
+  fiscalCode: "C.F. Ente"
+  contacts:
+    title: "Questo servizio può:"
+  headerTitle: "Dettagli del Servizio"
+  contextualHelpContent: !include services/service_detail.md
+  onUpdateEnabledChannelsFailure: "Si è verificato un errore temporaneo nel salvataggio delle preferenze, riprova per piacere."
+  disableTitle: "Vuoi davvero disattivare il servizio?"
+  disableMsg: "Ricorda che su IO ti scriveranno solo i servizi che effettivamente hanno qualche informazione personalizzata da comunicarti. Non riceverai messaggi di spam. Se disattivi il servizio, questo non potrà più contattarti tramite IO (finché non lo riattiverai). Potrai continuare a fruire il servizio attraverso altri canali (sportello, sito, etc.)"
+  lockedMailAlert: "L'inoltro dei messaggi via email è {{enabled}} globalmente:"
+  updatePreferences: Modifica le preferenze
+  goTo: Vai alle preferenze
+  enabled: abilitato
+  disabled: disabilitato
+  notValidated: Per poter abilitare le notifiche via email devi validare il tuo indirizzo email."
+identification:
+  title: Ciao!
+  titleProfileName: Ciao {{profileName}}!
+  titleValidation: Conferma l'operazione
+  logout: Esci
+  logoutProfileName: Non sei {{profileName}}?
+  logoutDescription: Puoi accedere con le tue credenziali SPID o CIE. Questa sessione verrà disconnessa.
+  logoutDescriptionProfileName: Puoi accedere con le tue credenziali SPID o CIE. La sessione di {{profileName}} verrà disconnessa.
+  subtitleCode: Inserisci il codice di sblocco
+  subtitleCodeFingerprint: "usa l'impronta o il codice di sblocco"
+  subtitleCodeFaceId: "usa Face ID o il codice di sblocco"
+  biometric:
+    fingerprintType: Impronta digitale
+    title: Identificazione Biometrica
+    popup:
+      reason: Identificazione tramite touch ID non riuscita
+      title: Identificazione richiesta
+      sensorDescription: Tocca il sensore
+      sensorErrorDescription: Impronta non riconosciuta. Tocca nuovamente il sensore.
+      fallbackLabel: Usa il codice di sblocco
+  fail:
+    remainingAttempts: Ti rimangono {{attempts}} tentativi.
+    remainingAttemptSingle: Ti rimane {{attempts}} tentativo.
+    tooManyAttempts: Troppi tentativi di inserimento errati.
+    waitMessage: "Riprova tra:"
+  unlockCode:
+    accessibility:
+      unlockHint: Hai inserito {{number}} cifre di {{length}}
+      fingerprint: Autenticati con l'impronta digitale
+      faceId: Autenticati con il riconoscimento facciale
+      delete: Cancella l'ultima cifra inserita
+    reset:
+      button: Hai dimenticato il
+      code: codice di sblocco
+      button_short: Modifica il codice di sblocco
+      subtitle: Imposta un nuovo codice di 6 cifre
+    confirmValid: Codice di sblocco corretto
+  unlock_screen:
+    help:
+      title: Accesso con codice di sblocco
+      content: !include onboarding/onboarding_pin.md
+  forgetCode:
+    confirmTitle: Hai dimenticato il codice di sblocco?
+    confirmMsg: Per poter scegliere un nuovo codice di sblocco dovrai accedere nuovamente.
+    confirmMsgWithTask: Per poter scegliere un nuovo codice di sblocco dovrai annullare l'operazione corrente e accedere nuovamente.
+calendarEvents:
+  calendarSelect: In quale calendario vuoi aggiungere l'evento?
+  removeRequest:
+    title: Vuoi davvero rimuovere l'evento?
+    ok: Rimuovi evento
+    cancel: Annulla l'operazione
+reminders:
+  emptyMonth: Non ci sono scadenze in questo mese
+  loadMoreData: scadenze precedenti
+  noOtherDeadlines: Non ci sono altre scadenze
+openMaps:
+  genericError: Si è verificato un errore durante l'apertura della mappa
+  openAddressOnMap: Apri l'indirizzo sulla mappa
+genericError: Si è verificato un errore
+titleUpdateApp: Aggiorna IO!
+msgErrorUpdateApp: "Si è verificato un errore durante l'apertura dello store delle app"
+messageUpdateApp: "IO introduce spesso piccole migliorie e nuove funzioni: per continuare ad usare l'app è necessario aggiornarla all'ultima versione."
+titleUpdateAppAlert: Per continuare, aggiorna IO
+messageUpdateAppAlert: È disponibile una nuova versione di IO su {{storeName}}, scaricala subito per utilizzare questa funzionalità.
+openStore: Apri {{storeName}}
+btnUpdateApp: Aggiorna l'app IO
+systemsOff:
+  title: Impossibile usare IO
+  closeApp: chiudi l'applicazione e riprova
+contextualHelp:
+  title: IO ti aiuto
+  sendScreenshot:
+    cta: Condividi un'istantanea del tuo schermo (screenshot), in modo da rendere più semplice la risoluzione del problema.
+  sendPersonalInfo:
+    title: Nuova segnalazione
+    description: "Il Team di IO è a disposizione per risolvere eventuali **problemi** dell’app o per ascoltare i **suggerimenti** dei nostri utenti relativi a **migliorie o nuove funzionalità.**\n\nSe hai dubbi sul **contenuto di un messaggio** o su un servizio, ti consigliamo di **contattare l'ente relativo**: troverai i contatti in fondo al messaggio o nella scheda del servizio in questione."
+    cta: Condividi il tuo codice fiscale, in modo da rendere più semplice la risoluzione del problema.
+    informativeTitle: Come sapete il mio codice fiscale?
+    informativeDescription: Il codice fiscale fa parte di quel set di dati che l’app IO riceve dall’identità SPID o dalla Carta d’identità elettronica con cui hai effettuato l’accesso. Non è obbligatorio inviare il codice fiscale insieme alla segnalazione, ma permette all’assistenza di IO di fare analisi più mirate sui nostri sistemi e quindi di ridurre i tempi di risoluzione del problema. Per maggiori informazioni sul trattamento dei dati, consulta la nostra Informativa Privacy.
+instabug:
+  overrideText:
+    commentFieldHintForQuestion: "Sii il più preciso possibile. Cosa doveva succedere e cosa invece è successo?\nPer quanto possibile, ti invitiamo a non inserire dati sensibili nelle tue segnalazioni"
+  contextualHelp:
+    title1: Hai bisogno di aiuto?
+    descriptionBug: "Se qualcosa **non funziona** come dovrebbe o se vuoi **suggerirci un miglioramento** o una nuova funzionalità, scrivici! Il team di IO ti risponderà direttamente tramite l'app."
+    buttonBug: Scrivi al team di IO
+    descriptionChat: "Solo se vuoi **riaprire una segnalazione passata**, per chiedere informazioni aggiuntive o aggiungere dettagli, clicca qui sotto."
+    buttonChat: Riapri una segnalazione
+    assistanceWorkHours: L'assistenza di IO è disponibile dal lunedì al venerdì dalle ore 8 alle 20; sabato, domenica dalle ore 8 alle 13. Sono esclusi i giorni di festività nazionale.
+bottomSheets:
+  ciePin:
+      title: Dove trovo il mio PIN?
+      content: !include bottomsheets/ciePin.md
+faq:
+  1:
+    title: "Cos'è SPID?"
+    content: !include faq/faq1.md
+  2:
+    title: "Come puoi ottenere SPID?"
+    content: !include faq/faq2.md
+  3:
+    title: "Hai perso le tue credenziali SPID?"
+    content: !include faq/faq3.md
+  4:
+    title: "Cos'è la CIE?"
+    content: !include faq/faq4.md
+  5:
+    title: "Come puoi ottenere la CIE?"
+    content: !include faq/faq5.md
+  6:
+    title: "Che cos'è un Identity Provider?"
+    content: !include faq/faq6.md
+  7:
+    title: "Come scegliere un Identity Provider?"
+    content: !include faq/faq7.md
+  8:
+    title: "È possibile avere più di un'identità digitale?"
+    content: !include faq/faq8.md
+  9:
+    title: "Qual è la tua password?"
+    content: !include faq/faq9.md
+  11:
+    title: "Cosa succede se superi i 5 tentativi di autenticazione?"
+    content: !include faq/faq11.md
+  12:
+    title: "Hai fatto tutto correttamente ma comunque non riesci ad entrare?"
+    content: !include faq/faq12.md
+  13:
+    title: "Come vengono gestiti i tuoi dati?"
+    content: !include faq/faq13.md
+  14:
+    title: "Come puoi rileggere l'informativa sul trattamento dei dati personali in un secondo momento?"
+    content: !include faq/faq14.md
+  15:
+    title: "Qual è il PIN della carta d'identità elettronica?"
+    content: !include faq/faq15.md
+  16:
+    title: "Il tuo telefono ha il lettore NFC?"
+    content: !include faq/faq16.md
+  17:
+    title: "A cosa serve il Codice di sblocco?"
+    content: !include faq/faq17.md
+  18:
+    title: "È possibile reimpostare il Codice di sblocco in un secondo momento?"
+    content: !include faq/faq18.md
+  19:
+    title: "Il riconoscimento biometrico è sicuro?"
+    content: !include faq/faq19.md
+
+  20:
+    title: "Quando ti verrà chiesto il riconoscimento biometrico?"
+    content: !include faq/faq20.md
+  21:
+    title: "Come abilitare il riconoscimento biometrico?"
+    content: !include faq/faq21.md
+  22:
+    title: "Come disabilitare il riconoscimento biometrico?"
+    content: !include faq/faq22.md
+  23:
+    title: "Che tipo di messaggi puoi ricevere?"
+    content: !include faq/faq23.md
+  24:
+    title: "Cosa succede se archivi i messaggi?"
+    content: !include faq/faq24.md
+  25:
+    title: "I messaggi possono essere cancellati?"
+    content: !include faq/faq25.md
+  26:
+    title: "È possibile rispondere ai messaggi?"
+    content: !include faq/faq26.md
+  27:
+    title: "Come si collega un calendario?"
+    content: !include faq/faq27.md
+  28:
+    title: "Non sei interessato a questo messaggio?"
+    content: !include faq/faq28.md
+  29:
+    title: "C'è un errore nella comunicazione che hai ricevuto?"
+    content: !include faq/faq29.md
+  30:
+    title: "Questo ente ha il permesso di scriverti?"
+    content: !include faq/faq30.md
+  31:
+    title: "Vuoi contattare l'ente?"
+    content: !include faq/faq31.md
+  32:
+    title: "Cos'è il codice identificativo del messaggio?"
+    content: !include faq/faq32.md
+  33:
+    title: "È possibile pagare un avviso che non hai ricevuto tramite l'app IO?"
+    content: !include faq/faq33.md
+  34:
+    title: "Che cos'è un QR code?"
+    content: !include faq/faq34.md
+  35:
+    title: "Che cos'è pagoPA?"
+    content: !include faq/faq35.md
+  36:
+    title: "Non vedi le tue ricevute pagoPA?"
+    content: !include faq/faq36.md
+  37:
+    title: "Quali metodi di pagamento puoi aggiungere?"
+    content: !include faq/faq37.md
+  38:
+    title: "Ricevuta dell’operazione e quietanza liberatoria sono la stessa cosa?"
+    content: !include faq/faq38.md
+  39:
+    title: "Cos'è il codice identificativo della transazione?"
+    content: !include faq/faq39.md
+  40:
+    title: "È possibile archiviare o gestire le ricevute delle transazioni?"
+    content: !include faq/faq40.md
+  41:
+    title: "Come puoi rimuovere un metodo di pagamento?"
+    content: !include faq/faq41.md
+  42:
+    title: "Come puoi aggiungere un metodo di pagamento?"
+    content: !include faq/faq42.md
+  43:
+    title: "Dove trovo il codice di sicurezza?"
+    content: !include faq/faq43.md
+  44:
+    title: "Perché devo pagare una commissione?"
+    content: !include faq/faq44.md
+  45:
+    title: "Perché le commissioni cambiano da un gestore all'altro?"
+    content: !include faq/faq45.md
+  46:
+    title: "Puoi scegliere un gestore diverso a ogni pagamento?"
+    content: !include faq/faq46.md
+  47:
+    title: "Come gestire i servizi su IO?"
+    content: !include faq/faq7.md
+  48:
+    title: "Cosa sono le tue aree di interesse?"
+    content: !include faq/faq48.md
+  49:
+    title: "Puoi contattare gli enti tramite IO?"
+    content: !include faq/faq49.md
+  50:
+    title: "Cosa succede se disattivi un servizio?"
+    content: !include faq/faq50.md
+  51:
+    title: "Come funzionano le notifiche push?"
+    content: !include faq/faq51.md
+  52:
+    title: "Come funziona l'inoltro via email dei messaggi?"
+    content: !include faq/faq52.md
+  53:
+    title: "Come usare i documenti in versione digitale?"
+    content: !include faq/faq53.md
+  54:
+    title: "A cosa serve un fac-simile del Codice Fiscale?"
+    content: !include faq/faq54.md
+  55:
+    title: "Come sarà tutelata la tua privacy?"
+    content: !include faq/faq55.md
+  56:
+    title: "Come cancellare tutti i tuoi dati da IO?"
+    content: !include faq/faq56.md
+  57:
+    title: "Hai avuto problemi durante un pagamento?"
+    content: !include faq/faq57.md
+  58:
+    title: "Come faccio a richiedere il bonus?"
+    content: !include bonus/faq/faq58.md
+  59:
+    title: "Cosa serve per richiedere il bonus?"
+    content: !include bonus/faq/faq59.md
+  60:
+    title: "Ho ottenuto il bonus?"
+    content: !include bonus/faq/faq60.md
+  61:
+    title: "Cosa vuol dire che i miei familiari sono beneficiari del bonus vacanze?"
+    content: !include bonus/faq/faq61.md
+  62:
+    title: "Cosa significa che la mia DSU presenta omissioni o difformità?"
+    content: !include bonus/faq/faq62.md
+  63:
+    title: "Come posso usare il Bonus Vacanze?"
+    content: !include bonus/faq/faq63.md
+  64:
+    title: "Come posso condividere il Bonus con i miei familiari?"
+    content: !include bonus/faq/faq64.md
+  65:
+    title: "Dove trovo l'elenco delle strutture che accettano il Bonus Vacanze?"
+    content: !include bonus/faq/faq65.md
+  66:
+    title: "Quali bonus o carte sconto posso aggiungere?"
+    content: !include bonus/faq/faq66.md
+  67:
+    title: "Devo caricare il mio ISEE in versione PDF sull’app IO?"
+    content: !include bonus/faq/faq67.md
+  68:
+    title: "Nell’app IO trovo l’elenco delle strutture turistiche che accettano il “Bonus Vacanze”?"
+    content: !include bonus/faq/faq68.md
+  69:
+    title: "Quanto tempo passa dal momento della richiesta al momento dell’attivazione del Bonus su IO?"
+    content: !include bonus/faq/faq69.md
+  70:
+    title: "Devo necessariamente aggiungere una carta di credito sull’app IO per richiedere e spendere il bonus?"
+    content: !include bonus/faq/faq70.md
+  71:
+    title: "Ho intenzione di richiedere il Bonus Vacanze ma non lo userò personalmente. Posso cederlo a un altro componente del mio nucleo familiare?"
+    content: !include bonus/faq/faq71.md
+  72:
+    title: "Come potrò condividere il Bonus con i miei familiari?"
+    content: !include bonus/faq/faq72.md
+  73:
+    title: "Come fa l’app IO a conoscere la composizione del mio nucleo familiare?"
+    content: !include bonus/faq/faq73.md
+  74:
+    title: "Sull’app IO potrò richiedere anche il Bonus Bici?"
+    content: !include bonus/faq/faq74.md
+  75:
+    title: "Dopo aver fatto la richiesta, ho trovato un errore nel riepilogo dei dati relativi al mio nucleo familiare che l’app mi mostra prima di confermare l’attivazione del Bonus. Come risolvo?"
+    content: !include bonus/faq/faq75.md
+  76:
+    title: "L’app mi dice che l’importo massimo del mio Bonus Vacanze è di 500 euro. Cosa succede se il costo del mio soggiorno è inferiore?"
+    content: !include bonus/faq/faq76.md
+  77:
+    title: "Qualsiasi tipo di ISEE è valido per richiedere il Bonus Vacanze tramite l’app IO?"
+    content: !include bonus/faq/faq77.md
+  78:
+    title: "Hai avuto problemi nell’aggiunta di un nuovo metodo di pagamento?"
+    content: !include bonus/bpd/faq/faqBpd1.md
+  79:
+    title: "La mia carta PagoBANCOMAT è anche una carta di debito. Cosa devo selezionare?"
+    content: !include bonus/bpd/faq/faqBpd2.md
+  80:
+    title: "Perché il salvataggio non va a buon fine?"
+    content: !include bonus/bpd/faq/faqBpd3.md
+  81:
+    title: "La mia carta non ha alcun codice di sicurezza."
+    content: "Controlla bene sul retro (per le carte Maestro, Mastercard, Visa) o sul fronte (per le carte American Express). Se non trovi alcun codice di sicurezza, molto probabilmente la tua carta non è abilitata ai pagamenti online. Contatta la tua banca per maggiori informazioni."
+bonus:
+  bonusVacanze:
+    accessibility:
+      card: Il tuo Bonus Vacanze con codice {{code}}, del valore di {{value}} euro è {{status}}
+    statusInfo:
+      validBetween: Potrai usare questo Bonus Vacanze dal {{from}} fino al {{to}}
+      bonusRejected: Attenzione! Questo Bonus Vacanze è stato annullato
+      redeemed: Questo Bonus Vacanze è stato utilizzato il {{date}}
+    multipleBonus: Risultano due o più bonus richiesti e attivati da te. Assicurati di usare quello relativo alla DSU corretta, per evitare che chi utilizza il bonus incorra in successive azioni di recupero.
+    usableAmount: Spendibile presso la struttura ricettiva
+    taxBenefit: Detraibile in dichiarazione dei redditi
+    request: Richiedi il
+    code: Codice
+    uniqueCode: Codice univoco
+    requestedAt: Richiesto il
+    consumedAt: Utilizzato il
+    advice: "Cliccando su “Richiedi il Bonus Vacanze” dichiari di avere letto e compreso la "
+    status: Stato
+    name: Bonus Vacanze
+    validity: Valido nel periodo
+    amount: Importo massimo
+    applicant: CF richiedente
+    bonusClaim: Chi può riscuotere il bonus?
+    shareMessage: "Questo è il codice del tuo Bonus Vacanze:"
+    saveScreenShotOk: "Bonus salvato nella tua galleria!"
+    savedOn: "Salvato il "
+    detail:
+      contextualHelp:
+        title: Bonus Vacanze
+        body: Qui sono visualizzati i dettagli del Bonus Vacanze e le informazioni necessarie per spendere il bonus.
+    checkBonusEligibility:
+      loading: Verifico l'idoneità per l'accesso al bonus
+    cta:
+      requestBonus: Richiedi Bonus
+      cancelRequest: Annulla la richiesta
+      qrCode: QR code
+      copyCode: Copia codice
+      openQRCode: Visualizza QR code
+    eligibility:
+      loading: "Stiamo verificando l’ISEE del tuo nucleo familiare con INPS\nTi preghiamo di attendere."
+      iseeNotAvailable:
+        title: "Siamo spiacenti.\n Non hai un ISEE ordinario o corrente in corso di validità."
+        text:
+          first: "E' necessario presentare una Dichiarazione Sostitutiva Unica (DSU) per il calcolo dell’ISEE ordinario o corrente, prima di richiedere nuovamente il Bonus Vacanze.\n\n
+                  Puoi fare subito una "
+          secondo: "simulazione online"
+          third: " sul sito dell'INPS per verificare la tua idoneità, oppure richiedere l'ISEE sui canali previsti da INPS."
+        goToDSU: Richiedi ISEE
+      iseeNotEligible:
+        title: "Siamo spiacenti.\n Il tuo ISEE supera la soglia richiesta."
+        text: Se la situazione patrimoniale del tuo nucleo familiare è cambiata rispetto all'ultima Dichiarazioni Sostitutiva Unica (DSU) presentata, puoi presentarne una nuova attraverso i canali previsti da INPS.
+        goToNewDSU: Richiedi nuovo ISEE
+      activateBonus:
+        contextualHelp:
+          title: Il Bonus Vacanze del tuo nucleo familiare
+          body: !include bonus/bonusVacanze/eligible_ch.md
+        headerTitle: Richiesta Bonus Vacanze
+        title: Buone notizie!
+        description: "Il tuo nucleo familiare ha diritto al seguente Bonus Vacanze:"
+        reminder:
+          text: "Ciascun componente del tuo nucleo familiare concorre a determinare l'importo e potrà spendere il bonus. Se i dati non sono corretti o aggiornati, per evitare problemi in seguito all'utilizzo del Bonus, ti invitiamo a presentare una nuova DSU prima di procedere con la richiesta."
+        discrepancies:
+          attention: "Attenzione!"
+          text: "INPS ha segnalato alcune omissioni o difformità nel tuo ISEE. Verifica che sia tutto corretto prima di continuare. Se decidi di proseguire, potresti essere chiamato a fornire la documentazione per provare la completezza e la veridicità dei dati indicati nella DSU Altrimenti, puoi presentare una nuova DSU e richiedere il Bonus in un secondo momento."
+        activateCTA: "Attiva il Bonus"
+      timeout:
+        title: Stiamo procedendo alla verifica del tuo ISEE.
+        description:
+          first: "Ti invieremo un messaggio in app non appena sarà completata.\n\nQuando lo riceverai, se l'esito sarà positivo, ricordati di completare la tua richiesta "
+          second: "entro 24 ore"
+          third: ", altrimenti dovrai iniziarne una nuova."
+      activationPending:
+        title: Il bonus per il tuo nucleo familiare è già stato richiesto ed è in fase di attivazione.
+        description: Riceverai un messaggio quando sarà attivato.
+      underage:
+        title: "Siamo spiacenti. Solo i cittadini maggiorenni possono richiedere il Bonus Vacanze"
+    activation:
+      loading: "Abbiamo inoltrato la tua richiesta a Agenzia delle Entrate\nTi preghiamo di attendere."
+      goToDetails: Visualizza Bonus Vacanze
+      timeout:
+        title: Stiamo processando la tua richiesta.
+        description: Ti invieremo un messaggio in app quando il tuo bonus sarà pronto.
+      alreadyRedeemed:
+        title: Il bonus per il tuo nucleo familiare è già attivo!
+        body: Puoi visualizzarne i dettagli nella sezione Portafoglio.
+        cta: Visualizza Bonus disponibili
+      eligibilityExpired:
+        title: Tempo scaduto.
+        body: Le 24 ore utili a proseguire la tua richiesta sono scadute. Ti chiediamo di ricominciare una nuova richiesta.
+        cta: "Richiedi Bonus"
+      confirm:
+        title: Attenzione
+        body: Continuando nel processo, non sarà più possibile annullare la richiesta.
+        cancel: Torna alla richiesta
+        confirm: Continua
+      completed:
+        title: Congratulazioni!
+        description: Il tuo bonus è attivo
+    abort:
+      title: Annulla
+      body: Vuoi davvero uscire dal processo? Per richiedere il bonus vacanze dovrai ripetere il flusso dall’inizio.
+      cancel: Continua
+      confirm: Annulla la richiesta
+      completed: Richiesta annullata
+    composition:
+      amount: "Importo massimo"
+      expendable: "Spendibile presso la struttura ricettiva"
+      taxBenefit: "Detraibile in dichiarazione dei redditi"
+    family:
+      title: "Chi può riscuotere il bonus?"
+  bonusList:
+    title: Aggiungi bonus o sconto
+    contentTitle: Seleziona uno dei bonus disponibili
+    contextualHelp:
+      title: Aggiungere un bonus o una carta sconto
+      body: "Qui puoi selezionare il bonus o la carta sconto che vuoi aggiungere. Una volta attivati, verranno poi visualizzati nella sezione Portafoglio. Potrai sempre visualizzare i dettagli del Bonus o dello sconto, entrando nella sezione Portafoglio, e selezionando l'elemento interessato all'interno della lista."
+  bonusInformation:
+    contextualHelp:
+      title: Il bonus vacanze
+      body: Qui sono visualizzate tutte le informazioni relative al bonus vacanze, il provvedimento istituito dal Decreto Rilancio per incentivare  il turismo dopo il lockdown dovuto all'emergenza Coronavirus.
+    requestAlert:
+      title: Attenzione
+      content: "Hai già ottenuto un bonus, continua la richiesta solo se la tua situazione si è modificata e hai presentato una nuova DSU per l’aggiornamento dell’ISEE.\n Ti informiamo che l’utilizzo di bonus generati in base a DSU non corrette, determina azioni di recupero dell’agevolazione verso l’utilizzatore.\n Confermi di voler continuare?"
+  request: Richiedi un nuovo bonus
+  requestLabel: Bonus e sconti
+  requestTitle: Richiesta
+  validity_interval: dal {{from}} fino al {{to}}
+  active: Attivo
+  failed: Fallito
+  redeemed: Utilizzato
+  termsAndConditionFooter: "Premendo \"{{ctaText}}\" dichiari di aver letto e compreso la [Guida]({{regulationLink}}) e l'[Informativa Privacy]({{tosUrl}})"
+  tos:
+    title: Informativa sul trattamento dei dati personali
+    content: !include bonus/bonusVacanze/bonus_tos.md
+  bpd:
+    title: Cashback
+    description: "Ottieni un rimborso quando paghi nei negozi con questo metodo"
+    name: Cashback
+    earned: Importo accumulato
+    cta:
+      activeBonus: Attiva il Cashback
+    unsubscribe:
+      cta: "Cancella la tua iscrizione al Cashback"
+      title: "Disattivazione Cashback"
+      body1: "Vuoi davvero cancellare la tua iscrizione al Cashback?"
+      body2: "Se confermi, le tue transazioni non potranno più essere registrate per il Cashback né potrai concorrere per il Super Cashback; inoltre, **non potrai riscuotere un rimborso**, nel caso ti fosse stato riconosciuto. La disattivazione del Cashback avrà effetto **anche negli altri canali** che hai usato per attivarlo (home banking, app, etc).\n\nSe riattivi il Cashback in un secondo momento, **ripartirai da zero transazioni**."
+      confirmCta: "Cancella iscrizione"
+      loading: "Stiamo cancellando la tua iscrizione"
+      success: "La tua iscrizione al Cashback è stata cancellata"
+      failure: "Non siamo riusciti a cancellare la tua iscrizione, riprova per favore"
+    onboarding:
+      alert:
+        title: Il Cashback è già attivo
+        body: Puoi vedere maggiori dettagli nel tuo Portafoglio.
+        cancel: Chiudi
+        confirm: Torna indietro
+      loadingActivationStatus:
+        title: Verifico lo stato di attivazione
+      declaration:
+        header: Per poter attivare il Cashback devi dichiarare
+        cta: "Dichiaro"
+        conditions:
+          age: di essere maggiorenne
+          resident: di risiedere in Italia
+          owner:
+            normal: "di attivare ai fini del Cashback "
+            bold: "solo metodi di pagamento di cui sei il titolare"
+          personal_use:
+            normal: "che userai i metodi di pagamento su cui è attivo il Cashback solo per acquisti effettuati per finalità personali, "
+            bold: "non legati ad attività di Impresa, Arte o Professione"
+        disclaimer:
+          normal1: "Questa autodichiarazione è resa ai sensi del "
+          link: "dpr 28 dicembre 2000 n. 445 art 46 e 47"
+          normal2: " e consapevole delle sanzioni penali e della perdita di diritto al rimborso in caso di falsa dichiarazione"
+      loadingActivateBpd:
+        title: "Stiamo attivando il Cashback"
+        body: "Ti preghiamo di attendere..."
+      noPaymentMethod:
+        title: "Aggiungi almeno un metodo di pagamento"
+        body: "Per iniziare a collezionare transazioni valide, aggiungi al tuo Portafoglio i tuoi metodi di pagamento preferiti: oggi sono supportate le principali carte di pagamento, app e altri strumenti digitali.\n\n
+        In futuro verranno supportati altri strumenti: potrai aggiungere quando vuoi nuovi metodi di pagamento su IO e attivare su ciascuno il Cashback!"
+      enrollPaymentMethod:
+        title: "Scegli quali metodi di pagamento attivare"
+        body1: "Attiva il Cashback sui metodi salvati nel tuo portafoglio per iniziare a collezionare le transazioni valide."
+        body2: "Potrai aggiungere in un secondo momento altri metodi di pagamento al tuo portafoglio e attivare su questi il Cashback."
+      errorPaymentMethod:
+        title: "Ci siamo quasi, attiva il Cashback sui tuoi metodi di pagamento!"
+        body: "Abilita il Cashback sui metodi già presenti nel tuo portafoglio o aggiungine di nuovi."
+        cta: "Attiva i metodi di pagamento"
+    suggestActivation:
+      title: "Vuoi attivare il Cashback?"
+      body: "Hai aggiunto dei metodi di pagamento compatibili con il Cashback, l’iniziativa promossa dalla Presidenza del Consiglio dei Ministri e dal Ministero dell’Economia e delle Finanze, allo scopo di incentivare un maggiore utilizzo di moneta elettronica nel Paese.\n\n
+             Puoi ricevere un rimborso sugli acquisti effettuati con carte, bancomat e app di pagamento.\n\n"
+      skip: "No, grazie"
+      confirm: "Info e attivazione"
+    activateOnNewMethods:
+      title: "Vuoi attivare il Cashback?"
+      body1: "Attiva il Cashback sui metodi salvati nel tuo portafoglio per iniziare a collezionare le transazioni valide."
+      body2: "Se preferisci, puoi attivare il Cashback su questi metodi anche in un secondo momento."
+      skip: "Non ora"
+    iban:
+      cta:
+        bpdNotActiveTitle: "attenzione"
+        bpdNotActiveMessage: "non sei iscritto al cashback, iscriviti e riprova."
+        noActivePeriodTitle: "attenzione"
+        noActivePeriodMessage: "non c'è alcun cashback attivo in questo momento."
+      iban: "IBAN"
+      edit: "Modifica IBAN"
+      verify: "Controlla IBAN"
+      insertion:
+        title: "IBAN per l’accredito"
+        body1: "Per ricevere eventuali rimborsi, inserisci il tuo "
+        body1Bold: "codice IBAN senza spazi"
+        body2: "L’IBAN verrà verificato per sapere se il relativo conto corrente è intestato proprio a te. Puoi inserirlo anche in un secondo momento."
+      koWrong:
+        title: "IBAN non corretto"
+        text1: "L'IBAN che hai inserito"
+        text2: "non risulta corretto: controllalo per piacere!"
+      koCannotVerify:
+        title: "Non è stato possibile verificare il tuo IBAN"
+        text1: "Se sei sicuro che l’IBAN"
+        text2: "identifichi il conto su cui vuoi ricevere gli accrediti, puoi proseguire."
+      koNotOwned:
+        title: "Controlla l'IBAN inserito"
+        text1: "L’IBAN"
+        text2: "non risulta intestato a"
+      loading:
+        "Stiamo verificando il tuo IBAN\n\nTi preghiamo di attendere."
+      success: "IBAN inserito con successo"
+    details:
+      howItWorks:
+        title: "Extra Cashback di Natale"
+        body: "1. Il programma Cashback si divide in periodi. Il periodo corrente inizia il **{{startDate}}** e finisce il **{{endDate}}**. **Accumula transazioni** valide durante tutta la durata di ciascun periodo con i **metodi di pagamento che hai attivato**.\n
+
+               2. In questo periodo, se raggiungi le **{{minTransactionNumber}} transazioni**, riceverai un rimborso pari al {{cashbackPercentage}}% fino ad un rimborso massimo di **{{maxTransactionCashback}} euro** a transazione ed un massimo di **{{maxPeriodCashback}} euro** in tutto il periodo.\n
+
+               3. Al termine del periodo, ricevi il rimborso accumulato sull’IBAN da te indicato.\n\n‎"
+      components:
+        iban:
+          title: "IBAN per l’accredito"
+          noIbanBody: "Imposta il tuo IBAN per poter ricevere il Cashback accumulato"
+          button: "Imposta IBAN"
+        transactionsCountOverview:
+          title: "Le tue transazioni"
+          of: "su"
+          closedPeriodKOBody: "Non hai raggiunto le {{transactions}} transazioni necessarie per ottenere un rimborso: avresti ricevuto € {{amount}}. Provaci nel prossimo periodo!"
+          currentPeriodKOBody:
+            one: "Devi aver fatto almeno"
+            two: " {{transactions}} transazioni"
+            three: " per sbloccare il Cashback che hai accumulato!"
+          currentPeriodUnlockBody: "Complimenti {{name}}! Hai superato la soglia di {{transactions}} transazioni e sbloccato il Cashback!"
+          currentPeriodMaxAmount: "Complimenti {{name}}! Hai raggiunto l’importo massimo previsto!"
+          currentPeriodSuperCashback: "In questo momento avresti diritto al Super Cashback di {{superCashbackAmount}} €! Continua così per rimanere in classifica."
+          gracePeriodBody: "Questo periodo del Cashback si è chiuso il {{date}}. Stiamo aspettando di ricevere le ultime transazioni, per calcolare i rimborsi. Riceverai un messaggio quando l'operazione verrà completata."
+          closedPeriodOKBody: "Complimenti {{name}}! \nHai diritto ad un rimborso di € {{amount}}"
+          closedPeriodMaxAmount: ", il massimo del rimborso possibile"
+          closedPeriodSuperCashback: ", di cui € {{amount}} di Super Cashback"
+          moneyTransfer: "Riceverai un messaggio quando verrà effettuato il bonifico all'IBAN da te scelto."
+          inactivePeriodBody: "Potrai iniziare a collezionare transazioni valide a partire dal {{date}}"
+          label:
+            one: "1 transazione valida"
+            other: "{{transactions}} transazioni valide"
+        ranking:
+          title: "La tua posizione"
+          notReady:
+            title: "Quando vedrai la classifica Super Cashback?"
+            body: "La classifica si basa sul **numero di transazioni** eseguite con i metodi di pagamento su cui hai attivato il Cashback.\n\n
+                   Mostreremo la tua posizione in classifica **quando la distribuzione dei partecipanti sarà più significativa**: in questo momento ci sono moltissimi utenti con lo stesso numero di transazioni.\n\n
+                   Una volta pubblicata, la classifica **continuerà a cambiare** a seconda del numero di transazioni di tutti i partecipanti, fino alla fine dei 6 mesi."
+      transaction:
+        label:
+          one: "1 transazione"
+          other: "{{transactions}} transazioni"
+        title: "Le tue transazioni"
+        goToButton: "Dettaglio transazioni"
+        loading: "Stiamo recuperando la lista delle tue transazioni\n\nAttendi qualche secondo..."
+        error:
+          title: "I sistemi stanno impiegando più tempo del previsto"
+          body: "In questo momento non riusciamo a recuperare le tue transazioni. Non preoccuparti, a breve l’elenco tornerà nuovamente disponibile."
+          pageLoading: "Non riusciamo a recuperare le transazioni, riprova per piacere."
+        noPaymentMethod:
+          text1: "Devi attivare "
+          text2: "almeno un metodo di pagamento "
+          text3: "al Cashback per iniziare a collezionare le transazioni necessarie"
+        detail:
+          empty:
+            text1: "Non ci sono ancora transazioni valide."
+            text2: "Controlla di nuovo nei prossimi giorni!"
+          summary:
+            bottomSheet:
+              title: Quando troverai le transazioni?
+              body: "**Continui a non vedere la transazione?**\n\n- Controlla se la tua banca ha già **contabilizzato** la transazione: i dati vengono trasmessi all'app entro 5 giorni lavorativi dalla contabilizzazione.\n\n- I pagamenti effettuati con Google Pay, Apple Pay e Samsung Pay non sono ancora supportati. Stiamo lavorando con la tua banca per ricevere anche questo tipo di transazioni.\n\n- La transazione potrebbe essere stata gestita con il POS di un soggetto (acquirer) **non ancora convenzionato.**"
+              readMore: "Leggi di più"
+            calendarBlock:
+              text1: "Ti informiamo che prima che tu veda la transazione su IO,"
+              text2: "possono passare in media 3 giorni lavorativi"
+              text3: "."
+            lastUpdated: "Ultimo aggiornamento: "
+            link: "Manca qualcosa?"
+            body:
+              text1: "Nel periodo "
+              text2: "hai totalizzato "
+              text3:
+                one: "1 transazione valida "
+                other: "{{transactions}} transazioni valide "
+              text4: "e accumulato "
+              text5: "un rimborso di "
+            milestone:
+              title: "Complimenti, hai raggiunto {{cashbackValue}}"
+              body: "Hai raggiunto l'importo massimo previsto in questo periodo. Continua ad accumulare transazioni valide per salire in classifica!"
+          title: "Dettaglio della transazione"
+          paymentCircuit: "Circuito di pagamento"
+          transactionAmount: "Importo transazione"
+          cashbackAmount: "Importo Cashback"
+          acquirerId: "ID transazione Acquirer"
+          issuerId: "ID transazione Issuer"
+          maxCashbackWarning: "Per ogni transazione puoi ottenere un Cashback massimo di € {{amount}}."
+          maxCashbackForPeriodWarning: "Hai già raggiunto il rimborso massimo previsto per questo periodo."
+          canceledOperationWarning: "Questa transazione è uno storno, ovvero annulla una transazione che era stata effettuata in precedenza."
+          canceled: "Storno"
+      paymentMethods:
+        add:
+          cta: "Aggiungi un metodo al Cashback"
+          alertBody: "Il metodo di pagamento che stai aggiungendo sarà salvato nel wallet dell'app IO e, se compatibile, potrà essere usato anche per eventuali pagamenti all'interno dell'app."
+        noPaymentMethods: "Devi aggiungere almeno un metodo di pagamento per iniziare a collezionare transazioni valide"
+        noActiveMethod: "Devi aver attivato almeno un metodo di pagamento per collezionare transazioni valide"
+        error: "Anche se in questo momento non è possibile visualizzare i tuoi metodi, registreremo le transazioni effettuate coi metodi già abilitati al Cashback."
+        activateOnOthersChannel:
+          text1: "Attivati su "
+          text2: "altri canali"
+          title: "Metodi aggiunti da altri canali"
+          body: "Hai aggiunto al Cashback questi metodi di pagamento direttamente dai canali messi a disposizione dalla tua banca o app di pagamenti. Puoi attivare o disattivare la registrazione delle transazioni di questi metodi anche da IO.\n
+                 Se vuoi usare alcuni di questi metodi anche per pagare tramite IO, aggiungili al tuo portafoglio!"
+          addWallet: "Aggiungi al portafoglio"
+          whyOtherCards:
+            title: "Perché vedo carte che non riconosco?"
+            body: "Non preoccuparti, si tratta delle versioni virtuali delle tue carte che Apple, Google e Samsung utilizzano per proteggere i tuoi acquisti effettuati tramite i loro ‘wallet’. Stiamo lavorando con i soggetti coinvolti nell’iniziativa per migliorare la visualizzazione sull’app IO di questo tipo di carte."
+            cta: "Scopri di più"
+        notActivable:
+          header: "Non attivabili o non compatibili"
+          title: "Metodo non attivabile"
+          body: "Qualcun altro ha già attivo in questo momento il Cashback su questo metodo di pagamento: il Cashback può essere attivato da un solo utente alla volta per ciascun metodo di pagamento."
+        notCompatible:
+          title: "Metodo non compatibile"
+          body: "Il metodo di pagamento non è compatibile con il Cashback perché la banca non ha ancora attivato il supporto a queste funzionalità. Contatta la tua banca per maggiori dettagli."
+        activate:
+          title: "Attivare il Cashback su questo metodo?"
+          body: "L’attivazione sarà operativa **da domani**, quindi non saranno valide ai fini del Cashback le transazioni effettuate nella giornata di oggi."
+          disclaimer: "Scegliendo {{activate}}, dichiari di essere il titolare di questo metodo di pagamento."
+        deactivate:
+          title: "Disattivare il Cashback su questo metodo?"
+          body: "Se confermi questa scelta, le transazioni effettuate con questo metodo non verranno più collezionate.
+                 La disattivazione sarà operativa **da domani**, quindi potrebbero essere ancora collezionate le transazioni effettuate oggi."
+      card:
+        status:
+          active: Attivo
+          closed: Concluso
+          inactive: In arrivo
+      superCashback:
+        rankLabel: "{{position}}º utente in classifica"
+        rankTitle: "Classifica Super Cashback"
+        howItWorks:
+          title: "Come funziona?"
+          body: "I **{{citizens}} cittadini** con il più alto numero di transazioni **ricevono il Super Cashback, un premio pari a €{{amount}}.**"
+          status:
+            active: "**La classifica cambia ogni giorno.** Riceverai un messaggio quando verrà consolidata."
+            closed: "La classifica per questo periodo è chiusa."
+      lastUpdate: Aggiornato alle {{hour}} del {{date}}
+  cgn:
+    accessibility:
+      code: Premendo l'elemento copierai il codice
+    name: Carta Giovani Nazionale
+    departmentName: Dipartimento per le politiche giovanili e il servizio civile universale
+    merchantsList:
+      online: Online
+      places: Luoghi
+      navigationTitle: Visualizza esercenti
+      screenTitle: Seleziona l’esercente presso cui vuoi effettuare il tuo acquisto
+      cta:
+        filter: Filtra
+      filter:
+        title: Filtra esercenti
+        searchTitle: Cerca per nome
+        inputPlaceholder: Cerca negozio, teatro o altro
+        addressTitle: Cerca per indirizzo
+        addressPlaceholder: Cerca indirizzo
+        sliderLabel: Distanza entro cui cercare
+        sliderUnit: Km
+        orderTitle: Visualizza
+        categories: Categorie
+        cta:
+          cancel: Rimuovi
+          confirm:
+            zero: Applica filtri
+            one: Applica filtri ({{count}})
+            other: Applica filtri ({{count}})
+        order:
+          byDistance: Per vicinanza alla tua posizione
+          byName: Ordine alfabetico
+    merchantDetail:
+      title:
+        deals: Offerte
+        description: Descrizione
+        services: Servizi
+        hours: Orari
+        validity: Validità
+        discountCode: Codice Sconto
+        conditions: Condizioni
+      cta:
+        label: Vai al sito dell'esercente
+      categories:
+        theater: teatro, cinema e spettacolo
+        travel: viaggi
+        mobility: carsharing e mobilità
+        telco: telefonia, servizi internet
+        book: libri, audiolibri, e-book
+        museum: musei, gallerie, parchi
+        sport: sport
+        health: salute e benessere
+    cta:
+      activeBonus: Attiva la tua Carta Giovani
+      goToDetail: Visualizza la Carta Giovani
+    detail:
+      cta:
+        buyers: Vedi esercenti
+        otp: Genera codice
+        eyca:
+          copy: Copia numero carta EYCA
+          pending: Scopri di più su EYCA
+          bottomSheet: Vedi gli sconti EYCA
+      tos:
+        link: Informativa sul trattamento dei dati personali
+      information:
+        active: "La carta è attiva e può essere usata fino al {{date}}"
+        warning: "Attenzione! "
+        revoked: "Questa carta è stata annullata per {{reason}}"
+        expired: "Questa carta è scaduta il {{date}}"
+      ownership: Chi può usufruire degli sconti?
+      status:
+        title: Carta Giovani Nazionale
+        eyca: Carta EYCA
+        eycaCircuit: Circuito EYCA
+        eycaNumber: Numero carta
+        eycaPending: "Stiamo associando la tua Carta Giovani Nazionale a un Numero EYCA."
+        eycaError: "Abbiamo riscontrato problemi con i sistemi EYCA."
+        eycaBottomSheetTitle: "Numero di carta EYCA"
+        eycaDescription: "Fino al compimento dei 31 anni, **la tua Carta Giovani Nazionale aderisce al circuito EYCA** (European Youth Card Association).\n\nInserendo il numero di carta EYCA sugli e&#8209;commerce o mostrando la carta presso gli esercenti aderenti, potrai ottenere sconti e agevolazioni su attività culturali, negozi, trasporti, ristorazione e alloggio anche nei 38 paesi europei aderenti al circuito."
+        badge:
+          active: Attiva
+          revoked: Annullata
+          expired: Scaduta
+        date:
+          activated: Attivata il
+          expired: Scaduta il
+          revoked: Annullata il
+        expiration:
+          cgn: Scadenza CGN
+          eyca: Scadenza EYCA
+    activation:
+      eyca:
+        loading:
+          caption: "Stiamo processando la tua richiesta"
+          subCaption: "Ti preghiamo di attendere."
+        error:
+          title: "Il servizio di EYCA in questo momento non è disponibile."
+          body: "Ci scusiamo per il disagio.\nTi invitiamo a riprovare più tardi."
+      loading:
+        caption: "Stiamo attivando la tua Carta Giovani Nazionale"
+        subCaption: "Ti preghiamo di attendere."
+      error:
+        title: "Il servizio Carta Giovani Nazionale in questo momento non è disponibile."
+        body: "Ci scusiamo per il disagio.\nTi invitiamo a riprovare più tardi."
+      ineligible:
+        title: "Siamo spiacenti. Non hai le caratteristiche per attivare la Carta Giovani Nazionale."
+        body: "La Carta Giovani Nazionali è disponibile solo per i cittadini italiani ed europei residenti in Italia, dai 18 ai 35 anni di età."
+      timeout:
+        title: "Stiamo processando la tua richiesta."
+        body: "Ti invieremo un messaggio in app quando la tua Carta Giovani sarà attiva."
+      alreadyActive:
+        title: "La tua Carta Giovani Nazionale è già attiva!"
+        body: "Puoi visualizzarne i dettagli nella sezione Portafoglio."
+      pending:
+        title: "La tua Carta Giovani Nazionale è in fase di attivazione."
+        body: "Riceverai un messaggio quando sarà attivata."
+      success:
+        title: "Congratulazioni!"
+        body: "La tua Carta Giovani Nazionale è attiva"
+    otp:
+      screen:
+        title: Usa codice sconto
+        cta: Copia codice
+        text1: "Copia questo codice nell'apposito campo sul sito dell'esercente entro"
+        text2: "Una volta scaduto, il codice non è più valido"
+        link: Il codice non funziona?
+        bottomSheet:
+          body:
+            text1: "Alcuni esercenti richiedono l’inserimento di un "
+            text2: "codice sconto statico."
+            text3: "Cerca l’esercente che ti interessa nella lista degli esercenti online, e verifica le offerte in corso."
+            text4: "All’interno della scheda relativa all’offerta troverai il codice per ottenere l’agevolazione che potrai copiare e incollare sul sito dell’esercente."
+          cta: Vai alla lista esercenti
+      code:
+        title: Il tuo codice sconto
+        validUntil: Valido ancora per
+        minutes:
+          one: 1 minuto
+          other: "{{minutes}} minuti"
+        seconds:
+          one: 1 secondo
+          other: "{{seconds}} secondi"
+  sv:
+    headerTitle: "Sicilia Vola"
+    voucherGeneration:
+      acceptTos:
+        title: "AcceptTosComponent"
+      checkResidence:
+        title: "CheckResidenceComponent"
+      selectBeneficiaryCategory:
+        title: "SelectBeneficiaryCategory"
+      student:
+        selectDestination:
+          title: "StudentSelectDestinationScreen"
+      disabled:
+        additionalInfo:
+          title: "DisabledAdditionalInfoScreen"
+      worker:
+        checkIncome:
+          title: "WorkerCheckIncomeScreen"
+        selectDestination:
+          title: "WorkerSelectDestinationScreen"
+      sick:
+        checkIncome:
+          title: "SickCheckIncomeScreen"
+        selectDestination:
+          title: "SickSelectDestinationScreen"
+      selectFlightsDate:
+        title: "SelectFlightsDateScreen"
+      summary:
+        title: "SummaryScreen"
+      voucherGenerated:
+        title: "VoucherGeneratedScreen"
+      ko:
+        checkIncome:
+          title: "Siamo spiacenti.\nNon hai le caratteristiche per accedere agli sconti."
+          body: "Gli sconti Sicilia Vola sono dedicati solo a chi ha un reddito personale lordo inferiore a 25.000€."
+        selectBeneficiaryCategory:
+          title: "Siamo spiacenti.\nNon hai le caratteristiche per accedere agli sconti."
+          body: "Gli sconti Sicilia Vola sono dedicati solo alle categorie presentate nella schermata precedente."
+        checkResidence:
+          title: "Siamo spiacenti.\nNon hai le caratteristiche per accedere agli sconti."
+          body: "Gli sconti Sicilia Vola sono dedicati solo ai residenti in Sicilia."
+        timeout:
+          title: "Il tuo codice sconto Sicilia Vola è in fase di generazione."
+          body: "Riceverai un messaggio in app IO quando sarà pronto."
+features:
+  euCovidCertificate:
+    save:
+      noPermission: "Sembra che l'app non abbia i permessi per salvare immagini. Controlla le impostazioni del tuo dispositivo."
+      ok: "L'immagine è stata salvata nella galleria del tuo dispositivo"
+      bottomSheet:
+        title: "Salva il certificato"
+        subTitle: "Potrai mostrare il QR code del certificato senza aprire app IO, anche in assenza di connessione."
+        saveAsImage:
+          title: "Salva come immagine nella galleria"
+          subTitle: "Troverai il QR code fra le immagini presenti sul tuo dispositivo"
+    listItem:
+      cta: "Visualizza"
+    common:
+      title: "Certificazione verde COVID-19"
+      subtitle: "EU Digital COVID Certificate"
+      learnMore: "Per saperne di più"
+      authorizationCode: "Codice di autorizzazione"
+      messageIdentifier: "Identificativo del messaggio"
+    loading:
+      title: "Stiamo caricando i dati del tuo certificato dalla Piattaforma Nazionale del Ministero della Salute"
+      subtitle: "Attendi per favore"
+    valid:
+      accessibility:
+        qrCode: "QR Code"
+        hint: "Visualizza il QR Code a tutto schermo"
+      markdownDetails:
+        headerTitle: "Dettagli del certificato"
+        save: "Salva i dettagli"
+    revoked:
+      title: "Questo certificato \nnon è più valido"
+    expired:
+      title: "Questo certifcato è scaduto"
+    ko:
+      genericError:
+        title: "Non è stato possibile recuperare i dati del tuo certificato: riprova"
+        subtitle: "Potrebbe essere dovuto ad un problema temporaneo."
+      notFound:
+        title: "Sembra che il certificato non \nesista: contatta l’assistenza"
+        subtitle: "Dati utili per ricevere assistenza:"
+        cta: "Contatta l'assistenza"
+      notOperational:
+        title: "La Certificazione verde COVID-19 non è attualmente operativa"
+        subtitle: "TMP"
+      temporarilyNotAvailable:
+        title: "Il servizio è temporaneamente non disponibile"
+        subtitle: "Ti preghiamo di riprovare più tardi"
+      wrongFormat:
+        title: "Non è possibile recuperare questo \ncertificato: contatta l’assistenza"
+        subtitle: "Dati utili per ricevere assistenza:"
+        cta: "Contatta l'assistenza"
+webView:
+  error:
+    missingParams: Non sono presenti le informazioni necessarie per accedere a questa pagina
+    missingToken: Non hai l'autorizzazione per avviare questo flusso
+    convertMessage: Non è stato possibile decodificare il messaggio inviato all'app

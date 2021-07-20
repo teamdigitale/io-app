@@ -1,0 +1,2 @@
+Puoi richiedere di cancellare tutti i tuoi dati personali associati all'app IO. Al termine dell'operazione di eliminazione dei dati, riceverai un messaggio di conferma al tuo indirizzo email associato all'app.
+Questo non significa che non potrai più utilizzare IO: potrai accedere nuovamente all'app ma come un nuovo utente.
