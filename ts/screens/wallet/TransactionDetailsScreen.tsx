@@ -287,7 +287,17 @@ class TransactionDetailsScreen extends React.Component<Props, State> {
           {/** to be implemented with the card logo when https://github.com/pagopa/io-app/pull/1622/ is merged */}
 
           {data.paymentMethodIcon ? (
-            <View style={[styles.row, styles.centered]}>
+            <View
+              style={[styles.row, styles.centered]}
+              accessible
+              accessibilityLabel={
+                data.paymentMethodBrand
+                  ? `${I18n.t("wallet.paymentMethod")}, ${
+                      data.paymentMethodBrand
+                    }`
+                  : undefined
+              }
+            >
               <Text>{I18n.t("wallet.paymentMethod")}</Text>
               <Image
                 style={styles.cardLogo}
