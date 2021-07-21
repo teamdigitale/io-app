@@ -198,9 +198,19 @@ class TransactionDetailsScreen extends React.Component<Props, State> {
     const data = this.getData();
 
     const standardRow = (label: string, value: string) => (
-      <View style={styles.row}>
+      <View
+        style={styles.row}
+        accessible
+        accessibilityLabel={`${label}, ${value}`}
+      >
         <Text style={styles.flex}>{label}</Text>
-        <Text bold={true} dark={true} selectable={true}>
+        <Text
+          bold={true}
+          dark={true}
+          selectable={true}
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants"
+        >
           {value}
         </Text>
       </View>
