@@ -64,6 +64,9 @@ const successFooter = (onClose: () => void) => (
 const PaymentOutcomeCodeMessage: React.FC<Props> = (props: Props) => {
   const outcomeCode = props.outcomeCode.outcomeCode.fold(undefined, oC => oC);
 
+  // FIXME: this CTA will point to an external site, yet to be defined
+  const onLearnMore = () => null;
+
   const renderSuccessComponent = () => {
     if (pot.isSome(props.verifica) && pot.isSome(props.psps)) {
       const totalAmount =
@@ -85,6 +88,7 @@ const PaymentOutcomeCodeMessage: React.FC<Props> = (props: Props) => {
       onClose={props.navigateToWalletHome}
       successComponent={renderSuccessComponent}
       successFooter={() => successFooter(props.navigateToWalletHome)}
+      onLearnMore={onLearnMore}
     />
   ) : null;
 };

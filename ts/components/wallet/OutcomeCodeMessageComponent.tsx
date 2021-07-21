@@ -8,27 +8,47 @@ import BaseScreenComponent from "../screens/BaseScreenComponent";
 import { InfoScreenComponent } from "../infoScreen/InfoScreenComponent";
 import { renderInfoRasterImage } from "../infoScreen/imageRendering";
 import FooterWithButtons from "../ui/FooterWithButtons";
-import { cancelButtonProps } from "../../features/bonus/bonusVacanze/components/buttons/ButtonConfigurations";
+import {
+  cancelButtonProps,
+  confirmButtonProps
+} from "../../features/bonus/bonusVacanze/components/buttons/ButtonConfigurations";
 import { OutcomeCode } from "../../types/outcomeCode";
 import { getFullLocale } from "../../utils/locale";
 
 type OwnProp = {
   outcomeCode: OutcomeCode;
   successComponent: React.FC;
-  successFooter?: React.FC;
   onClose: () => void;
+  successFooter?: React.FC;
+  onLearnMore?: () => void;
 };
 type Props = OwnProp;
 
-const blockingFooterWithButton = (onClose: () => void) => (
-  <FooterWithButtons
-    type={"SingleButton"}
-    leftButton={cancelButtonProps(
-      onClose,
-      I18n.t("wallet.outcomeMessage.cta.close")
-    )}
-  />
-);
+const blockingFooterWithButton = (
+  onClose: () => void,
+  onLearnMore: (() => void) | undefined
+) =>
+  onLearnMore ? (
+    <FooterWithButtons
+      type={"TwoButtonsInlineThird"}
+      leftButton={cancelButtonProps(
+        onClose,
+        I18n.t("wallet.outcomeMessage.cta.close")
+      )}
+      rightButton={confirmButtonProps(
+        onLearnMore,
+        I18n.t("wallet.outcomeMessage.cta.learnMore")
+      )}
+    />
+  ) : (
+    <FooterWithButtons
+      type={"SingleButton"}
+      leftButton={cancelButtonProps(
+        onClose,
+        I18n.t("wallet.outcomeMessage.cta.close")
+      )}
+    />
+  );
 
 /**
  * This component renders the message associated to the outcome code of a payment.
@@ -72,7 +92,7 @@ const OutcomeCodeMessageComponent: React.FC<Props> = (props: Props) => {
               />
             )}
             {props.outcomeCode.status === "errorBlocking" &&
-              blockingFooterWithButton(props.onClose)}
+              blockingFooterWithButton(props.onClose, props.onLearnMore)}
           </>
         )}
       </SafeAreaView>

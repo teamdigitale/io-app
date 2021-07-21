@@ -1405,6 +1405,7 @@ wallet:
   outcomeMessage:
     cta:
       close: Close
+      learnMore: Learn more
       visualizeCard: View card
     fallback:
       title: "Sorry, an unexpected error has occurred"

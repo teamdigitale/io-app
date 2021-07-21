@@ -1428,6 +1428,7 @@ wallet:
   outcomeMessage:
     cta:
       close: Chiudi
+      learnMore: Scopri di più
       visualizeCard: Visualizza carta
     fallback:
       title: "Spiacenti, si è verificato un errore imprevisto"
