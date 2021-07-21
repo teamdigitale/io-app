@@ -123,8 +123,15 @@ function compareLocaleKeys(
 // eslint-disable-next-line sonarjs/cognitive-complexity
 async function run(): Promise<void> {
   try {
+    /**
+     * how to use:
+     * - set leader with the name of the folder (placed in locales) that represents the status-quo of the locales
+     * - set the follower with the name of the folder (placed in locales) that represents the locale you want to compare to leader
+     *
+     * note: each folder should be filled with all files (*.yaml, *.md)
+     */
     const root = path.join(__dirname, "../locales");
-    const leader = "leader";
+    const leader = "it";
     const follower = "follower";
 
     const localeDocs = await Promise.all(
@@ -162,8 +169,8 @@ async function run(): Promise<void> {
       );
     }
     console.log("-".repeat(10));
-    const leaderKeysAndValues: any = flat(localeDocs[0]);
-    const followerKeysAndValues: any = flat(localeDocs[1]);
+    const leaderKeysAndValues: any = flat.flatten(localeDocs[0]);
+    const followerKeysAndValues: any = flat.flatten(localeDocs[1]);
     console.log("the following keys have different values:\n");
     Object.keys(leaderKeysAndValues).forEach(k => {
       if (
