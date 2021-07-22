@@ -1,7 +1,8 @@
-import { Input, Item, View } from "native-base";
+import { View } from "native-base";
 import * as React from "react";
 import { useState } from "react";
 import { Platform, SafeAreaView, ScrollView } from "react-native";
+import { fromNullable } from "fp-ts/lib/Option";
 import { Iban } from "../../../../../../../definitions/backend/Iban";
 import { makeFontStyleObject } from "../../../../../../components/core/fonts";
 import { Body } from "../../../../../../components/core/typography/Body";
@@ -9,6 +10,7 @@ import { H1 } from "../../../../../../components/core/typography/H1";
 import { H4 } from "../../../../../../components/core/typography/H4";
 import { H5 } from "../../../../../../components/core/typography/H5";
 import { IOStyles } from "../../../../../../components/core/variables/IOStyles";
+import { LabelledItem } from "../../../../../../components/LabelledItem";
 import BaseScreenComponent from "../../../../../../components/screens/BaseScreenComponent";
 import I18n from "../../../../../../i18n";
 import { FooterTwoButtons } from "../../../../bonusVacanze/components/markdown/FooterTwoButtons";
@@ -43,9 +45,8 @@ const upperCaseAndNoBlanks = (text: string) =>
   text.replace(/\s/g, "").toUpperCase();
 
 export const IbanInsertionComponent: React.FunctionComponent<Props> = props => {
-  const [iban, setIban] = useState(props.startIban ?? "");
-  const isInvalidIban = iban.length > 0 && Iban.decode(iban).isLeft();
-  const userCanContinue = !isInvalidIban && iban.length > 0;
+  const [iban, setIban] = useState<string | undefined>(props.startIban);
+  const isValidIban = iban && Iban.decode(iban).isRight();
   const {
     headerTitle,
     title,
@@ -73,32 +74,40 @@ export const IbanInsertionComponent: React.FunctionComponent<Props> = props => {
             </Body>
             <View spacer={true} large={true} />
             <H5>{ibanDescription}</H5>
-            <Item error={isInvalidIban}>
-              <Input
-                value={iban}
-                style={IBANInputStyle}
-                autoCapitalize={"characters"}
-                maxLength={IbanMaxLength}
-                onChangeText={text => {
+            <LabelledItem
+              type="text"
+              isValid={fromNullable(iban).fold(undefined, _ =>
+                Iban.decode(iban).isRight()
+              )}
+              inputProps={{
+                value: iban,
+                autoCapitalize: "characters",
+                maxLength: IbanMaxLength,
+                onChangeText: text => {
                   // On Android we cannot modify the input text, or the text is duplicated
                   setIban(
-                    Platform.select({
-                      android: text,
-                      default: upperCaseAndNoBlanks(text)
-                    })
+                    text
+                      ? Platform.select({
+                          android: text,
+                          default: upperCaseAndNoBlanks(text)
+                        })
+                      : undefined
                   );
-                }}
-              />
-            </Item>
+                },
+                style: IBANInputStyle
+              }}
+            />
             <View spacer={true} large={true} />
             <View spacer={true} small={true} />
             <Body>{body2}</Body>
           </View>
         </ScrollView>
         <FooterTwoButtons
-          rightDisabled={!userCanContinue}
+          rightDisabled={!isValidIban}
           onRight={() =>
-            Iban.decode(upperCaseAndNoBlanks(iban)).map(props.onIbanConfirm)
+            Iban.decode(upperCaseAndNoBlanks(iban as string)).map(
+              props.onIbanConfirm
+            )
           }
           onCancel={props.onContinue}
           rightText={I18n.t("global.buttons.continue")}

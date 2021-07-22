@@ -1,11 +1,8 @@
-import color from "color";
 import debounce from "lodash/debounce";
 import * as React from "react";
 import { connect } from "react-redux";
 
 import { fromNullable, none, Option, some } from "fp-ts/lib/Option";
-import { Input, Item } from "native-base";
-import { NavigationEvents } from "react-navigation";
 import I18n from "../../i18n";
 import {
   disableSearch,
@@ -14,9 +11,9 @@ import {
   updateSearchText
 } from "../../store/actions/search";
 import { Dispatch } from "../../store/actions/types";
-import variables from "../../theme/variables";
 import ButtonDefaultOpacity from "../ButtonDefaultOpacity";
 import IconFont from "../ui/IconFont";
+import { LabelledItem } from "../LabelledItem";
 
 export const MIN_CHARACTER_SEARCH_TEXT = 3;
 
@@ -50,25 +47,21 @@ class SearchButton extends React.Component<Props, State> {
     return (
       <React.Fragment>
         {searchText.isSome() ? (
-          <Item>
-            <NavigationEvents onWillBlur={this.onSearchDisable} />
-            <Input
-              placeholder={I18n.t("global.actions.search")}
-              value={searchText.value}
-              onChangeText={this.onSearchTextChange}
-              autoFocus={true}
-              placeholderTextColor={color(variables.brandGray)
-                .darken(0.2)
-                .string()}
-            />
-            <ButtonDefaultOpacity
-              onPress={this.onSearchDisable}
-              transparent={true}
-              accessibilityLabel={I18n.t("global.buttons.close")}
-            >
-              <IconFont name="io-close" color={this.props.color} />
-            </ButtonDefaultOpacity>
-          </Item>
+          <LabelledItem
+            type="text"
+            hasNavigationEvents
+            inputProps={{
+              placeholder: I18n.t("global.actions.search"),
+              value: searchText.value,
+              onChangeText: this.onSearchTextChange,
+              autoFocus: true
+            }}
+            icon="io-close"
+            iconPosition="right"
+            onPress={this.onSearchDisable}
+            accessibilityLabelIcon={I18n.t("global.buttons.close")}
+            iconColor={this.props.color}
+          />
         ) : (
           <ButtonDefaultOpacity
             hasFullHitSlop

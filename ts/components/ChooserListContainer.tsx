@@ -1,8 +1,7 @@
-import color from "color";
 import { none, Option, some } from "fp-ts/lib/Option";
 import { Millisecond } from "italia-ts-commons/lib/units";
 import { debounce } from "lodash";
-import { Body, Content, Input, Item, Right, View } from "native-base";
+import { Body, Content, Right, View } from "native-base";
 import * as React from "react";
 import { ComponentProps } from "react";
 import {
@@ -13,7 +12,6 @@ import {
   StyleSheet
 } from "react-native";
 import I18n from "../i18n";
-import variables from "../theme/variables";
 import customVariables from "../theme/variables";
 import { areSetEqual } from "../utils/options";
 import ButtonDefaultOpacity from "./ButtonDefaultOpacity";
@@ -24,6 +22,7 @@ import {
   InjectedWithItemsSelectionProps,
   withItemsSelection
 } from "./helpers/withItemsSelection";
+import { LabelledItem } from "./LabelledItem";
 import AppHeader from "./ui/AppHeader";
 import FooterWithButtons from "./ui/FooterWithButtons";
 import IconFont from "./ui/IconFont";
@@ -128,27 +127,19 @@ class ChooserListContainer<T> extends React.PureComponent<Props<T>, State> {
         <Body />
         <Right>
           {searchText.isSome() ? (
-            <Item>
-              <Input
-                placeholder={I18n.t("global.actions.search")}
-                value={searchText.value}
-                onChangeText={this.onSearchTextChange}
-                autoFocus={true}
-                placeholderTextColor={color(variables.brandGray)
-                  .darken(0.2)
-                  .string()}
-              />
-              <ButtonDefaultOpacity
-                onPress={this.onPressCancel}
-                transparent={true}
-              >
-                <IconFont
-                  name="io-close"
-                  accessible={true}
-                  accessibilityLabel={I18n.t("global.buttons.close")}
-                />
-              </ButtonDefaultOpacity>
-            </Item>
+            <LabelledItem
+              type="text"
+              inputProps={{
+                placeholder: I18n.t("global.actions.search"),
+                value: searchText.value,
+                onChangeText: this.onSearchTextChange,
+                autoFocus: true
+              }}
+              icon="io-close"
+              iconPosition="right"
+              onPress={this.onPressCancel}
+              accessibilityLabelIcon={I18n.t("global.buttons.close")}
+            />
           ) : (
             <ButtonDefaultOpacity
               onPress={this.handleSearchPress}

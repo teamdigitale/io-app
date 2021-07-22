@@ -1,7 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { Keyboard, SafeAreaView } from "react-native";
-import { Input, Item, View } from "native-base";
+import { View } from "native-base";
 import { debounce } from "lodash";
 import { Millisecond } from "italia-ts-commons/lib/units";
 import { GlobalState } from "../../../../../store/reducers/types";
@@ -14,7 +14,7 @@ import { availableMerchants } from "../../__mock__/availableMerchants";
 import { navigateToCgnMerchantDetail } from "../../navigation/actions";
 import CgnMerchantsListView from "../../components/merchants/CgnMerchantsListView";
 import { H1 } from "../../../../../components/core/typography/H1";
-import { IOColors } from "../../../../../components/core/variables/IOColors";
+import { LabelledItem } from "../../../../../components/LabelledItem";
 
 type Props = ReturnType<typeof mapStateToProps> &
   ReturnType<typeof mapDispatchToProps>;
@@ -73,15 +73,15 @@ const CgnMerchantsListScreen: React.FunctionComponent<Props> = (
       <SafeAreaView style={IOStyles.flex}>
         <View style={[IOStyles.horizontalContentPadding]}>
           <H1>{I18n.t("bonus.cgn.merchantsList.screenTitle")}</H1>
-          <Item>
-            <Input
-              value={searchValue}
-              autoFocus={true}
-              onChangeText={setSearchValue}
-              placeholderTextColor={IOColors.bluegreyLight}
-              placeholder={I18n.t("global.buttons.search")}
-            />
-          </Item>
+          <LabelledItem
+            type="text"
+            inputProps={{
+              value: searchValue,
+              autoFocus: true,
+              onChangeText: setSearchValue,
+              placeholder: I18n.t("global.buttons.search")
+            }}
+          />
         </View>
         <CgnMerchantsListView
           merchantList={merchantList}
