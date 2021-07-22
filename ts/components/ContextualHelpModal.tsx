@@ -4,6 +4,7 @@ import * as pot from "italia-ts-commons/lib/pot";
 import { Container } from "native-base";
 import * as React from "react";
 import { InteractionManager, Modal, ModalBaseProps } from "react-native";
+import DeviceInfo from "react-native-device-info";
 import { connect } from "react-redux";
 import { loadContextualHelpData } from "../store/actions/content";
 import { Dispatch } from "../store/actions/types";
@@ -15,6 +16,7 @@ import {
   SupportTokenState
 } from "../store/reducers/authentication";
 import { loadSupportToken } from "../store/actions/authentication";
+import { isMixpanelEnabled as selectIsMixpanelEnabled } from "../store/reducers/persistedPreferences";
 import { remoteUndefined } from "../features/bonus/bpd/model/RemoteValue";
 import {
   FAQsCategoriesType,
@@ -28,6 +30,13 @@ import SendSupportRequestOptions, {
 } from "./SendSupportRequestOptions";
 import ContextualHelpComponent from "./ContextualHelpComponent";
 
+export type RequestAssistancePayload = {
+  supportType: BugReporting.reportType;
+  supportToken: SupportTokenState;
+  deviceUniqueId?: string;
+  shouldSendScreenshot?: boolean | undefined;
+};
+
 type OwnProps = Readonly<{
   title: string;
   body: () => React.ReactNode;
@@ -36,13 +45,10 @@ type OwnProps = Readonly<{
   onLinkClicked?: (url: string) => void;
   modalAnimation?: ModalBaseProps["animationType"];
   close: () => void;
-  onRequestAssistance: (
-    type: BugReporting.reportType,
-    supportToken: SupportTokenState,
-    shouldSendScreenshot?: boolean | undefined
-  ) => void;
+  onRequestAssistance: (payload: RequestAssistancePayload) => void;
   faqCategories?: ReadonlyArray<FAQsCategoriesType>;
   shouldAskForScreenshotWithInitialValue?: boolean;
+  isMixpanelEnabled: boolean;
 }>;
 
 type Props = ReturnType<typeof mapStateToProps> &
@@ -148,12 +154,12 @@ const ContextualHelpModal: React.FunctionComponent<Props> = (props: Props) => {
    * Otherwise we allow the user to open directly a the assistance request (new or not) without sending the personal token.
    * @param reportType
    */
-  const handleOnRequestAssistance = (reportType: BugReporting.reportType) => {
+  const handleOnRequestAssistance = (supportType: BugReporting.reportType) => {
     if (props.isAuthenticated) {
-      setSupportType(reportType);
+      setSupportType(supportType);
 
       // ask to send the personal information to the assistance only for a new bug.
-      if (reportType === BugReporting.reportType.bug) {
+      if (supportType === BugReporting.reportType.bug) {
         // refresh / load support token
         props.loadSupportToken();
         setShowSendPersonalInfo(true);
@@ -161,25 +167,34 @@ const ContextualHelpModal: React.FunctionComponent<Props> = (props: Props) => {
       }
     }
     props.dispatchOpenReportType(BugReporting.reportType.question);
-    props.onRequestAssistance(reportType, props.supportToken);
+    props.onRequestAssistance({
+      supportType,
+      supportToken: props.supportToken
+    });
   };
 
   /**
-   * If an authenticated user choice to send the personal token we send it to the assistance.
+   * If an authenticated user chooses to send the personal token we send it to the assistance.
    * Otherwise we allow the user to open a new assistance request without sending the personal token.
    *
    * @param options Contains the checkboxes' values, @todo handle screenshot attachment request.
    */
   const handleContinue = (options: SupportRequestOptions) => {
     setShowSendPersonalInfo(false);
-    fromNullable(supportType).map(st => {
-      props.dispatchOpenReportType(st);
-      props.onRequestAssistance(
-        st,
-        options.sendPersonalInfo ? props.supportToken : remoteUndefined,
-        options.sendScreenshot
-      );
-    });
+    // TODO: non usare supportType am qualcosa di piu' explicit
+    if (supportType !== undefined) {
+      props.dispatchOpenReportType(supportType);
+      props.onRequestAssistance({
+        supportType,
+        supportToken: options.sendPersonalInfo
+          ? props.supportToken
+          : remoteUndefined,
+        deviceUniqueId: props.isMixpanelEnabled
+          ? DeviceInfo.getUniqueId()
+          : undefined,
+        shouldSendScreenshot: options.sendScreenshot
+      });
+    }
   };
 
   return (
@@ -219,13 +234,15 @@ const mapStateToProps = (state: GlobalState) => {
   const potContextualData = screenContextualHelpDataSelector(state);
   const maybeContextualData = pot.getOrElse(potContextualData, none);
   const isAuthenticated = isLoggedIn(state.authentication);
+  const isMixpanelEnabled = selectIsMixpanelEnabled(state);
 
   const supportToken = supportTokenSelector(state);
   return {
     supportToken,
     potContextualData,
     maybeContextualData,
-    isAuthenticated
+    isAuthenticated,
+    isMixpanelEnabled
   };
 };
 

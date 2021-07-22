@@ -27,7 +27,9 @@ import I18n from "../../i18n";
 import customVariables from "../../theme/variables";
 import { setStatusBarColorAndBackground } from "../../utils/statusBar";
 import { handleItemOnPress } from "../../utils/url";
-import ContextualHelpModal from "../ContextualHelpModal";
+import ContextualHelpModal, {
+  RequestAssistancePayload
+} from "../ContextualHelpModal";
 import { SearchType } from "../search/SearchButton";
 import Markdown from "../ui/Markdown";
 import {
@@ -101,15 +103,15 @@ class BaseScreenComponent extends React.PureComponent<Props, State> {
     };
   }
 
-  private handleOnRequestAssistance = (
-    type: BugReporting.reportType,
-    supportToken: SupportTokenState,
-    shouldAttachScreenshotToIBRequest?: boolean
-  ) => {
+  private handleOnRequestAssistance = ({
+    supportType,
+    supportToken,
+    shouldSendScreenshot
+  }: RequestAssistancePayload) => {
     // don't close modal if the report isn't a bug (bug brings a screenshot)
-    if (type !== BugReporting.reportType.bug) {
+    if (supportType !== BugReporting.reportType.bug) {
       this.setState(
-        { requestReport: some(type), supportToken },
+        { requestReport: some(supportType), supportToken },
         this.handleOnContextualHelpDismissed
       );
       return;
@@ -124,9 +126,9 @@ class BaseScreenComponent extends React.PureComponent<Props, State> {
       this.setState({ isHelpVisible: false }, () => {
         this.setState(
           {
-            requestReport: some(type),
+            requestReport: some(supportType),
             supportToken,
-            shouldAttachScreenshotToIBRequest
+            shouldAttachScreenshotToIBRequest: shouldSendScreenshot
           },
           () => {
             // since in Android we have no way to handle Modal onDismiss event https://reactnative.dev/docs/modal#ondismiss
