@@ -44,6 +44,7 @@ import {
 import { getSpidErrorCodeDescription } from "../../utils/spidErrorCode";
 import { getUrlBasepath } from "../../utils/url";
 import { mixpanelTrack } from "../../mixpanel";
+import { isDevEnv } from "../../utils/environment";
 
 type Props = NavigationScreenProps &
   ReturnType<typeof mapStateToProps> &
@@ -103,6 +104,11 @@ const styles = StyleSheet.create({
   }
 });
 
+const originSchemasWhiteList = [
+  "https://*",
+  "intent://*",
+  ...(isDevEnv ? ["http://*"] : [])
+];
 /**
  * A screen that allows the user to login with an IDP.
  * The IDP page is opened in a WebView
@@ -296,7 +302,7 @@ class IdpLoginScreen extends React.Component<Props, State> {
         {!hasError && (
           <WebView
             textZoom={100}
-            originWhitelist={["https://*", "intent://*"]}
+            originWhitelist={originSchemasWhiteList}
             source={{ uri: loginUri }}
             onError={this.handleLoadingError}
             javaScriptEnabled={true}
