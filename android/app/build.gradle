@@ -214,6 +214,16 @@ dependencies {
         exclude group:'com.facebook.flipper'
     }
 
+    implementation(project(':react-native-maps')){
+        exclude group: 'com.google.android.gms', module: 'play-services-base'
+        exclude group: 'com.google.android.gms', module: 'play-services-maps'
+    }
+
+    implementation project(':react-native-location')
+
+    implementation 'com.google.android.gms:play-services-base:17.2.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
     implementation project(':react-native-cie')
     // compile "com.squareup.okhttp3:okhttp:4.2.1"
     // compile "com.squareup.okhttp3:logging-interceptor:4.2.1"
@@ -230,7 +240,7 @@ dependencies {
     } else {
         implementation jscFlavor
     }
-    
+
 }
 
 // Run this once to be able to run the application with BUCK

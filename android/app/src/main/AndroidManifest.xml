@@ -18,8 +18,8 @@
   <uses-permission android:name="android.permission.RECORD_AUDIO" tools:node="remove" />
 
   <!-- Required by react-native-calendar-events -->
-  <uses-permission android:name="android.permission.READ_CALENDAR" />
-  <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+  <uses-permission android:name="android.permission.READ_CALENDAR"/>
+  <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
 
   <!-- Required by @react-native-community/cameraroll -->
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -27,6 +27,9 @@
 
   <!-- Required by react-native-touch-id -->
   <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+
+  <!-- Required by react-native-location -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
   <application
     android:name=".MainApplication"
@@ -60,15 +63,19 @@
       android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
       android:exported="false" >
       <intent-filter>
-        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        <action android:name="com.google.firebase.MESSAGING_EVENT"/>
       </intent-filter>
     </service>
     <meta-data
       android:name="com.google.firebase.messaging.default_notification_icon"
-      android:resource="@drawable/ic_notification" />
+      android:resource="@drawable/ic_notification"/>
     <meta-data
       android:name="com.google.firebase.messaging.default_notification_channel_id"
-      android:value="@string/default_notification_channel_id" />
+      android:value="@string/default_notification_channel_id"/>
+
+    <meta-data
+      android:name="com.google.android.geo.API_KEY"
+      android:value="AIzaSyArpH8lve7zihok2KtVJxLK10O7gMhanUU"/>
 
 
     <!-- END Required by react-native-push-notification -->

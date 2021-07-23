@@ -290,6 +290,10 @@ PODS:
     - React
   - react-native-image-picker (0.28.1):
     - React
+  - react-native-location (2.5.0):
+    - React
+  - react-native-maps (0.28.0):
+    - React-Core
   - react-native-mixpanel (1.2.0):
     - Mixpanel (~> 3.6.0)
     - React
@@ -461,6 +465,8 @@ DEPENDENCIES:
   - react-native-config (from `../node_modules/react-native-config`)
   - "react-native-cookies (from `../node_modules/@react-native-community/cookies`)"
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
+  - react-native-location (from `../node_modules/react-native-location`)
+  - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-mixpanel (from `../node_modules/react-native-mixpanel`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-screen-brightness (from `../node_modules/react-native-screen-brightness`)
@@ -583,6 +589,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/cookies"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
+  react-native-location:
+    :path: "../node_modules/react-native-location"
+  react-native-maps:
+    :path: "../node_modules/react-native-maps"
   react-native-mixpanel:
     :path: "../node_modules/react-native-mixpanel"
   react-native-netinfo:
@@ -703,6 +713,8 @@ SPEC CHECKSUMS:
   react-native-config: 7db9b96479164dfd7b2be68eb9079e08279511c4
   react-native-cookies: ff2e6865dff2e5feeca8f1ed082ae7898e4fa912
   react-native-image-picker: fd93361c666f397bdf72f9c6c23f13d2685b9173
+  react-native-location: 5a40ec1cc6abf2f6d94df979f98ec76c3a415681
+  react-native-maps: 2d405b4e8cee0282e4c02bac434d81450dfea877
   react-native-mixpanel: d644efe1ca33d2646d5cba29e24a13ebc9b37209
   react-native-netinfo: ddaca8bbb9e6e914b1a23787ccb879bc642931c9
   react-native-screen-brightness: 9eefe6db96a5d757e63cdfce8e48d7c9039f2af2

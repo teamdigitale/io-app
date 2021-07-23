@@ -41,6 +41,8 @@ import com.instabug.reactlibrary.RNInstabugReactnativePackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import it.ipzs.cieidsdk.native_bridge.CiePackage;
 import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
+import com.airbnb.android.react.maps.MapsPackage;
+import com.github.reactnativecommunity.location.RNLocationPackage;
 
 import com.facebook.react.PackageList;
 import android.content.Context;
@@ -76,6 +78,8 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
             new RNViewShotPackage(),
             new JailMonkeyPackage(),
             new LinearGradientPackage(),
+            new MapsPackage(),
+            new RNLocationPackage(),
             new RNSharePackage(), new ScreenBrightnessPackage(), new AsyncStoragePackage(), new QRScanReaderPackage(),
           new ImagePickerPackage(), new FlagSecurePackage(), new RNFSPackage(), new AndroidOpenSettingsPackage(),
           new RNGestureHandlerPackage(), new CalendarEventsPackage(), new RNCWebViewPackage(),
