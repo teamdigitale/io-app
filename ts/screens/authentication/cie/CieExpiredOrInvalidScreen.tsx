@@ -2,6 +2,7 @@ import { Content, Text, View } from "native-base";
 import * as React from "react";
 import { NavigationInjectedProps } from "react-navigation";
 import { connect } from "react-redux";
+import { Link } from "../../../components/core/typography/Link";
 import { ScreenContentHeader } from "../../../components/screens/ScreenContentHeader";
 import TopScreenComponent from "../../../components/screens/TopScreenComponent";
 import FooterWithButtons from "../../../components/ui/FooterWithButtons";
@@ -33,9 +34,9 @@ class CieExpiredOrInvalidScreen extends React.PureComponent<Props> {
         <Content>
           <Text>{I18n.t("authentication.landing.expiredCardContent")}</Text>
           <View spacer={true} />
-          <Text link={true} onPress={browseToLink}>
+          <Link onPress={browseToLink}>
             {I18n.t("authentication.landing.expiredCardHelp")}
-          </Text>
+          </Link>
         </Content>
         <FooterWithButtons
           type={"SingleButton"}

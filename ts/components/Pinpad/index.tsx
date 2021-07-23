@@ -13,6 +13,7 @@ import { PinString } from "../../types/PinString";
 import { ComponentProps } from "../../types/react";
 import { PIN_LENGTH, PIN_LENGTH_SIX } from "../../utils/constants";
 import { ShakeAnimation } from "../animations/ShakeAnimation";
+import { Link } from "../core/typography/Link";
 import InputPlaceHolder from "./InputPlaceholder";
 import { DigitRpr, KeyPad } from "./KeyPad";
 
@@ -51,7 +52,8 @@ const styles = StyleSheet.create({
   },
   mediumText: {
     fontSize: 18,
-    lineHeight: 21
+    lineHeight: 21,
+    textAlign: "center"
   }
 });
 
@@ -346,14 +348,9 @@ class Pinpad extends React.PureComponent<Props, State> {
         {this.props.onCancel && (
           <React.Fragment>
             <View spacer={true} large={true} />
-            <Text
-              style={styles.mediumText}
-              alignCenter={true}
-              link={true}
-              onPress={this.props.onCancel}
-            >
+            <Link style={styles.mediumText} onPress={this.props.onCancel}>
               {I18n.t("global.buttons.cancel")}
-            </Text>
+            </Link>
           </React.Fragment>
         )}
       </React.Fragment>

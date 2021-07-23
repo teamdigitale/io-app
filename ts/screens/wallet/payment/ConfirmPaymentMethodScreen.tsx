@@ -14,7 +14,6 @@ import { withLoadingSpinner } from "../../../components/helpers/withLoadingSpinn
 import BaseScreenComponent, {
   ContextualHelpPropsMarkdown
 } from "../../../components/screens/BaseScreenComponent";
-import TouchableDefaultOpacity from "../../../components/TouchableDefaultOpacity";
 import IconFont from "../../../components/ui/IconFont";
 import { LightModalContextInterface } from "../../../components/ui/LightModal";
 import Markdown from "../../../components/ui/Markdown";
@@ -63,6 +62,7 @@ import { isPaymentOutcomeCodeSuccessfully } from "../../../utils/payment";
 import { fetchTransactionsRequestWithExpBackoff } from "../../../store/actions/wallet/transactions";
 import { OutcomeCodesKey } from "../../../types/outcomeCode";
 import { getLookUpIdPO } from "../../../utils/pmLookUpId";
+import { Link } from "../../../components/core/typography/Link";
 
 export type NavigationParams = Readonly<{
   rptId: RptId;
@@ -251,15 +251,13 @@ const ConfirmPaymentMethodScreen: React.FC<Props> = (props: Props) => {
               <H4>{` ${maybePsp.value.businessName}`}</H4>
             </H4>
           )}
-          <TouchableDefaultOpacity onPress={props.pickPsp}>
-            <Text link={true} bold={true}>
-              {I18n.t("payment.changePsp")}
-            </Text>
-          </TouchableDefaultOpacity>
+          <Link onPress={props.pickPsp} weight={"Bold"}>
+            {I18n.t("payment.changePsp")}
+          </Link>
           <View spacer={true} large={true} />
-          <TouchableDefaultOpacity testID="why-a-fee" onPress={showHelp}>
-            <Text link={true}>{I18n.t("wallet.whyAFee.title")}</Text>
-          </TouchableDefaultOpacity>
+          <Link onPress={showHelp} testID="why-a-fee">
+            {I18n.t("wallet.whyAFee.title")}
+          </Link>
         </View>
       </Content>
 

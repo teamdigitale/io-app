@@ -25,6 +25,7 @@ import {
 import IconFont from "../ui/IconFont";
 import variables from "../../theme/variables";
 import { IOColors } from "../core/variables/IOColors";
+import { Link } from "../core/typography/Link";
 import CalendarIconComponent from "./CalendarIconComponent";
 
 type OwnProps = {
@@ -76,9 +77,7 @@ const PaidTextContent: React.FunctionComponent<{
 }> = ({ onPress }) => (
   <>
     {`${I18n.t("messages.cta.payment.paid")} `}
-    <Text link={true} onPress={onPress}>
-      {I18n.t("wallet.wallet")}
-    </Text>
+    <Link onPress={onPress}>{I18n.t("wallet.wallet")}</Link>
   </>
 );
 

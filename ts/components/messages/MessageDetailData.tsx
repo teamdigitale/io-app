@@ -12,6 +12,7 @@ import { PaymentByRptIdState } from "../../store/reducers/entities/payments";
 import customVariables from "../../theme/variables";
 import { format, formatDateAsLocal } from "../../utils/dates";
 import CopyButtonComponent from "../CopyButtonComponent";
+import { Link } from "../core/typography/Link";
 import EmailCallCTA from "../screens/EmailCallCTA";
 
 const styles = StyleSheet.create({
@@ -26,6 +27,10 @@ const styles = StyleSheet.create({
   flex: {
     flex: 1,
     alignSelf: "center"
+  },
+  service: {
+    display: "flex",
+    flexDirection: "row"
   }
 });
 
@@ -106,16 +111,12 @@ class MessageDetailData extends React.PureComponent<Props> {
         )}
 
         {this.data.service_name.isSome() && this.data.service_detail.isSome() && (
-          <Text>
-            {`${I18n.t("messageDetails.service")} `}
-            <Text
-              bold={true}
-              link={true}
-              onPress={this.props.goToServiceDetail}
-            >
+          <View style={styles.service}>
+            <Text>{`${I18n.t("messageDetails.service")} `}</Text>
+            <Link weight={"Bold"} onPress={this.props.goToServiceDetail}>
               {this.data.service_detail.value.service_name}
-            </Text>
-          </Text>
+            </Link>
+          </View>
         )}
         {this.hasEmailOrPhone && (
           <React.Fragment>

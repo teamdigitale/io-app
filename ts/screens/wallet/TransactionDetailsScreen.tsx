@@ -12,6 +12,7 @@ import { NavigationEvents, NavigationInjectedProps } from "react-navigation";
 import { connect } from "react-redux";
 import ButtonDefaultOpacity from "../../components/ButtonDefaultOpacity";
 import CopyButtonComponent from "../../components/CopyButtonComponent";
+import { Link } from "../../components/core/typography/Link";
 import { withLightModalContext } from "../../components/helpers/withLightModalContext";
 import { withLoadingSpinner } from "../../components/helpers/withLoadingSpinner";
 import ItemSeparatorComponent from "../../components/ItemSeparatorComponent";
@@ -221,8 +222,10 @@ class TransactionDetailsScreen extends React.Component<Props, State> {
             recipient={transaction.merchant}
             description={cleanTransactionDescription(transaction.description)}
           />
-          <TouchableWithoutFeedback onPress={this.handleOnFullReasonPress}>
-            <Text link={true}>{I18n.t("wallet.transactionFullReason")}</Text>
+          <TouchableWithoutFeedback>
+            <Link onPress={this.handleOnFullReasonPress}>
+              {I18n.t("wallet.transactionFullReason")}
+            </Link>
           </TouchableWithoutFeedback>
           {this.state.showFullReason && (
             <Text

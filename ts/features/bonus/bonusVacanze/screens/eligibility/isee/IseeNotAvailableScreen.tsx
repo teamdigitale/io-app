@@ -3,6 +3,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import image from "../../../../../../../img/servicesStatus/error-detail-icon.png";
+import { Link } from "../../../../../../components/core/typography/Link";
 import { openLink } from "../../../../../../components/ui/Markdown/handlers/link";
 import I18n from "../../../../../../i18n";
 import { cancelBonusVacanzeRequest } from "../../../store/actions/bonusVacanze";
@@ -15,9 +16,7 @@ const dsuUrl = "https://servizi2.inps.it/servizi/Iseeriforma/FrmSimHome.aspx";
 const renderBody = (first: string, second: string, third: string) => (
   <Text>
     {first}
-    <Text link={true} onPress={() => openLink(dsuUrl)}>
-      {second}
-    </Text>
+    <Link onPress={() => openLink(dsuUrl)}>{second}</Link>
     {third}
   </Text>
 );

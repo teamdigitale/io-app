@@ -41,6 +41,7 @@ import {
 import { Dispatch } from "../../../store/actions/types";
 import { paymentInitializeState } from "../../../store/actions/wallet/payment";
 import variables from "../../../theme/variables";
+import { Link } from "../../../components/core/typography/Link";
 import CodesPositionManualPaymentModal from "./CodesPositionManualPaymentModal";
 
 type NavigationParams = {
@@ -144,8 +145,10 @@ class ManualDataInsertionScreen extends React.Component<Props, State> {
           <Content scrollEnabled={false}>
             <H1>{I18n.t("wallet.insertManually.title")}</H1>
             <Text>{I18n.t("wallet.insertManually.info")}</Text>
-            <TouchableDefaultOpacity onPress={this.showModal}>
-              <Text link={true}>{I18n.t("wallet.insertManually.link")}</Text>
+            <TouchableDefaultOpacity>
+              <Link onPress={this.showModal}>
+                {I18n.t("wallet.insertManually.link")}
+              </Link>
             </TouchableDefaultOpacity>
 
             <Form>

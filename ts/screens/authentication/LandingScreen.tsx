@@ -49,6 +49,7 @@ import { InfoScreenComponent } from "../../components/infoScreen/InfoScreenCompo
 import { renderInfoRasterImage } from "../../components/infoScreen/imageRendering";
 import sessionExpiredImg from "../../../img/landing/session_expired.png";
 import SectionStatusComponent from "../../components/SectionStatusComponent";
+import { Link } from "../../components/core/typography/Link";
 
 type Props = NavigationInjectedProps &
   LightModalContextInterface &
@@ -293,17 +294,15 @@ class LandingScreen extends React.PureComponent<Props, State> {
           </ButtonDefaultOpacity>
           <View spacer={true} />
 
-          <ButtonDefaultOpacity
-            block={true}
-            small={true}
-            transparent={true}
-            onPress={this.navigateToSpidCieInformationRequest}
-          >
-            <Text style={styles.noPadded} link={true}>
+          <ButtonDefaultOpacity block={true} small={true} transparent={true}>
+            <Link
+              style={styles.noPadded}
+              onPress={this.navigateToSpidCieInformationRequest}
+            >
               {this.isCieSupported()
                 ? I18n.t("authentication.landing.nospid-nocie")
                 : I18n.t("authentication.landing.nospid")}
-            </Text>
+            </Link>
           </ButtonDefaultOpacity>
         </View>
       </BaseScreenComponent>
