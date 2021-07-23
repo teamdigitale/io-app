@@ -1,4 +1,6 @@
 import { WebViewNavigation } from "react-native-webview/lib/WebViewTypes";
+import URLParse from "url-parse";
+import { none, Option, some } from "fp-ts/lib/Option";
 import * as config from "../config";
 import { SessionToken } from "../types/SessionToken";
 /**
@@ -16,6 +18,27 @@ type LoginFailure = {
 };
 
 type LoginResult = LoginSuccess | LoginFailure;
+
+export const isPosteIDP = (idp: string): boolean => idp === "posteid";
+
+/**
+ * return some(intentFallbackUrl) if the given input is a valid intent and it has the fallback url
+ * more info https://developer.chrome.com/docs/multidevice/android/intents/
+ * @param intentUrl
+ */
+export const getIntentFallbackUrl = (intentUrl: string): Option<string> => {
+  const intentParse = new URLParse(intentUrl, true).protocol;
+  if (intentParse !== "intent:") {
+    return none;
+  }
+  const hook = "S.browser_fallback_url=";
+  const hookIndex = intentUrl.indexOf(hook);
+  const endIndex = intentUrl.indexOf(";end", hookIndex + hook.length);
+  if (hookIndex !== -1 && endIndex !== -1) {
+    return some(intentUrl.substring(hookIndex + hook.length, endIndex));
+  }
+  return none;
+};
 
 // Prefixes for LOGIN SUCCESS/ERROR
 const LOGIN_SUCCESS_PREFIX = "/profile.html?token=";

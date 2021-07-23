@@ -3,7 +3,7 @@ import Instabug from "instabug-reactnative";
 import * as pot from "italia-ts-commons/lib/pot";
 import { Text, View } from "native-base";
 import * as React from "react";
-import { Image, StyleSheet } from "react-native";
+import { Image, Linking, StyleSheet } from "react-native";
 import { WebView } from "react-native-webview";
 import {
   WebViewErrorEvent,
@@ -35,10 +35,16 @@ import {
 import { idpContextualHelpDataFromIdSelector } from "../../store/reducers/content";
 import { GlobalState } from "../../store/reducers/types";
 import { SessionToken } from "../../types/SessionToken";
-import { getIdpLoginUri, onLoginUriChanged } from "../../utils/login";
+import {
+  getIdpLoginUri,
+  getIntentFallbackUrl,
+  isPosteIDP,
+  onLoginUriChanged
+} from "../../utils/login";
 import { getSpidErrorCodeDescription } from "../../utils/spidErrorCode";
 import { getUrlBasepath } from "../../utils/url";
 import { mixpanelTrack } from "../../mixpanel";
+import { isDevEnv } from "../../utils/environment";
 
 type Props = NavigationScreenProps &
   ReturnType<typeof mapStateToProps> &
@@ -98,6 +104,12 @@ const styles = StyleSheet.create({
   }
 });
 
+// if the app is running in dev env, add "http" to allow the dev-server usage
+const originSchemasWhiteList = [
+  "https://*",
+  "intent://*",
+  ...(isDevEnv ? ["http://*"] : [])
+];
 /**
  * A screen that allows the user to login with an IDP.
  * The IDP page is opened in a WebView
@@ -173,6 +185,16 @@ class IdpLoginScreen extends React.Component<Props, State> {
   };
 
   private handleShouldStartLoading = (event: WebViewNavigation): boolean => {
+    const url = event.url;
+    // if an intent is coming from Poste SPID login form, extract the fallbackUrl and use it in Linking.openURL
+    if (isPosteIDP(this.props.loggedOutWithIdpAuth?.idp.id ?? "")) {
+      const posteIntent = getIntentFallbackUrl(url);
+      if (posteIntent.isSome()) {
+        void Linking.openURL(posteIntent.value);
+        return false;
+      }
+    }
+
     const isLoginUrlWithToken = onLoginUriChanged(
       this.handleLoginFailure,
       this.handleLoginSuccess
@@ -281,6 +303,7 @@ class IdpLoginScreen extends React.Component<Props, State> {
         {!hasError && (
           <WebView
             textZoom={100}
+            originWhitelist={originSchemasWhiteList}
             source={{ uri: loginUri }}
             onError={this.handleLoadingError}
             javaScriptEnabled={true}

@@ -1,4 +1,5 @@
-import { extractLoginResult } from "../login";
+import { none, Option, some } from "fp-ts/lib/Option";
+import { extractLoginResult, getIntentFallbackUrl } from "../login";
 
 describe("hook the login outcome from the url", () => {
   const remoteHost = "https://somedomain.com/somepath/";
@@ -68,4 +69,36 @@ describe("hook the login outcome from the url", () => {
       });
     }
   }
+});
+
+describe("getIntentFallbackUrl", () => {
+  const isIntentSchemeCases: ReadonlyArray<[string, Option<string>]> = [
+    ["", none],
+    ["https://www.google.com", none],
+    ["intent:", none],
+    ["intent://", none],
+    [
+      "intent://domain.test.it/?tranId=abc#Intent;scheme=https;package=com.test.it;S.browser_fallback_url=https://domain.it/?tranId=acb;end",
+      some("https://domain.it/?tranId=acb")
+    ],
+    [
+      "intent://domain.test.it/?tranId=abc#Intent;scheme=https;package=com.test.it;S.browser_fallback_url=https://domain.it/?tranId=acb",
+      none
+    ],
+    [
+      "intent://domain.test.it/?tranId=abc#Intent;scheme=https;package=com.test.it;end",
+      none
+    ],
+    [
+      "intent://domain.test.it/?tranId=abc#Intent;scheme=https;package=com.test.it;fallback_url=https://domain.it/?tranId=acb;end",
+      none
+    ]
+  ];
+  test.each(isIntentSchemeCases)(
+    "given %p as argument, returns %p",
+    (firstArg, expectedResult) => {
+      const result = getIntentFallbackUrl(firstArg);
+      expect(result).toEqual(expectedResult);
+    }
+  );
 });
