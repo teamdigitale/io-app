@@ -23,11 +23,13 @@ import {
 } from "react-native";
 import { TextInputMaskProps } from "react-native-masked-text";
 import { IconProps } from "react-native-vector-icons/Icon";
+import { NavigationEvents } from "react-navigation";
 import I18n from "../i18n";
 import variables from "../theme/variables";
 import { WithTestID } from "../types/WithTestID";
 import { makeFontStyleObject } from "./core/fonts";
 import { H5 } from "./core/typography/H5";
+import { IOColors } from "./core/variables/IOColors";
 import IconFont from "./ui/IconFont";
 import TextInputMask from "./ui/MaskedInput";
 
@@ -47,15 +49,24 @@ const styles = StyleSheet.create({
 type StyleType = IconProps["style"] & ImageStyle;
 
 type CommonProp = Readonly<{
-  label: string;
+  label?: string;
   icon?: string | ImageSourcePropType;
-  isValid?: boolean;
+  iconPosition?: "left" | "right";
   iconStyle?: StyleType;
+  iconColor?: string;
+  isValid?: boolean;
   focusBorderColor?: string;
   description?: string;
   accessibilityLabel?: string;
   accessibilityHint?: string;
+  accessibilityLabelIcon?: string;
+  onPressIcon?: () => void;
+  hasNavigationEvents?: boolean;
 }>;
+
+interface InputProps extends TextInputProps {
+  disabled?: boolean;
+}
 
 type Props = WithTestID<CommonProp> &
   (
@@ -66,14 +77,43 @@ type Props = WithTestID<CommonProp> &
       }>
     | Readonly<{
         type: "text";
-        inputProps: TextInputProps;
+        inputProps: InputProps;
       }>
   );
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
-export const LabelledItem: React.FC<Props> = (props: Props) => {
+export const LabelledItem: React.FC<Props> = ({
+  iconPosition = "left",
+  ...props
+}: // eslint-disable-next-line sonarjs/cognitive-complexity
+Props) => {
   const [isEmpty, setIsEmpty] = useState(true);
   const [hasFocus, setHasFocus] = useState(false);
+
+  const isDisabledTextInput =
+    props.type === "text" && props.inputProps.disabled;
+  const descriptionColor = isDisabledTextInput
+    ? "bluegreyLight"
+    : props.isValid === false
+    ? "red"
+    : "bluegreyDark";
+  const iconColor = isDisabledTextInput
+    ? IOColors.bluegreyLight
+    : variables.brandDarkGray;
+  const accessibilityLabel = props.accessibilityLabel ?? "";
+  const isValid = props.isValid === undefined ? false : props.isValid;
+  const isNotValid = props.isValid === undefined ? false : !props.isValid;
+
+  const onSetInputBorderColor = () => {
+    if (isDisabledTextInput) {
+      return IOColors.greyLight;
+    }
+
+    if (hasFocus && isEmpty) {
+      return variables.itemBorderDefaultColor;
+    }
+
+    return props.focusBorderColor;
+  };
 
   /**
    * check if the input is empty and set the value in the state
@@ -117,24 +157,20 @@ export const LabelledItem: React.FC<Props> = (props: Props) => {
     setHasFocus(false);
   };
 
-  const descriptionColor = props.isValid === false ? "red" : "bluegreyDark";
-  const accessibilityLabel = props.accessibilityLabel ?? "";
-  const inputBorderColor =
-    hasFocus && isEmpty
-      ? variables.itemBorderDefaultColor
-      : props.focusBorderColor;
-  const isValid = props.isValid === undefined ? false : props.isValid;
-  const isNotValid = props.isValid === undefined ? false : !props.isValid;
   return (
     <View>
-      <View
-        importantForAccessibility="no-hide-descendants"
-        accessibilityElementsHidden={true}
-      >
-        <Item style={styles.noBottomLine}>
-          <H5>{props.label}</H5>
-        </Item>
-      </View>
+      {props.label && (
+        <View
+          importantForAccessibility="no-hide-descendants"
+          accessibilityElementsHidden={true}
+        >
+          <Item style={styles.noBottomLine}>
+            <H5 color={isDisabledTextInput ? "bluegreyLight" : "bluegreyDark"}>
+              {props.label}
+            </H5>
+          </Item>
+        </View>
+      )}
 
       <View
         accessible={true}
@@ -146,18 +182,25 @@ export const LabelledItem: React.FC<Props> = (props: Props) => {
         <Item
           style={{
             ...styles.bottomLine,
-            borderColor: inputBorderColor
+            borderColor: onSetInputBorderColor()
           }}
           error={isNotValid}
           success={isValid}
         >
+          {props.hasNavigationEvents && (
+            <NavigationEvents onWillBlur={props.onPressIcon} />
+          )}
+
           {props.icon &&
+            iconPosition === "left" &&
             (isString(props.icon) ? (
               <IconFont
                 size={variables.iconSize3}
-                color={variables.brandDarkGray}
+                color={iconColor}
                 name={props.icon}
                 style={props.iconStyle}
+                onPress={props.onPressIcon}
+                accessibilityLabel={props.accessibilityLabelIcon}
               />
             ) : (
               <Image source={props.icon} style={props.iconStyle} />
@@ -178,17 +221,35 @@ export const LabelledItem: React.FC<Props> = (props: Props) => {
             />
           ) : (
             <Input
-              placeholderTextColor={color(variables.brandGray)
-                .darken(0.2)
-                .string()}
+              placeholderTextColor={
+                isDisabledTextInput
+                  ? color(IOColors.bluegreyLight).string()
+                  : color(variables.brandGray).darken(0.2).string()
+              }
               underlineColorAndroid="transparent"
               {...props.inputProps}
               onChangeText={handleOnChangeText}
               onFocus={handleOnFocus}
               onBlur={handleOnBlur}
               testID={`${props.testID}Input`}
+              disabled={props.inputProps.disabled}
             />
           )}
+
+          {props.icon &&
+            iconPosition === "right" &&
+            (isString(props.icon) ? (
+              <IconFont
+                size={variables.iconSize3}
+                color={iconColor}
+                name={props.icon}
+                style={props.iconStyle}
+                onPress={props.onPressIcon}
+                accessibilityLabel={props.accessibilityLabelIcon}
+              />
+            ) : (
+              <Image source={props.icon} style={props.iconStyle} />
+            ))}
         </Item>
       </View>
       {props.description && (

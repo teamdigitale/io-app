@@ -8,13 +8,14 @@
  *    https://www.pivotaltracker.com/n/projects/2048617/stories/157874540
  */
 
-import { Content, Form, H1, Input, Item, Label, Text } from "native-base";
+import { Content, Form, H1, Text } from "native-base";
 import * as React from "react";
 import { Keyboard, ScrollView, StyleSheet } from "react-native";
 import { NavigationEvents, NavigationInjectedProps } from "react-navigation";
 import { connect } from "react-redux";
 
-import { isLeft, isRight } from "fp-ts/lib/Either";
+import { isRight } from "fp-ts/lib/Either";
+import { isNone } from "fp-ts/lib/Option";
 import { fromEither, none, Option, some } from "fp-ts/lib/Option";
 import {
   AmountInEuroCents,
@@ -33,6 +34,7 @@ import BaseScreenComponent, {
 import TouchableDefaultOpacity from "../../../components/TouchableDefaultOpacity";
 import FooterWithButtons from "../../../components/ui/FooterWithButtons";
 import { LightModalContextInterface } from "../../../components/ui/LightModal";
+import { LabelledItem } from "../../../components/LabelledItem";
 import I18n from "../../../i18n";
 import {
   navigateBack,
@@ -65,10 +67,6 @@ type State = Readonly<{
 const styles = StyleSheet.create({
   whiteBg: {
     backgroundColor: variables.colorWhite
-  },
-
-  noLeftMargin: {
-    marginLeft: 0
   }
 });
 
@@ -149,54 +147,52 @@ class ManualDataInsertionScreen extends React.Component<Props, State> {
             </TouchableDefaultOpacity>
 
             <Form>
-              <Item
-                style={styles.noLeftMargin}
-                floatingLabel={true}
-                error={this.state.paymentNoticeNumber
-                  .map(isLeft)
-                  .getOrElse(false)}
-                success={this.state.paymentNoticeNumber
-                  .map(isRight)
-                  .getOrElse(false)}
-              >
-                <Label>{I18n.t("wallet.insertManually.noticeCode")}</Label>
-                <Input
-                  keyboardType={"numeric"}
-                  returnKeyType={"done"}
-                  maxLength={18}
-                  onChangeText={value => {
+              <LabelledItem
+                type="text"
+                isValid={
+                  isNone(this.state.paymentNoticeNumber)
+                    ? undefined
+                    : this.state.paymentNoticeNumber
+                        .map(isRight)
+                        .getOrElse(false)
+                }
+                label={I18n.t("wallet.insertManually.noticeCode")}
+                inputProps={{
+                  keyboardType: "numeric",
+                  returnKeyType: "done",
+                  maxLength: 18,
+                  onChangeText: value => {
                     this.setState({
                       paymentNoticeNumber: some(value)
                         .filter(NonEmptyString.is)
                         .map(_ => PaymentNoticeNumberFromString.decode(_))
                     });
-                  }}
-                />
-              </Item>
-              <Item
-                style={styles.noLeftMargin}
-                floatingLabel={true}
-                error={this.state.organizationFiscalCode
-                  .map(isLeft)
-                  .getOrElse(false)}
-                success={this.state.organizationFiscalCode
-                  .map(isRight)
-                  .getOrElse(false)}
-              >
-                <Label>{I18n.t("wallet.insertManually.entityCode")}</Label>
-                <Input
-                  keyboardType={"numeric"}
-                  returnKeyType={"done"}
-                  maxLength={11}
-                  onChangeText={value => {
+                  }
+                }}
+              />
+              <LabelledItem
+                type="text"
+                isValid={
+                  isNone(this.state.organizationFiscalCode)
+                    ? undefined
+                    : this.state.organizationFiscalCode
+                        .map(isRight)
+                        .getOrElse(false)
+                }
+                label={I18n.t("wallet.insertManually.entityCode")}
+                inputProps={{
+                  keyboardType: "numeric",
+                  returnKeyType: "done",
+                  maxLength: 11,
+                  onChangeText: value => {
                     this.setState({
                       organizationFiscalCode: some(value)
                         .filter(NonEmptyString.is)
                         .map(_ => OrganizationFiscalCode.decode(_))
                     });
-                  }}
-                />
-              </Item>
+                  }
+                }}
+              />
             </Form>
           </Content>
         </ScrollView>
