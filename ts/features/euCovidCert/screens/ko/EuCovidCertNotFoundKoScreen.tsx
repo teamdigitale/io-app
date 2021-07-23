@@ -18,7 +18,6 @@ import { confirmButtonProps } from "../../../bonus/bonusVacanze/components/butto
 import FooterWithButtons from "../../../../components/ui/FooterWithButtons";
 import { openWebUrl } from "../../../../utils/url";
 import { euCovidCertificateUrl } from "../../../../urls";
-import i18n from "../../../../i18n";
 
 type Props = ReturnType<typeof mapDispatchToProps> &
   ReturnType<typeof mapStateToProps>;
@@ -108,7 +107,7 @@ const EuCovidCertNotFoundKoScreen = (props: Props): React.ReactElement => {
           type={"SingleButton"}
           leftButton={confirmButtonProps(
             () => openWebUrl(euCovidCertificateUrl),
-            i18n.t("features.euCovidCertificate.ko.notFound.cta")
+            I18n.t("features.euCovidCertificate.ko.notFound.cta")
           )}
         />
       }

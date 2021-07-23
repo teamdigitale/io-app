@@ -7,13 +7,13 @@ import { H5 } from "../../../../../components/core/typography/H5";
 import { H4 } from "../../../../../components/core/typography/H4";
 import { ShadowBox } from "../../../bpd/screens/details/components/summary/base/ShadowBox";
 import { IOStyles } from "../../../../../components/core/variables/IOStyles";
-import { TmpDiscountType } from "../../__mock__/availableMerchantDetail";
 import TouchableDefaultOpacity from "../../../../../components/TouchableDefaultOpacity";
+import { Discount } from "../../../../../../definitions/cgn/merchants/Discount";
 import { useCgnDiscountDetailBottomSheet } from "./CgnDiscountDetail";
 import CgnDiscountValueBox from "./CgnDiscountValueBox";
 
 type Props = {
-  discount: TmpDiscountType;
+  discount: Discount;
 };
 
 const styles = StyleSheet.create({
@@ -45,19 +45,20 @@ const CgnMerchantDiscountItem: React.FunctionComponent<Props> = ({
               />
               <View hspacer small />
               <View style={IOStyles.flex}>
+                {/* FIXME properly handle multiple categories on discount */}
                 <H5 weight={"SemiBold"} color={"bluegrey"}>
-                  {discount.category.toLocaleUpperCase()}
+                  {discount.productCategories[0].toLocaleUpperCase()}
                 </H5>
               </View>
             </View>
             <View spacer xsmall />
             <View style={IOStyles.flex}>
               <H4 weight={"SemiBold"} color={"bluegreyDark"}>
-                {discount.title}
+                {discount.name}
               </H4>
             </View>
           </View>
-          <CgnDiscountValueBox value={discount.value} small={true} />
+          <CgnDiscountValueBox value={discount.discount} small={true} />
         </View>
       </ShadowBox>
     </TouchableDefaultOpacity>

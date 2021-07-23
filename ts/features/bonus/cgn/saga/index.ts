@@ -14,6 +14,12 @@ import {
   cgnEycaActivation,
   cgnEycaActivationStatusRequest
 } from "../store/actions/eyca/activation";
+import {
+  cgnOfflineMerchants,
+  cgnOnlineMerchants,
+  cgnSelectedMerchant
+} from "../store/actions/merchants";
+import { BackendCgnMerchants } from "../api/backendCgnMerchants";
 import { handleCgnStartActivationSaga } from "./orchestration/activation/activationSaga";
 import { handleCgnActivationSaga } from "./orchestration/activation/handleActivationSaga";
 import {
@@ -25,10 +31,16 @@ import { handleGetEycaStatus } from "./networking/eyca/details/getEycaStatus";
 import { cgnGenerateOtp } from "./networking/otp";
 import { getEycaActivationStatusSaga } from "./networking/eyca/activation/getEycaActivationStatus";
 import { eycaActivationSaga } from "./orchestration/eyca/eycaActivationSaga";
+import {
+  cgnMerchantDetail,
+  cgnOfflineMerchantsSaga,
+  cgnOnlineMerchantsSaga
+} from "./networking/merchants/cgnMerchantsSaga";
 
 export function* watchBonusCgnSaga(bearerToken: string): SagaIterator {
   // create client to exchange data with the APIs
   const backendCGN = BackendCGN(apiUrlPrefix, bearerToken);
+  const backendCgnMerchants = BackendCgnMerchants(apiUrlPrefix, bearerToken);
 
   // CGN Activation request with status polling
   yield takeLatest(
@@ -77,5 +89,26 @@ export function* watchBonusCgnSaga(bearerToken: string): SagaIterator {
     getType(cgnGenerateOtpAction.request),
     cgnGenerateOtp,
     backendCGN.generateOtp
+  );
+
+  // CGN Offline Merchants
+  yield takeLatest(
+    getType(cgnOfflineMerchants.request),
+    cgnOfflineMerchantsSaga,
+    backendCgnMerchants.getOfflineMerchants
+  );
+
+  // CGN Online Merchants
+  yield takeLatest(
+    getType(cgnOnlineMerchants.request),
+    cgnOnlineMerchantsSaga,
+    backendCgnMerchants.getOnlineMerchants
+  );
+
+  // CGN get selected Merchant detail
+  yield takeLatest(
+    getType(cgnSelectedMerchant.request),
+    cgnMerchantDetail,
+    backendCgnMerchants.getMerchant
   );
 }

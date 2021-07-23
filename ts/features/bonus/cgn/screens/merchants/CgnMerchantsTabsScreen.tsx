@@ -10,7 +10,6 @@ import BaseScreenComponent from "../../../../../components/screens/BaseScreenCom
 import { IOStyles } from "../../../../../components/core/variables/IOStyles";
 import I18n from "../../../../../i18n";
 import { emptyContextualHelp } from "../../../../../utils/emptyContextualHelp";
-import { availableMerchants } from "../../__mock__/availableMerchants";
 import { navigateToCgnMerchantDetail } from "../../navigation/actions";
 import customVariables from "../../../../../theme/variables";
 import { makeFontStyleObject } from "../../../../../components/core/fonts";
@@ -23,6 +22,7 @@ import {
 import CgnMerchantsFilters from "../../components/merchants/CgnMerchantsFilters";
 import FooterWithButtons from "../../../../../components/ui/FooterWithButtons";
 import { confirmButtonProps } from "../../../bonusVacanze/components/buttons/ButtonConfigurations";
+import { Merchant } from "../../../../../../definitions/cgn/merchants/Merchant";
 
 type Props = ReturnType<typeof mapStateToProps> &
   ReturnType<typeof mapDispatchToProps>;
@@ -131,11 +131,14 @@ const CgnMerchantsTabsScreen: React.FunctionComponent<Props> = (
 
 const mapStateToProps = (_: GlobalState) => ({
   // FIXME replace with selector when available
-  merchants: availableMerchants
+  merchants: []
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  navigateToMerchantDetail: () => dispatch(navigateToCgnMerchantDetail())
+  navigateToMerchantDetail: () =>
+    dispatch(
+      navigateToCgnMerchantDetail({ merchantID: "some" as Merchant["id"] })
+    )
 });
 
 export default connect(

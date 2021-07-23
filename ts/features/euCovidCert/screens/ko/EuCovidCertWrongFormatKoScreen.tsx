@@ -17,7 +17,6 @@ import FooterWithButtons from "../../../../components/ui/FooterWithButtons";
 import { confirmButtonProps } from "../../../bonus/bonusVacanze/components/buttons/ButtonConfigurations";
 import { openWebUrl } from "../../../../utils/url";
 import { euCovidCertificateUrl } from "../../../../urls";
-import i18n from "../../../../i18n";
 import { euCovidCertCurrentSelector } from "../../store/reducers/current";
 
 type Props = ReturnType<typeof mapDispatchToProps> &
@@ -108,7 +107,7 @@ const EuCovidCertWrongFormatKoScreen = (props: Props): React.ReactElement => {
           type={"SingleButton"}
           leftButton={confirmButtonProps(
             () => openWebUrl(euCovidCertificateUrl),
-            i18n.t("features.euCovidCertificate.ko.wrongFormat.cta")
+            I18n.t("features.euCovidCertificate.ko.wrongFormat.cta")
           )}
         />
       }

@@ -1,8 +1,9 @@
 import { fromNullable } from "fp-ts/lib/Option";
 import React from "react";
-import { AppState, AppStateStatus } from "react-native";
 import {
   ActivityIndicator,
+  AppState,
+  AppStateStatus,
   InteractionManager,
   LayoutAnimation,
   Platform,
