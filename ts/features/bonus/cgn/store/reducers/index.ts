@@ -4,6 +4,7 @@ import cgnDetailsReducer, { CgnDetailsState } from "./details";
 import eycaReducer, { EycaState } from "./eyca";
 import cgnMerchantsReducer, { CgnMerchantsState } from "./merchants";
 import cgnOtpReducer, { CgnOtpState } from "./otp";
+import geocodingReducer, { GeocodingState } from "./geocoding";
 
 export type CgnState = {
   activation: ActivationState;
@@ -11,6 +12,7 @@ export type CgnState = {
   eyca: EycaState;
   merchants: CgnMerchantsState;
   otp: CgnOtpState;
+  geocoding: GeocodingState;
 };
 
 const cgnReducer = combineReducers<CgnState, Action>({
@@ -18,7 +20,8 @@ const cgnReducer = combineReducers<CgnState, Action>({
   detail: cgnDetailsReducer,
   merchants: cgnMerchantsReducer,
   otp: cgnOtpReducer,
-  eyca: eycaReducer
+  eyca: eycaReducer,
+  geocoding: geocodingReducer
 });
 
 export default cgnReducer;
