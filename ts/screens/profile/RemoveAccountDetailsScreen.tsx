@@ -1,13 +1,14 @@
 import * as pot from "italia-ts-commons/lib/pot";
-import { Content, Input, Item, Label, View } from "native-base";
+import { Content, View } from "native-base";
 import * as React from "react";
-import { Alert, SafeAreaView, StyleSheet } from "react-native";
+import { Alert, SafeAreaView } from "react-native";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { RadioButtonList } from "../../components/core/selection/RadioButtonList";
 import { H1 } from "../../components/core/typography/H1";
 import { H4 } from "../../components/core/typography/H4";
 import { IOStyles } from "../../components/core/variables/IOStyles";
+import { LabelledItem } from "../../components/LabelledItem";
 import BaseScreenComponent from "../../components/screens/BaseScreenComponent";
 import FooterWithButtons from "../../components/ui/FooterWithButtons";
 import { shufflePinPadOnPayment } from "../../config";
@@ -30,12 +31,6 @@ import { withKeyboard } from "../../utils/keyboard";
 type Props = ReduxProps &
   ReturnType<typeof mapStateToProps> &
   ReturnType<typeof mapDispatchToProps>;
-
-const styles = StyleSheet.create({
-  noLeftMargin: {
-    marginLeft: 0
-  }
-});
 
 const getMotivationItems = (): ReadonlyArray<{
   label: string;
@@ -163,20 +158,19 @@ const RemoveAccountDetails: React.FunctionComponent<Props> = (props: Props) => {
                 onPress={setSelectedMotivation}
               />
               {selectedMotivation === RemoveAccountMotivationEnum.OTHERS && (
-                <Item style={styles.noLeftMargin} floatingLabel={true}>
-                  <Label>
-                    {I18n.t(
-                      "profile.main.privacy.removeAccount.details.labelOpenAnswer"
-                    )}
-                  </Label>
-                  <Input
-                    keyboardType={"default"}
-                    returnKeyType={"done"}
-                    autoFocus={true}
-                    maxLength={18}
-                    onChangeText={setOtherMotivation}
-                  />
-                </Item>
+                <LabelledItem
+                  type="text"
+                  label={I18n.t(
+                    "profile.main.privacy.removeAccount.details.labelOpenAnswer"
+                  )}
+                  inputProps={{
+                    keyboardType: "default",
+                    returnKeyType: "done",
+                    autoFocus: true,
+                    maxLength: 18,
+                    onChangeText: setOtherMotivation
+                  }}
+                />
               )}
             </View>
           </Content>

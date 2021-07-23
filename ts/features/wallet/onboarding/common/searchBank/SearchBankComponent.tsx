@@ -1,4 +1,4 @@
-import { Input, Item, View } from "native-base";
+import { View } from "native-base";
 import * as React from "react";
 import {
   FlatList,
@@ -8,12 +8,10 @@ import {
 } from "react-native";
 import { debounce } from "lodash";
 import I18n from "../../../../../i18n";
-import { Label } from "../../../../../components/core/typography/Label";
-import IconFont from "../../../../../components/ui/IconFont";
 import { Abi } from "../../../../../../definitions/pagopa/walletv2/Abi";
 import { BankPreviewItem } from "../../bancomat/components/BankPreviewItem";
-import { IOColors } from "../../../../../components/core/variables/IOColors";
 import { sortAbiByName } from "../../bancomat/utils/abi";
+import { LabelledItem } from "../../../../../components/LabelledItem";
 
 type Props = {
   bankList: ReadonlyArray<Abi>;
@@ -70,22 +68,22 @@ export const SearchBankComponent: React.FunctionComponent<Props> = (
 
   return (
     <>
-      {!props.isLoading && (
-        <Label color={"bluegrey"}>{I18n.t("wallet.searchAbi.bankName")}</Label>
-      )}
-      <Item>
-        <Input
-          value={searchText}
-          autoFocus={true}
-          onChangeText={handleFilter}
-          disabled={props.isLoading}
-          placeholderTextColor={IOColors.bluegreyLight}
-          placeholder={
-            props.isLoading ? I18n.t("wallet.searchAbi.loading") : undefined
-          }
-        />
-        {!props.isLoading && <IconFont name="io-search" />}
-      </Item>
+      <LabelledItem
+        type="text"
+        label={
+          !props.isLoading ? I18n.t("wallet.searchAbi.bankName") : undefined
+        }
+        inputProps={{
+          value: searchText,
+          autoFocus: true,
+          onChangeText: handleFilter,
+          disabled: props.isLoading,
+          placeholder: props.isLoading
+            ? I18n.t("wallet.searchAbi.loading")
+            : undefined
+        }}
+        icon={!props.isLoading ? "io-search" : undefined}
+      />
       <View spacer={true} />
       {props.isLoading ? (
         <>

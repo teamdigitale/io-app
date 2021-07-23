@@ -1,4 +1,4 @@
-import { Input, Item, View } from "native-base";
+import { View } from "native-base";
 import * as React from "react";
 import { useState } from "react";
 import { Platform, SafeAreaView, ScrollView } from "react-native";
@@ -9,6 +9,7 @@ import { H1 } from "../../../../../../components/core/typography/H1";
 import { H4 } from "../../../../../../components/core/typography/H4";
 import { H5 } from "../../../../../../components/core/typography/H5";
 import { IOStyles } from "../../../../../../components/core/variables/IOStyles";
+import { LabelledItem } from "../../../../../../components/LabelledItem";
 import BaseScreenComponent from "../../../../../../components/screens/BaseScreenComponent";
 import I18n from "../../../../../../i18n";
 import { FooterTwoButtons } from "../../../../bonusVacanze/components/markdown/FooterTwoButtons";
@@ -44,8 +45,8 @@ const upperCaseAndNoBlanks = (text: string) =>
 
 export const IbanInsertionComponent: React.FunctionComponent<Props> = props => {
   const [iban, setIban] = useState(props.startIban ?? "");
-  const isInvalidIban = iban.length > 0 && Iban.decode(iban).isLeft();
-  const userCanContinue = !isInvalidIban && iban.length > 0;
+  const isValidIban = iban.length > 0 && Iban.decode(iban).isRight();
+  const userCanContinue = isValidIban && iban.length > 0;
   const {
     headerTitle,
     title,
@@ -73,13 +74,14 @@ export const IbanInsertionComponent: React.FunctionComponent<Props> = props => {
             </Body>
             <View spacer={true} large={true} />
             <H5>{ibanDescription}</H5>
-            <Item error={isInvalidIban}>
-              <Input
-                value={iban}
-                style={IBANInputStyle}
-                autoCapitalize={"characters"}
-                maxLength={IbanMaxLength}
-                onChangeText={text => {
+            <LabelledItem
+              type="text"
+              isValid={!iban ? undefined : isValidIban}
+              inputProps={{
+                value: iban,
+                autoCapitalize: "characters",
+                maxLength: IbanMaxLength,
+                onChangeText: text => {
                   // On Android we cannot modify the input text, or the text is duplicated
                   setIban(
                     Platform.select({
@@ -87,9 +89,10 @@ export const IbanInsertionComponent: React.FunctionComponent<Props> = props => {
                       default: upperCaseAndNoBlanks(text)
                     })
                   );
-                }}
-              />
-            </Item>
+                },
+                style: IBANInputStyle
+              }}
+            />
             <View spacer={true} large={true} />
             <View spacer={true} small={true} />
             <Body>{body2}</Body>

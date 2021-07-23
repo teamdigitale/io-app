@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import _ from "lodash";
-import { Body, Container, Input, Item, Left, Right, View } from "native-base";
+import { Body, Container, Left, Right, View } from "native-base";
 import {
   FlatList,
   Keyboard,
@@ -13,7 +13,6 @@ import AppHeader from "../../../../../components/ui/AppHeader";
 import ButtonDefaultOpacity from "../../../../../components/ButtonDefaultOpacity";
 import IconFont from "../../../../../components/ui/IconFont";
 import { H5 } from "../../../../../components/core/typography/H5";
-import { IOColors } from "../../../../../components/core/variables/IOColors";
 import I18n from "../../../../../i18n";
 import { IOStyles } from "../../../../../components/core/variables/IOStyles";
 import { H2 } from "../../../../../components/core/typography/H2";
@@ -24,6 +23,7 @@ import {
   cancelButtonProps,
   confirmButtonProps
 } from "../../../bonusVacanze/components/buttons/ButtonConfigurations";
+import { LabelledItem } from "../../../../../components/LabelledItem";
 import CategoryCheckbox from "./search/CategoryCheckbox";
 import OrderOption from "./search/OrderOption";
 import { DistanceSlider } from "./search/DistanceSlider";
@@ -112,32 +112,32 @@ const CgnMerchantsFilters: React.FunctionComponent<Props> = (props: Props) => {
         >
           <View style={IOStyles.horizontalContentPadding}>
             <H2>{I18n.t("bonus.cgn.merchantsList.filter.searchTitle")}</H2>
-            <Item>
-              <Input
-                value={searchValue}
-                onChangeText={setSearchValue}
-                placeholderTextColor={IOColors.bluegreyLight}
-                placeholder={I18n.t(
+            <LabelledItem
+              type="text"
+              inputProps={{
+                value: searchValue,
+                onChangeText: setSearchValue,
+                placeholder: I18n.t(
                   "bonus.cgn.merchantsList.filter.inputPlaceholder"
-                )}
-              />
-              <IconFont name="io-search" color={IOColors.bluegrey} />
-            </Item>
+                )
+              }}
+              icon="io-search"
+            />
             <View spacer large />
             {props.isLocal && (
               <>
                 <H2>{I18n.t("bonus.cgn.merchantsList.filter.addressTitle")}</H2>
-                <Item>
-                  <Input
-                    value={address}
-                    onChangeText={setAddress}
-                    placeholderTextColor={IOColors.bluegreyLight}
-                    placeholder={I18n.t(
+                <LabelledItem
+                  type="text"
+                  inputProps={{
+                    value: address,
+                    onChangeText: setAddress,
+                    placeholder: I18n.t(
                       "bonus.cgn.merchantsList.filter.addressPlaceholder"
-                    )}
-                  />
-                  <IconFont name="io-place" color={IOColors.bluegrey} />
-                </Item>
+                    )
+                  }}
+                  icon="io-place"
+                />
                 <View spacer />
                 <DistanceSlider
                   value={distance}
