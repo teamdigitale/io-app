@@ -85,7 +85,7 @@ export const SearchStartComponent: React.FunctionComponent<Props> = (
       </Body>
 
       <View spacer={true} large={true} />
-      <Body>
+      <Body accessibilityRole="link">
         <H4 weight={"Regular"} color={"bluegreyDark"}>
           {locales.text3}
         </H4>
