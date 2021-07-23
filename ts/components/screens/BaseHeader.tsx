@@ -219,6 +219,11 @@ class BaseHeaderComponent extends React.PureComponent<Props, State> {
         )}
 
         {this.renderRight()}
+
+        {fromNullable(this.props.accessibilityEvents).fold(
+          true,
+          ({ avoidNavigationEventsUsage }) => !avoidNavigationEventsUsage
+        ) && <NavigationEvents onDidFocus={this.handleFocus} />}
       </AppHeader>
     );
   }
@@ -257,6 +262,10 @@ class BaseHeaderComponent extends React.PureComponent<Props, State> {
             <IconFont name={customRightIcon.iconName} />
           </ButtonDefaultOpacity>
         )}
+        {!onShowHelp &&
+          !customRightIcon &&
+          showInstabugChat === false &&
+          !isSearchEnabled && <View hspacer={true} extralarge={true} />}
         {fromNullable(this.props.accessibilityEvents).fold(
           true,
           ({ avoidNavigationEventsUsage }) => !avoidNavigationEventsUsage
